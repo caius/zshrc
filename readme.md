@@ -4,6 +4,18 @@ This is [Caius][]' ZSH configs for his shell. It has an `install` script to syml
 
 [Caius]: http://caius.name/
 
+## Installation
+
+Should be simply:
+
+	$ cd ~
+	$ git clone git://github.com/caius/zshrc.git .zsh
+	$ ./.zsh/install
+
+## Screenshot
+
+![](http://caius.name/images/qs/zshrc-example-screenshot.png)
+
 ## Licence
 
 Copyright (c) 2011 Caius Durling <caius@swedishcampground.com>
