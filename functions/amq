@@ -1,0 +1,4 @@
+# function amq {
+  # Fuck you java
+  $(brew --prefix activemq)/bin/activemq console xbean:$(brew --prefix activemq)/libexec/conf/activemq-stomp.xml
+# }
