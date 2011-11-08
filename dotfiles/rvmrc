@@ -1,0 +1,6 @@
+rvm_install_on_use_flag=1
+rvm_gemset_create_on_use_flag=1
+rvm_make_flags="-j 4"
+rvm_archflags="-arch x86_64"
+rvm_project_rvmrc_default=1
+export rvm_path="/Users/caius/.rvm"
