@@ -1,0 +1,40 @@
+#!/usr/bin/env zsh
+# Symlinks ~/.zsh/dotfiles/* to ~/.*
+# Moves existing files aside if they don't match, to ~/.*.EPOCH-old
+
+ZSH_ROOT=$(dirname $0)
+
+echo "Installing dotfiles from $ZSH_ROOT/dotfiles to $HOME"
+
+for FROM in $ZSH_ROOT/dotfiles/*; do
+  NAME=".$(basename $FROM)"
+  TO="$HOME/$NAME"
+  # echo "TO: $TO"
+  # echo "FROM: $FROM"
+
+  echo -n "$NAME"
+
+  # See if it exists
+  if [[ -f $TO ]]; then
+    # See if it matches what we're about to install
+    if [[ "$(md5 -q $TO)" == "$(md5 -q $FROM)" ]]; then
+      # If so, we're done here for this file
+      echo "  ..done!"
+      continue
+    else
+      # Need to backup the existing one
+      echo # Clears the line
+      echo -n "  ..moving existing"
+      mv "$TO" "$TO.$(date '+%s')-old"
+      echo -n "  ..done!"
+    fi
+  fi
+
+  echo
+  echo -n "  ..installing link"
+  ln -s $FROM $TO
+  echo "  ..done!"
+
+done
+
+echo "All installed!"
