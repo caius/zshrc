@@ -1,0 +1,12 @@
+# Caius' ZSH config
+# Initialize the environme
+
+ZSH_ROOT="$HOME/.zsh"
+
+# Use the force to load my functions
+fpath=($ZSH_ROOT/functions $fpath)
+# autoload custom functions
+autoload $^fpath/*(N:t)
+
+# Load all the ZSH config files
+for config_file ($ZSH_ROOT/lib/*.zsh) source $config_file
