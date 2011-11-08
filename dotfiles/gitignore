@@ -1,0 +1,9 @@
+.svn
+.DS_Store
+tmp/restart.txt
+tmtags
+.tmtags
+config/deploy.local.rb
+.rake_tasks~
+.rvmrc
+.bundle/config

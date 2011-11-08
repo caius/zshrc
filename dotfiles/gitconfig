@@ -1,0 +1,136 @@
+[user]
+  name = Caius Durling
+  email = dev@caius.name
+[color]
+  branch = auto
+  diff = auto
+  status = auto
+[color "branch"]
+  current = yellow reverse
+  local = yellow
+  remote = green
+[color "diff"]
+  meta = yellow bold
+  frag = magenta bold
+  old = red bold
+  new = green bold
+[color "status"]
+  added = yellow
+  changed = green
+  untracked = cyan
+[color]
+  ui = true
+[core]
+  whitespace = fix,-indent-with-non-tab,trailing-space,cr-at-eol
+  excludesfile = /Users/caius/.gitignore
+  autocrlf = input
+  safecrlf = true
+[alias]
+  # Spellings
+  ass = add
+  doff = diff
+  dff = diff
+  idff = diff
+  pl = pull
+  tpull = pull
+  oull = pull
+  ps = push
+  pushy = push
+  tpush = push
+  psuh = push
+  pish = push
+  satsh = stash
+  mregetool = mergetool
+  x = !sh -c \"gitx\"
+  # Shortcuts
+  sst = status -sb
+  tst = status -sb
+  t = status -sb
+  ts = status -sb
+  st = status -sb
+  s = status -sb
+  b = branch
+  ci = commit
+  co = checkout
+  cob = checkout -b
+  cp = cherry-pick
+  a = add
+  aa = add --all
+  aap = add --all -p
+  au = add -u
+  aua = add -u .
+  ap = add -p
+  pr = pull --rebase
+  pullr = pull --rebase
+  tpr = pull --rebase
+  tome = pull
+  toyou = push
+  pop = stash pop
+  cl = clone
+  vi = commit -v
+  via = commit -va
+  viaa = commit -va --amend
+  sui = submodule update --init
+  pp = !sh -c 'git pull && git push'
+  merge-delete-branch = !sh -c \"git co master && git merge \\$0 && git branch -d \\$0\"
+  mirror-branch = checkout -t
+  cot = checkout -t
+  git = !sh -c \"git \\$0 \\$*\"
+  rebase-on-master = !sh -c \"git rebase -i HEAD~`git log --format=oneline master.. | wc -l | awk '{ print $1 }'`\"
+  gtfu = !sh -c \"echo GET THE FUCK UP\"
+  dm = !sh -c \"git diff|mate\"
+  dc = diff --cached
+  dcm = !sh -c \"git diff --cached|mate\"
+  clear = !sh -c \"clear\"
+  happify = !sh -c \"ln -s ~/.git/hooks/post-commit .git/hooks\"
+  mute = !sh -c \"rm .git/hooks/post-commit 1&> /dev/null || true\"
+  proj = !sh -c \"proj\"
+  d = diff
+[branch]
+  autosetupmerge = true
+[merge]
+  tool = opendiff
+  stat = true
+[help]
+  autocorrect = 0
+[diff "exif"]
+  textconv = exiftool
+[diff "doc"]
+  textconv = strings
+[diff]
+  renamelimit = 0
+  mnemonicprefix = true
+  renames = copies
+[mergetool]
+  keepBackup = false
+[status]
+  showUntrackedFiles = all
+[push]
+  default = current
+[rerere]
+  enabled = true
+[advice]
+  statusHints = true
+  pushNonFastForward = false
+[merge "railsschema"]
+  name = newer Rails schema version
+  driver = ruby -e '\n\
+"                system %(git), %(merge-file), %(--marker-size=%L), %(%A), %(%O), %(%B)"\n\
+"                b = File.read(%(%A))"\n\
+"                b.sub!(/^<+ .*\\nActiveRecord::Schema\\.define.:version => (\\d+). do\\n=+\\nActiveRecord::Schema\\.define.:version => (\\d+). do\\n>+ .*/) do"\n\
+"                  %(ActiveRecord::Schema.define(:version => #{[$1, $2].max}) do)"\n\
+"                end"\n\
+"                File.open(%(%A), %(w)) {|f| f.write(b)}"\n\
+"                exit 1 if b.include?(%(<)*%L)'"
+[url "git@github.com:"]
+  insteadOf = gh:
+  pushInsteadOf = github:
+  pushInsteadOf = git://github.com/
+[url "git://github.com/"]
+  insteadOf = github:
+[url "git@gist.github.com:"]
+  insteadOf = gst:
+  pushInsteadOf = gist:
+  pushInsteadOf = git://gist.github.com/
+[url "git://gist.github.com/"]
+  insteadOf = gist:
