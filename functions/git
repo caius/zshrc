@@ -45,7 +45,7 @@
       CONTINUE=false
 
       # Figure it out from the reflog
-      LAST_BRANCH=$(git log -g --oneline | egrep "moving from .*? to ($(current_branch)|HEAD)" | head -n1 | awk '{ print $6 }')
+      LAST_BRANCH=$(git log -g --oneline | egrep "moving from .*? to ($(git_current_branch)|HEAD)" | head -n1 | awk '{ print $6 }')
       if [[ "$LAST_BRANCH" != "" ]]; then
         $GIT checkout $LAST_BRANCH
       else
@@ -62,7 +62,7 @@
       CONTINUE=false
 
       # Run our actual git rebase
-      $GIT rebase origin/$(current_branch)
+      $GIT rebase origin/$(git_current_branch)
     fi
   fi
 
