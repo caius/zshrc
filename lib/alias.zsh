@@ -23,7 +23,7 @@ alias eprod="eproduction"
 
 alias be="bundle exec"
 alias bes="bundle exec spec"
-alias ber="bundle exec rspec"
+alias ber="bundle exec rake"
 
 alias rcap=$(whence -p cap)
 
@@ -148,3 +148,7 @@ alias bb-lbs='brightbox-lbs'
 alias javascript="jsc"
 
 alias csshx="csshX"
+
+# Prettify JSON/XML
+alias pretty_json="python -m json.tool"
+alias pretty_xml="xmllint --format -"
