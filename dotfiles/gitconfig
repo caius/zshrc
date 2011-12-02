@@ -86,6 +86,7 @@
   mute = !sh -c \"rm .git/hooks/post-commit 1&> /dev/null || true\"
   proj = !sh -c \"proj\"
   d = diff
+  nyan = !sh -c \"nyancat\"
 [branch]
   autosetupmerge = true
 [merge]
