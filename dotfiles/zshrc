@@ -1,5 +1,5 @@
 # Caius' ZSH config
-# Initialize the environme
+# Initialize the environment
 
 ZSH_ROOT="$HOME/.zsh"
 
@@ -10,3 +10,8 @@ autoload $^fpath/*(N:t)
 
 # Load all the ZSH config files
 for config_file ($ZSH_ROOT/lib/*.zsh) source $config_file
+
+# Load platform specific config files
+if [[ -d "$ZSH_ROOT/lib/$(uname)/" ]]; then
+  for config_file ($ZSH_ROOT/lib/$(uname)/*.zsh) source $config_file
+fi
