@@ -46,6 +46,7 @@ alias ram='top -o rsize'
 # Sources
 alias bb="cd ~/Brightbox/src"
 alias pp="cd ~/PizzaPowered/src"
+alias ee="cd ~/EmberAds/src"
 
 alias same='open .'
 
