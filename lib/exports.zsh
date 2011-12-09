@@ -2,6 +2,7 @@
 PATH="/Users/caius/bin:/usr/local/Cellar/jruby/1.5.6/jruby/bin:/Users/caius/.cabal/bin:/usr/local/share/npm/bin"
 PATH="$PATH:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin"
 #PATH="$PATH:/opt/PalmSDK/Current/bin:/opt/PalmPDK/bin:/opt/nova/bin"
+PATH="$PATH:/usr/texbin"
 export PATH
 
 # And the same for the manpath
