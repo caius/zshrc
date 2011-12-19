@@ -23,8 +23,9 @@
 [core]
   whitespace = fix,-indent-with-non-tab,trailing-space,cr-at-eol
   excludesfile = /Users/caius/.gitignore
-  autocrlf = input
-  safecrlf = true
+  # Deals with shitty projects having shitty line endings. Normally not needed.
+  # autocrlf = input
+  # safecrlf = true
 [alias]
   # Spellings
   ass = add
