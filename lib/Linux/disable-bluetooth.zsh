@@ -1,0 +1,1 @@
+rfkill block bluetooth
