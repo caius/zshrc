@@ -1,0 +1,3 @@
+# function ea-ssh6 () {
+  ssh ea-admin@ipv6.$1.gb1.brightbox.com
+# }
