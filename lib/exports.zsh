@@ -1,5 +1,5 @@
 # make sure Homebrew s/bin comes first
-PATH="/Users/caius/bin:/usr/local/Cellar/jruby/1.5.6/jruby/bin:/Users/caius/.cabal/bin:/usr/local/share/npm/bin"
+PATH="$HOME/bin:/usr/local/Cellar/jruby/1.5.6/jruby/bin:/Users/caius/.cabal/bin:/usr/local/share/npm/bin"
 PATH="$PATH:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin"
 #PATH="$PATH:/opt/PalmSDK/Current/bin:/opt/PalmPDK/bin:/opt/nova/bin"
 PATH="$PATH:/usr/texbin"
@@ -19,12 +19,6 @@ export LSCOLORS="Gxfxcxdxbxegedabagacad"
 # Textmate required
 export LC_CTYPE=en_US.UTF-8
 export LANG=en_GB.UTF-8
-
-# Editors
-export SVN_EDITOR="mate -wl1"
-export HGEDITOR="mate -wl1"
-export GIT_EDITOR="mate -wl1"
-export EDITOR='mate'
 
 # Fuck you python
 export PYTHONPATH="/usr/local/lib/python2.6/site-packages"
