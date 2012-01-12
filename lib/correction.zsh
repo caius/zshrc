@@ -10,7 +10,6 @@ alias git="nocorrect git"
 alias aping='nocorrect aping'
 alias port='nocorrect port'
 alias brew='nocorrect brew'
-alias iplayer="get_iplayer --isodate"
 alias scp="nocorrect scp"
 alias rspec="nocorrect rspec"
 alias spec="nocorrect spec"
