@@ -1,0 +1,3 @@
+# function isoD() {
+  date "+%Y-%m-%d"
+# }
