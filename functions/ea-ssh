@@ -1,3 +1,3 @@
 # function ea-ssh () {
-  ssh ea-admin@$1.gb1.brightbox.com
+  ssh -p 2222 ea-admin@$1.gb1.brightbox.com
 # }
