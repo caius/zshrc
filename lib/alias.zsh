@@ -112,6 +112,7 @@ alias ti='git'
 alias tit='git'
 alias gits='git'
 alias guit="git"
+alias ig="git"
 
 alias gitst='git st'
 alias gtst='git st'
