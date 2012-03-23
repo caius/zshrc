@@ -1,3 +1,4 @@
 set autolist
 set autoeval
 set autoreload
+eval require 'ruby-debug/completion'

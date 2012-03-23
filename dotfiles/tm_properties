@@ -1,0 +1,39 @@
+# Default Settings
+fontSize = 14
+fontName = "Liberation Mono"
+softWrap = true
+softTabs = true
+tabSize = 2
+showInvisibles = false
+
+# Extra files to include
+myExtraIncludes = ".tm_properties,.htaccess,.gitignore,.rvmrc"
+fileBrowserGlob  = "{*,$myExtraIncludes}"
+include = "{$include,$myExtraIncludes}"
+
+# Hide log, vendor and tmp directories from search popups.
+myExtraExcludes = "log,vendor,tmp"
+excludeInFileChooser  = "{$excludeInFileChooser,$myExtraExcludes}"
+excludeInFolderSearch = "{$excludeInFolderSearch,$myExtraExcludes}"
+
+# Configure some binary paths
+TM_HG  = "/usr/local/bin/hg"
+TM_GIT = "/usr/local/bin/git"
+TM_RUBY = "/Users/caius/.rvm/bin/rvm-auto-ruby"
+
+# Variables
+TM_ORGANIZATION_NAME = "SwedishCamground"
+TM_DOT = "/usr/local/bin/dot"
+
+# Specific file overrides
+[ .git/COMMIT_EDITMSG ]
+spellChecking = true
+
+[ *.{icns,ico,jpg,jpeg,m4v,nib,pdf,png,psd,pyc,rtf,tif,tiff,xib} ]
+binary = true
+
+[ "{README,INSTALL,LICENSE,TODO}" ]
+fileType = "text.plain"
+
+[ "{Gemfile,Gemfile.lock,Capfile,Rakefile,.rvmrc,.bundle/config}"]
+fileType = "source.ruby"
