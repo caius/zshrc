@@ -1,6 +1,6 @@
 # make sure Homebrew s/bin comes first
 PATH="$HOME/bin" # Home folder overrides everything
-PATH="$PATH:$HOME/.cabal/bin:/usr/local/share/npm/bin" # Haskell & Node.js binfiles
+PATH="$PATH:$HOME/.cabal/bin" # Haskell binfiles
 PATH="$PATH:/usr/local/bin:/usr/local/sbin" # Homebrew
 PATH="$PATH:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin" # Normal $PATH bit
 PATH="$PATH:/usr/texbin" # LaTeX stuff

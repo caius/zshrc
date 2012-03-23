@@ -22,7 +22,6 @@ alias eproduction='RAILS_ENV=production'
 alias eprod="eproduction"
 
 alias be="bundle exec"
-alias bes="bundle exec spec"
 alias ber="bundle exec rake"
 
 alias rcap=$(whence -p cap)
@@ -44,16 +43,14 @@ alias cpu='top -o cpu'
 alias ram='top -o rsize'
 
 # Sources
-alias bb="cd ~/Brightbox/src"
-alias pp="cd ~/PizzaPowered/src"
 alias ee="cd ~/EmberAds/src"
+alias ea="cd ~/EmberAds/src"
 
 alias same='open .'
 
 ## My nifty stuff for copying/pasting dir paths
 alias copypath='echo `pwd` | pbcopy'
 alias cdpath='cd "`pbpaste`"'
-
 
 ## Textmate alias'
 alias mate='/Users/caius/bin/mate -r'
@@ -63,16 +60,10 @@ alias matew='mate -rw'
 alias mw='mate -rw'
 alias m.='mate .'
 
-# XcodeBuild with network builds
-alias buildNetwork='xcodebuild build -bonjourbuildhosts -project '
-alias buildLocal='xcodebuild build  -project '
-# Open xcode projects named after the folder you're in
-# alias xcode='open `pwd | sed -e "s/^\/.*\///g"`.xcodeproj'
 # Open all .xcodeproj files in the current folder
 alias xcode='open *.xcodeproj'
 
 # General ones
-alias scn='svn'
 alias df='df -Hl'
 alias mktar='tar -cvf'
 alias mkbz2='tar -cvjf'
@@ -82,7 +73,6 @@ alias unbz2='tar -xvjf'
 alias ungz='tar -xvzf'
 alias mv='mv -i'
 alias cp='cp -i'
-#alias rm='rm -i'
 
 alias dnsflush='dscacheutil -flushcache'
 
