@@ -22,6 +22,12 @@ export LSCOLORS="Gxfxcxdxbxegedabagacad"
 export LC_CTYPE=en_US.UTF-8
 export LANG=en_GB.UTF-8
 
+# Editors
+export SVN_EDITOR="mate -wl1"
+export HGEDITOR="mate -wl1"
+export GIT_EDITOR="mate -wl1"
+export EDITOR='mate'
+
 # Fuck you python
 export PYTHONPATH="/usr/local/lib/python2.6/site-packages"
 
