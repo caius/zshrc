@@ -1,3 +1,8 @@
 # function ea-ssh () {
-  ssh -p 2222 ea-admin@$1.gb1.brightbox.com
+  address="$1"
+  if [[ ! "$address" =~ '.*\.com$' ]]; then
+    address="$address.gb1.brightbox.com"
+  fi
+  echo $address
+  ssh -p 2222 ea-admin@$address
 # }
