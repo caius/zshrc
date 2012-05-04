@@ -109,8 +109,7 @@ alias gtst='git st'
 
 alias gme='gem'
 alias rkae='rake'
-
-alias bcb="bundle check || bundle"
+alias bundel="bundle"
 
 alias js="java org.mozilla.javascript.tools.shell.Main"
 
