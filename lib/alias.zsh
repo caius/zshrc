@@ -1,4 +1,5 @@
 alias ehco="echo"
+alias ea-ssh="ssh"
 
 alias ls="ls -G"
 
