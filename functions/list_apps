@@ -1,0 +1,3 @@
+# function list_apps() {
+  ps aux | grep Applications | grep -v grep | awk '{ print $11 }' | sed -Ee 's#^.+/(.+)\.app.+$#\1#'
+# }
