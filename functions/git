@@ -7,34 +7,6 @@
   GIT=$(whence -p git)
   CONTINUE=true
 
-  # git push
-  # Checks if there are spec/ or features/ folders and
-  # questions the user if they have been run if they exist.
-  if [[ "$1" == "push" ]]; then
-
-    # Check if spec/ exists
-    if [[ -e spec ]]; then
-      CONTINUE=false # fail by default
-      # Ask the user
-      echo -n "Have you run your specs? [Y/n]"
-      read a
-      if [[ $a == "Y" || $a == "y" || $a == "" ]]; then
-        CONTINUE=true
-      fi
-    fi
-
-    # Check if features/ exists
-    if [[ -e features ]]; then
-      CONTINUE=false # fail by default
-      # Ask the user
-      echo -n "Have you run your features? [Y/n]"
-      read a
-      if [[ $a == "Y" || $a == "y" || $a == "" ]]; then
-        CONTINUE=true
-      fi
-    fi
-  fi
-
   # git checkout
   # If you pass "-" as the branch name then it attempts to check out the previous
   # branch you were on, deducing that from the `git reflog`
@@ -67,7 +39,7 @@
   fi
 
   # Run the command if we've been told to.
-  # The default is to run the command so this 
+  # The default is to run the command so this
   # fires unless a check has disabled it.
   if [[ $CONTINUE == true ]]; then
     $GIT $*
