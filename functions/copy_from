@@ -1,0 +1,8 @@
+# function copy_from () {
+  # $1 is a ssh alias or server to copy from
+  # $2 is a relative path to copy
+
+  PATH_TO_COPY="$(pwd | sed "s#$HOME/##")/$2"
+
+  scp "$1:$PATH_TO_COPY" $2
+# }
