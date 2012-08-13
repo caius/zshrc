@@ -116,6 +116,7 @@ alias js="java org.mozilla.javascript.tools.shell.Main"
 
 alias mysqlstop='mysqladmin -u root -p shutdown'
 alias sqlite='sqlite3'
+alias crontab="EDITOR=nano crontab"
 
 # Override ZSH's built ins
 alias time="$(whence -p time)"
