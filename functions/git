@@ -1,30 +1,9 @@
 ## My magical git function ##
 # Adds various checks to `git` as detailed below:
-#  * Makes sure you've run your specs/features before pushing
-#  * Asks for confirmation before committing on master
 #  * Changes `git rebase .` into `git rebase origin/$current_branch`
 # function git {
   GIT=$(whence -p git)
   CONTINUE=true
-
-  # git checkout
-  # If you pass "-" as the branch name then it attempts to check out the previous
-  # branch you were on, deducing that from the `git reflog`
-  if [[ "$1" == "checkout" || "$1" == "co" ]]; then
-    # Check if it's 'checkout -' or an actual branch name
-    if [[ "$2" == "-" ]]; then
-      # Don't run 'checkout -'
-      CONTINUE=false
-
-      # Figure it out from the reflog
-      LAST_BRANCH=$(git log -g --oneline | egrep "moving from .*? to ($(git_current_branch)|HEAD)" | head -n1 | awk '{ print $6 }')
-      if [[ "$LAST_BRANCH" != "" ]]; then
-        $GIT checkout $LAST_BRANCH
-      else
-        echo "I'm sorry $USER, I'm afraid I can't do that."
-      fi
-    fi
-  fi
 
   # git rebase
   if [[ "$1" == "rebase" ]]; then
