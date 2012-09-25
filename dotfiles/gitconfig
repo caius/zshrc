@@ -88,6 +88,7 @@
   proj = !sh -c \"proj\"
   d = diff
   nyan = !sh -c \"nyancat\"
+	standup = log --since yesterday --oneline --author caius
 [branch]
   autosetupmerge = true
 [merge]
