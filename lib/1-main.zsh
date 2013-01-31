@@ -15,6 +15,7 @@ prompt caius
 setopt auto_cd
 setopt multios
 setopt cdablevarS
+setopt BRACE_CCL # echo {a-c} # => [a,b,c]
 
 # Completion
 setopt noautomenu
