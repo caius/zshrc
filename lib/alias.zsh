@@ -23,7 +23,7 @@ alias eproduction='RAILS_ENV=production'
 alias eprod="eproduction"
 
 alias be="bundle exec"
-alias ber="bundle exec rake"
+alias ber="nocorrect bundle exec rake"
 
 alias rcap=$(whence -p cap)
 
@@ -113,7 +113,7 @@ alias gme='gem'
 alias rkae='rake'
 alias bundel="bundle"
 
-alias js="java org.mozilla.javascript.tools.shell.Main"
+alias js="/System/Library/Frameworks/JavaScriptCore.framework/Versions/Current/Resources/jsc"
 
 alias mysqlstop='mysqladmin -u root -p shutdown'
 alias sqlite='sqlite3'
