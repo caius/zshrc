@@ -1,3 +1,18 @@
+my_rvm_prompt() {
+  rvm_prompt_bin="$HOME/.rvm/bin/rvm-prompt"
+  if [ -x ${rvm_prompt_bin} ]; then
+    # We show unicode characters, and nothing for the default ruby
+    zsh_rvm_prompt="$($rvm_prompt_bin u -d)"
+    # Add a space if we're showing anything
+    if [[ ! -z $zsh_rvm_prompt ]]; then
+      zsh_rvm_prompt="${zsh_rvm_prompt} "
+    fi
+  else
+    zsh_rvm_prompt=""
+  fi
+  echo $zsh_rvm_prompt
+}
+
 function prompt_caius_precmd {
 	local exitstatus=$?
 	setopt localoptions noxtrace noksharrays
@@ -9,7 +24,7 @@ function prompt_caius_precmd {
 
 function prompt_caius_setup {
 #  PS1='[%(2L.%L/.)'$ZSH_VERSION']%(?..%B{%v}%b)%n%(2v.%B@%b.@)%m:%B%~%b%(!.#.>) '
-  PS1='%{$fg_bold[green]%}%m:%{$fg_bold[blue]%}%1~$(git_prompt_info) %{$reset_color%}%n%(!.#.$) '
+  PS1='%{$fg_bold[green]%}%m:%{$fg_bold[blue]%}%1~$(git_prompt_info) %{$fg[white]%}$(my_rvm_prompt)%{$reset_color%}%n%(!.#.$) '
   PS2='%(4_:... :)%3_> '
 
   prompt_opts=( cr subst percent )
