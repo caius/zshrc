@@ -1,9 +1,12 @@
 .svn
 .DS_Store
-tmp/restart.txt
+/tmp/restart.txt
 tmtags
 .tmtags
-config/deploy.local.rb
+/config/deploy.local.rb
+/config/initializers/caius_urls.rb
+/lib/common/caius_urls.rb
 .rake_tasks~
 .rvmrc
-.bundle/config
+/.bundle/config
+/.rbx/
