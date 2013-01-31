@@ -43,6 +43,3 @@ export RUBY_HEAP_FREE_MIN=500000
 
 # Coz I wanna be different, yeah?
 export SUDO_PROMPT="Sudo Password: "
-
-# Default to emberads for brightbox-cli
-export CLIENT="ea"
