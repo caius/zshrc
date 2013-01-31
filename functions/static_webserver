@@ -1,0 +1,15 @@
+#!/usr/bin/env zsh
+
+if [[ -z "$1" ]]; then
+  host="127.0.0.1"
+else
+  host="$1"
+fi
+
+if [[ -z "$2" ]]; then
+  port=8080
+else
+  port="$2"
+fi
+
+python -c 'import BaseHTTPServer as bhs, SimpleHTTPServer as shs; bhs.HTTPServer(("'$host'", '$port'), shs.SimpleHTTPRequestHandler).serve_forever()'
