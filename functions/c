@@ -1,0 +1,3 @@
+# function c() {
+  gcc -Werror -o "$1:r" "$1"
+# }
