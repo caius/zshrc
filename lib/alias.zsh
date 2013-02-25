@@ -125,6 +125,9 @@ alias time="$(whence -p time)"
 # ln -s /System/Library/Frameworks/JavascriptCore.framework/Versions/A/Resources/jsc ~/bin/
 alias javascript="jsc"
 
+# From http://www.leancrew.com/all-this/2013/02/getting-rid-of-open-with-duplicates/
+alias fixopenwith='/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -kill -r -domain local -domain system -domain user'
+
 alias csshx="csshX"
 
 # Prettify JSON/XML
