@@ -1,6 +1,5 @@
 # function git_dirty {
-  git_state=$(git status 2> /dev/null | tail -n1)
-  if [[ $git_state != "nothing to commit" && $git_state != "nothing to commit (working directory clean)" ]]; then
+  if [[ -n $(git status -s --ignore-submodules=dirty 2> /dev/null) ]]; then
     echo "*"
   else
     echo ""
