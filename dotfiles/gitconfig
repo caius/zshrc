@@ -90,7 +90,7 @@
   proj = !sh -c \"proj\"
   d = diff
   nyan = !sh -c \"nyancat\"
-	standup = log --since yesterday --oneline --author caius
+  standup = log --since yesterday --oneline --author caius
   rup = remote update --prune
 [branch]
   autosetupmerge = true
@@ -141,4 +141,4 @@
 [url "git://gist.github.com/"]
   insteadOf = gist:
 [credential]
-	helper = osxkeychain
+  helper = osxkeychain
