@@ -7,6 +7,7 @@ Pry.config.hooks.add_hook :after_session, :say_bye do
 end
 
 # Prompt with ruby version
-Pry.prompt = [proc { |obj, nest_level| "#{RUBY_VERSION} (#{obj}):#{nest_level} > " }, proc { |obj, nest_level| "#{RUBY_VERSION} (#{obj}):#{nest_level} * " }]
-
-%w{map_by_method hirb}.each { |gem| require gem }
+Pry.config.prompt = [
+  proc { |obj, nest_level, _| "#{RUBY_VERSION} (#{obj}):#{nest_level} > " },
+  proc { |obj, nest_level, _| "#{RUBY_VERSION} (#{obj}):#{nest_level} * " }
+]
