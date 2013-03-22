@@ -44,8 +44,7 @@ alias cpu='top -o cpu'
 alias ram='top -o rsize'
 
 # Sources
-alias ee="cd ~/EmberAds/src"
-alias ea="cd ~/EmberAds/src"
+alias fa="cd ~/freeagent/src"
 
 alias same='open .'
 
