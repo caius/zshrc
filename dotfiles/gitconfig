@@ -62,6 +62,8 @@
   aua = add -u .
   ap = add -p
   pr = pull --rebase
+  prr = pull --rebase
+  prrr = pull --rebase
   pullr = pull --rebase
   tpr = pull --rebase
   tome = pull
@@ -89,6 +91,7 @@
   d = diff
   nyan = !sh -c \"nyancat\"
 	standup = log --since yesterday --oneline --author caius
+  rup = remote update --prune
 [branch]
   autosetupmerge = true
 [merge]
