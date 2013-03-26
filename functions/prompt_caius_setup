@@ -1,16 +1,16 @@
 my_rvm_prompt() {
-  rvm_prompt_bin="$HOME/.rvm/bin/rvm-prompt"
-  if [ -x ${rvm_prompt_bin} ]; then
-    # We show unicode characters, and nothing for the default ruby
-    zsh_rvm_prompt="$($rvm_prompt_bin u -d)"
-    # Add a space if we're showing anything
-    if [[ ! -z $zsh_rvm_prompt ]]; then
-      zsh_rvm_prompt="${zsh_rvm_prompt} "
-    fi
-  else
-    zsh_rvm_prompt=""
-  fi
-  echo $zsh_rvm_prompt
+  # rvm_prompt_bin="$HOME/.rvm/bin/rvm-prompt"
+  # if [ -x ${rvm_prompt_bin} ]; then
+  #   # We show unicode characters, and nothing for the default ruby
+  #   zsh_rvm_prompt="$($rvm_prompt_bin u -d)"
+  #   # Add a space if we're showing anything
+  #   if [[ ! -z $zsh_rvm_prompt ]]; then
+  #     zsh_rvm_prompt="${zsh_rvm_prompt} "
+  #   fi
+  # else
+  #   zsh_rvm_prompt=""
+  # fi
+  # echo $zsh_rvm_prompt
 }
 
 function prompt_caius_precmd {

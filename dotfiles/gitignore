@@ -8,5 +8,6 @@ tmtags
 /lib/common/caius_urls.rb
 .rake_tasks~
 .rvmrc
+.rbenv-version
 /.bundle/config
 /.rbx/

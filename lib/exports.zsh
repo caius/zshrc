@@ -4,7 +4,6 @@ PATH="$PATH:$HOME/.cabal/bin" # Haskell binfiles
 PATH="$PATH:/usr/local/bin:/usr/local/sbin" # Homebrew
 PATH="$PATH:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin" # Normal $PATH bit
 PATH="$PATH:/usr/texbin" # LaTeX stuff
-PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 export PATH
 
 # And the same for the manpath

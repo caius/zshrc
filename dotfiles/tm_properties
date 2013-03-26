@@ -7,7 +7,7 @@ tabSize = 2
 showInvisibles = false
 
 # Extra files to include
-myExtraIncludes = ".tm_properties,.htaccess,.gitignore,.rvmrc"
+myExtraIncludes = ".tm_properties,.htaccess,.gitignore,.rvmrc,.rbenv-version"
 fileBrowserGlob  = "{*,$myExtraIncludes}"
 include = "{$include,$myExtraIncludes}"
 
@@ -19,10 +19,10 @@ excludeInFolderSearch = "{$excludeInFolderSearch,$myExtraExcludes}"
 # Configure some binary paths
 TM_HG  = "/usr/local/bin/hg"
 TM_GIT = "/usr/local/bin/git"
-TM_RUBY = "/Users/caius/.rvm/bin/rvm-auto-ruby"
+TM_RUBY = "/usr/local/var/rbenv/shims/ruby"
 
 # Variables
-TM_ORGANIZATION_NAME = "SwedishCamground"
+TM_ORGANIZATION_NAME = ""
 TM_DOT = "/usr/local/bin/dot"
 
 # Specific file overrides

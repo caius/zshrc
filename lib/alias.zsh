@@ -151,3 +151,6 @@ alias bb-groups="brightbox-groups"
 alias bb-grps="brightbox-groups"
 alias bb-servers="brightbox-servers"
 alias bb-zones="brightbox-zones"
+
+# Habit
+alias rvm="rbenv"

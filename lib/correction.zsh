@@ -12,5 +12,4 @@ alias port='nocorrect port'
 alias brew='nocorrect brew'
 alias scp="nocorrect scp"
 alias rspec="nocorrect rspec"
-# alias rvm="nocorrect rvm"
 alias spec="nocorrect spec"
