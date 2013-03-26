@@ -22,10 +22,16 @@ function prompt_caius_precmd {
 	jobs % >/dev/null 2>&1 && psvar[2]=
 }
 
+function prompt_caius_battery {
+  echo $(pmset -g batt | tail -1 | awk '{ sub(";", "", $2); sub("%", "%%", $2); print $2 }')
+}
+
 function prompt_caius_setup {
 #  PS1='[%(2L.%L/.)'$ZSH_VERSION']%(?..%B{%v}%b)%n%(2v.%B@%b.@)%m:%B%~%b%(!.#.>) '
   PS1='%{$fg_bold[green]%}%m:%{$fg_bold[blue]%}%1~$(git_prompt_info) %{$fg[white]%}$(my_rvm_prompt)%{$reset_color%}%n%(!.#.$) '
   PS2='%(4_:... :)%3_> '
+
+  RPROMPT='$(prompt_caius_battery)'
 
   prompt_opts=( cr subst percent )
 
