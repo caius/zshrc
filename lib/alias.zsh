@@ -53,7 +53,7 @@ alias copypath='echo `pwd` | pbcopy'
 alias cdpath='cd "`pbpaste`"'
 
 ## Textmate alias'
-alias mate='/Users/caius/bin/mate -r'
+alias mate='\mate -r'
 alias m='mate -r'
 alias ,='mate -r'
 alias matew='mate -rw'
