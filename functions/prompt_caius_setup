@@ -23,7 +23,11 @@ function prompt_caius_precmd {
 }
 
 function prompt_caius_battery {
-  echo $(pmset -g batt | tail -1 | awk '{ sub(";", "", $2); sub("%", "%%", $2); print $2 }')
+  pmset -g batt | tail -1 | awk '{ sub(";", "", $2); sub("%", "%%", $2); print $2" ("$4")" }'
+}
+
+function prompt_caius_datetime {
+  date "+%Y-%m-%d %H:%M:%S"
 }
 
 function prompt_caius_setup {
@@ -31,7 +35,7 @@ function prompt_caius_setup {
   PS1='%{$fg_bold[green]%}%m:%{$fg_bold[blue]%}%1~$(git_prompt_info) %{$fg[white]%}$(my_rvm_prompt)%{$reset_color%}%n%(!.#.$) '
   PS2='%(4_:... :)%3_> '
 
-  RPROMPT='$(prompt_caius_battery)'
+  RPROMPT='$(prompt_caius_datetime) | $(prompt_caius_battery)'
 
   prompt_opts=( cr subst percent )
 
