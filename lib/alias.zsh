@@ -114,7 +114,6 @@ alias bundel="bundle"
 
 alias js="/System/Library/Frameworks/JavaScriptCore.framework/Versions/Current/Resources/jsc"
 
-alias mysqlstop='mysqladmin -u root -p shutdown'
 alias sqlite='sqlite3'
 alias crontab="EDITOR=nano crontab"
 
