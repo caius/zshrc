@@ -22,6 +22,10 @@ alias estaging='RAILS_ENV=staging'
 alias eproduction='RAILS_ENV=production'
 alias eprod="eproduction"
 
+# For running test unit *sigh*
+alias rtest="ruby -Itest"
+alias rt="ruby -Itest"
+
 alias be="bundle exec"
 alias ber="nocorrect bundle exec rake"
 
