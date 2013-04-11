@@ -1,0 +1,6 @@
+# Normal test for one file, require trick for multiple files
+if [[ -z $2 ]]; then
+  ruby -Itest $*
+else
+  ruby -I'.:test' -e 'ARGV.each {|f| require f }' $*
+fi
