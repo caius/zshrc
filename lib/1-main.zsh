@@ -5,6 +5,7 @@ autoload -U colors && colors
 autoload -U promptinit && promptinit
 autoload -U compinit -u && compinit -u
 autoload -U url-quote-magic
+autoload add-zsh-hook
 autoload zmv
 
 # Setup my prompt
