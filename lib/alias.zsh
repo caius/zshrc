@@ -157,3 +157,6 @@ alias bb-zones="brightbox-zones"
 
 # Habit
 alias rvm="rbenv"
+
+# Reload my shell!
+alias reload="exec zsh -l"
