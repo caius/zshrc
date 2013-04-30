@@ -2,6 +2,7 @@
 PATH="$HOME/bin" # Home folder overrides everything
 PATH="$PATH:$HOME/.cabal/bin" # Haskell binfiles
 PATH="$PATH:/usr/local/bin:/usr/local/sbin" # Homebrew
+PATH="$PATH:/usr/local/share/python" # Homebrew python scripts
 PATH="$PATH:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin" # Normal $PATH bit
 PATH="$PATH:/usr/texbin" # LaTeX stuff
 export PATH
@@ -28,7 +29,7 @@ export GIT_EDITOR="mate -wl1"
 export EDITOR='mate'
 
 # Fuck you python
-export PYTHONPATH="/usr/local/lib/python2.6/site-packages"
+export PYTHONPATH="/usr/local/lib/python2.7/site-packages"
 
 # Fuck you make
 export MAKEFLAGS="-j$(sysctl machdep.cpu.thread_count | awk '{ print $2 }')"
