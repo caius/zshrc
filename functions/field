@@ -1,0 +1,3 @@
+# function field {
+  awk "{ print \$${1} }"
+# }
