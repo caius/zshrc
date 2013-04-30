@@ -44,8 +44,8 @@ alias nt="terminal_clone_tab"
 alias cur='clear && pwd && ls'
 
 ## Top Stuff
-alias cpu='(which htop && htop --sort-key PERCENT_CPU) || top -o cpu'
-alias ram='(which htop && htop --sort-key RES) || top -o rsize'
+alias cpu='(which htop > /dev/null && htop --sort-key PERCENT_CPU) || top -o cpu'
+alias ram='(which htop > /dev/null && htop --sort-key RES) || top -o rsize'
 
 # Sources
 alias fa="cd ~/freeagent/src"
