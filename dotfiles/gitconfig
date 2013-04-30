@@ -92,6 +92,8 @@
   nyan = !sh -c \"nyancat\"
   standup = log --since yesterday --oneline --author caius
   rup = remote update --prune
+  prup = !sh -c \"git pr && git rup\"
+  rupr = !sh -c \"git prup\"
   # From http://blog.apiaxle.com/post/handy-git-tips-to-stop-you-getting-fired/
   assume   = update-index --assume-unchanged
   unassume = update-index --no-assume-unchanged
