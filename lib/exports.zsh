@@ -4,7 +4,7 @@ PATH="$PATH:$HOME/.cabal/bin" # Haskell binfiles
 PATH="$PATH:/usr/local/bin:/usr/local/sbin" # Homebrew
 PATH="$PATH:/usr/local/share/python" # Homebrew python scripts
 PATH="$PATH:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin" # Normal $PATH bit
-PATH="$PATH:/usr/texbin" # LaTeX stuff
+PATH="$PATH:/Users/caius/pebble-dev/arm-cs-tools/bin" # pebble SDK
 export PATH
 
 # And the same for the manpath
