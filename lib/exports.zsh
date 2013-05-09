@@ -34,6 +34,9 @@ export PYTHONPATH="/usr/local/lib/python2.7/site-packages"
 # Fuck you make
 export MAKEFLAGS="-j$(sysctl machdep.cpu.thread_count | awk '{ print $2 }')"
 
+# Fuck you JAVA
+export JAVA_HOME="$(/usr/libexec/java_home -v 1.6)"
+
 # From http://grease-your-suite.heroku.com/#87
 export RUBY_HEAP_MIN_SLOTS=1000000
 export RUBY_HEAP_SLOTS_INCREMENT=1000000
