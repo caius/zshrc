@@ -1,0 +1,9 @@
+# function ,() {
+  if [[ -z $1 ]]; then
+    # No arguments, behave like `mate .`
+    , "$PWD"
+  else
+    # Pass shit upstream to mate - uses alias' of mate
+    mate $*
+  fi
+# }
