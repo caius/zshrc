@@ -1,0 +1,12 @@
+# function y() {
+  # Expects $1 to be path to YAML file to load, and all remaining arguments to be nested keys
+  # Eg,
+  #   config.yml:
+  #   ---
+  #   parent:
+  #     child: "some value"
+  #
+  #   y config.yml parent child
+  #   # => some value
+  ruby -ryaml -e 'print YAML.load_file("'${1}'")'$(echo ${@:2} | sed -Ee 's/^/["/' -e 's/$/"]/' -e 's/ /"]["/')
+# }
