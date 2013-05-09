@@ -6,7 +6,7 @@
 --type-add=objc=.pch
 --type-set=plist=.plist
 --type-set=ragel=.rl
---type-add=ruby=.haml,.rake,.rsel,.feature
+--type-add=ruby=.haml,,.rsel,.feature
 --type-set=tmstuff=.tmproj,.tm_build_errors
 --type-set=xcode=.pbxproj,.pbxuser,.perspectivev3
 
