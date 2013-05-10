@@ -148,3 +148,5 @@
   insteadOf = gist:
 [credential]
   helper = osxkeychain
+[hub]
+	protocol = https
