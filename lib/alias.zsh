@@ -158,5 +158,8 @@ alias bb-zones="brightbox-zones"
 # Habit
 alias rvm="rbenv"
 
+# GPG2 installs `gpg2`, not `gpg`
+alias gpg="gpg2"
+
 # Reload my shell!
 alias reload="exec zsh -l"
