@@ -23,7 +23,9 @@ function prompt_caius_precmd {
 }
 
 function prompt_caius_battery {
-  pmset -g batt | tail -1 | awk '{ sub(";", "", $2); sub("%", "%%", $2); print $2" ("$4")" }'
+  if [[ "$(pmset -g | awk '/Active Profiles/, /Currently in use/ { if (!/Active Profiles/ && !/Currently in use/) print }' | wc -l)" -mt 2 ]]; then
+    pmset -g batt | tail -1 | awk '{ sub(";", "", $2); sub("%", "%%", $2); print $2" ("$4")" }'
+  fi
 }
 
 function prompt_caius_datetime {
