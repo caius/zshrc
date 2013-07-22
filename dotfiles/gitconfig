@@ -113,6 +113,7 @@
   renamelimit = 0
   mnemonicprefix = true
   renames = copies
+	algorithm = patience
 [mergetool]
   keepBackup = false
 [status]
