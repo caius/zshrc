@@ -11,8 +11,8 @@ myExtraIncludes = ".tm_properties,.htaccess,.gitignore,.rvmrc,.rbenv-version"
 fileBrowserGlob  = "{*,$myExtraIncludes}"
 include = "{$include,$myExtraIncludes}"
 
-# Hide log, vendor and tmp directories from search popups.
-myExtraExcludes = "log,vendor,tmp"
+# Hide log and vendor directories from search popups.
+myExtraExcludes = "log,vendor"
 excludeInFileChooser  = "{$excludeInFileChooser,$myExtraExcludes}"
 excludeInFolderSearch = "{$excludeInFolderSearch,$myExtraExcludes}"
 
