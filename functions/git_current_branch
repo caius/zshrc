@@ -1,3 +1,4 @@
 # function git_current_branch {
-  git describe --contains --all --exact-match HEAD 2> /dev/null || echo "no branch"
+  ref=$(git symbolic-ref HEAD 2> /dev/null) || (echo -n "no branch" && return)
+  echo ${ref#refs/heads/}
 # }
