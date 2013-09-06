@@ -19,7 +19,7 @@ excludeInFolderSearch = "{$excludeInFolderSearch,$myExtraExcludes}"
 # Configure some binary paths
 TM_HG  = "/usr/local/bin/hg"
 TM_GIT = "/usr/local/bin/git"
-TM_RUBY = "/usr/local/var/rbenv/shims/ruby"
+TM_RUBY = "/Users/caius/.rubies/ruby-1.9.3-p327-perf/bin/ruby"
 
 # Variables
 TM_ORGANIZATION_NAME = ""
