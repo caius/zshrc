@@ -20,6 +20,7 @@ excludeInFolderSearch = "{$excludeInFolderSearch,$myExtraExcludes}"
 TM_HG  = "/usr/local/bin/hg"
 TM_GIT = "/usr/local/bin/git"
 TM_RUBY = "/Users/caius/.rubies/ruby-1.9.3-p327-perf/bin/ruby"
+GEM_PATH = "/Users/caius/.gem/ruby/1.9.3:/Users/caius/.rubies/ruby-1.9.3-p327-perf/lib/ruby/gems/1.9.1"
 
 # Variables
 TM_ORGANIZATION_NAME = ""
