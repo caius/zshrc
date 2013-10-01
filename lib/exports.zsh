@@ -8,7 +8,7 @@ PATH="$PATH:/Users/caius/pebble-dev/arm-cs-tools/bin" # pebble SDK
 export PATH
 
 # And the same for the manpath
-export MANPATH="/Users/caius/man:/usr/share/man:/usr/local/share/man:/usr/X11/man"
+export MANPATH="/Users/caius/man:/usr/share/man:/usr/local/share/man:/usr/X11/man:/usr/local/opt/erlang/lib/erlang/man"
 
 ## pager
 export PAGER=less
