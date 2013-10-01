@@ -1,0 +1,9 @@
+# function fa() {
+  if [[ -z $1 ]]; then
+    # No arguments, behave like an alias
+    ff
+  else
+    # Pass shit upstream to devkit
+    devkit $*
+  fi
+# }
