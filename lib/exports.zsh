@@ -8,7 +8,10 @@ PATH="$PATH:/Users/caius/pebble-dev/arm-cs-tools/bin" # pebble SDK
 export PATH
 
 # And the same for the manpath
-export MANPATH="/Users/caius/man:/usr/share/man:/usr/local/share/man:/usr/X11/man:/usr/local/opt/erlang/lib/erlang/man"
+MANPATH="$HOME/man" # Home is where the critical is
+MANPATH="$MANPATH::/usr/share/man:/usr/local/share/man:/usr/X11/man" # The usual
+MANPATH="$MANPATH:/usr/local/opt/erlang/lib/erlang/man" # Erlang installed with homebrew
+export MANPATH
 
 ## pager
 export PAGER=less
