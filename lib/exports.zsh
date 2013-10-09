@@ -2,14 +2,13 @@
 PATH="$HOME/bin" # Home folder overrides everything
 PATH="$PATH:$HOME/.cabal/bin" # Haskell binfiles
 PATH="$PATH:/usr/local/bin:/usr/local/sbin" # Homebrew
-PATH="$PATH:/usr/local/share/python" # Homebrew python scripts
 PATH="$PATH:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin" # Normal $PATH bit
 PATH="$PATH:/Users/caius/pebble-dev/arm-cs-tools/bin" # pebble SDK
 export PATH
 
 # And the same for the manpath
 MANPATH="$HOME/man" # Home is where the critical is
-MANPATH="$MANPATH::/usr/share/man:/usr/local/share/man:/usr/X11/man" # The usual
+MANPATH="$MANPATH:/usr/share/man:/usr/local/share/man" # The usual
 MANPATH="$MANPATH:/usr/local/opt/erlang/lib/erlang/man" # Erlang installed with homebrew
 export MANPATH
 
