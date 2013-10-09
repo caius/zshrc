@@ -42,3 +42,6 @@ export JAVA_HOME="$(/usr/libexec/java_home -v 1.6)"
 
 # Coz I wanna be different, yeah?
 export SUDO_PROMPT="Sudo Password: "
+
+# If we have homebrew's curl-ca-bundle installed, use it
+[[ -d /usr/local/opt/curl-ca-bundle ]] && export SSL_CERT_FILE=/usr/local/opt/curl-ca-bundle/share/ca-bundle.crt
