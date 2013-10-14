@@ -6,6 +6,7 @@
   if [[ -e "script/console" ]]; then
     script/console $*
   else
-    rails console $*
+    SPRING="$(whence -p spring)"
+    $SPRING rails console $*
   fi
 # }

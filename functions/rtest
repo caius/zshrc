@@ -1,1 +1,7 @@
-ruby -I'.:test' -e 'finish = (( e = ARGV.find {|e| e[/^-/] } )) && ARGV.index(e) || 0; requires = ARGV[0..finish - 1]; original_verbosity, $VERBOSE = $VERBOSE, nil; ARGV -= requires; $VERBOSE = original_verbosity; requires.each {|x| require x }' $*
+SPRING="$(whence -p spring)"
+
+if [[ -z $SPRING ]]; then
+  ruby -I'.:test' -e 'finish = (( e = ARGV.find {|e| e[/^-/] } )) && ARGV.index(e) || 0; requires = ARGV[0..finish - 1]; original_verbosity, $VERBOSE = $VERBOSE, nil; ARGV -= requires; $VERBOSE = original_verbosity; requires.each {|x| require x }' $*
+else
+  $SPRING test $*
+fi
