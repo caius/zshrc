@@ -1,0 +1,4 @@
+# function savegif {
+  destination="$HOME/Google Drive/GifCentral/$2"
+  curl -o "$destination" "$1"
+# }
