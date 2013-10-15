@@ -160,3 +160,6 @@ alias rvm="rbenv"
 
 # Reload my shell!
 alias reload="exec zsh -l"
+
+# ag is faster than ack
+alias ack="ag"
