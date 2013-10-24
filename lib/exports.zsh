@@ -34,7 +34,11 @@ export EDITOR='mate'
 export PYTHONPATH="/usr/local/lib/python2.7/site-packages"
 
 # Fuck you make
-export MAKEFLAGS="-j$(sysctl machdep.cpu.thread_count | awk '{ print $2 }')"
+if [[ "FreeBSD" == $(uname) ]]; then
+  export MAKEFLAGS="-j$(sysctl hw.ncpu)"
+else
+  export MAKEFLAGS="-j$(sysctl machdep.cpu.thread_count | awk '{ print $2 }')"
+fi
 
 # Coz I wanna be different, yeah?
 export SUDO_PROMPT="Sudo Password: "
