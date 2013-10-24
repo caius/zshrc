@@ -35,7 +35,7 @@ export PYTHONPATH="/usr/local/lib/python2.7/site-packages"
 
 # Fuck you make
 if [[ "FreeBSD" == $(uname) ]]; then
-  export MAKEFLAGS="-j$(sysctl hw.ncpu)"
+  export MAKEFLAGS="-j$(sysctl hw.ncpu | awk '{ print $2 }')"
 else
   export MAKEFLAGS="-j$(sysctl machdep.cpu.thread_count | awk '{ print $2 }')"
 fi
