@@ -1,4 +1,6 @@
 # function savegif {
   destination="$HOME/Google Drive/GifCentral/$2"
+  # Append .gif if it doesn't have it
+  [[ "$destination" =~ "\.gif$" ]] || destination="$destination.gif"
   curl -o "$destination" "$1"
 # }
