@@ -121,7 +121,7 @@
 [status]
   showUntrackedFiles = all
 [push]
-  default = current
+	default = simple
 [rerere]
   enabled = true
 [advice]
