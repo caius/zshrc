@@ -25,6 +25,7 @@ alias eprod="eproduction"
 # For running test unit *sigh*
 # Depends on my rtest function
 alias rt="rtest"
+alias bert="rtest" # bundle exec ruby -Itest, etc
 
 alias be="bundle exec"
 alias ber="nocorrect bundle exec rake"
