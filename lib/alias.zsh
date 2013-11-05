@@ -164,3 +164,6 @@ alias reload="exec zsh -l"
 
 # ag is faster than ack
 alias ack="ag"
+
+# Fuck yes, I am this lazy
+alias v="vagrant"
