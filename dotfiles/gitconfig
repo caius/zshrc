@@ -27,7 +27,7 @@
   # autocrlf = input
   # safecrlf = true
 [alias]
-  # Spellings
+  ## Spellings
   ass = add
   doff = diff
   dff = diff
@@ -42,12 +42,16 @@
   pish = push
   satsh = stash
   mregetool = mergetool
-  x = !sh -c \"gitx\"
-  # Shortcuts
   sst = status -sb
   tst = status -sb
   t = status -sb
   ts = status -sb
+  prr = pull --rebase
+  prrr = pull --rebase
+  pullr = pull --rebase
+  tpr = pull --rebase
+
+  ## Shortcuts
   st = status -sb
   s = status -sb
   b = branch
@@ -55,50 +59,43 @@
   co = checkout
   cob = checkout -b
   cp = cherry-pick
+  l = log
   a = add
+  d = diff
   aa = add --all
   aap = add --all -p
   au = add -u
   aua = add -u .
   ap = add -p
   pr = pull --rebase
-  prr = pull --rebase
-  prrr = pull --rebase
-  pullr = pull --rebase
-  tpr = pull --rebase
+  rup = remote update --prune
   tome = pull
   toyou = push
-  pop = stash pop
   cl = clone
   vi = commit -v
   via = commit -va
   viaa = commit -va --amend
   sui = submodule update --init
-  pp = !sh -c 'git pull && git push'
-  merge-delete-branch = !sh -c \"git co master && git merge \\$0 && git branch -d \\$0\"
-  mirror-branch = checkout -t
   cot = checkout -t
-  git = !sh -c \"git \\$0 \\$*\"
-  rebase-on-master = !sh -c \"git rebase -i HEAD~`git log --format=oneline master.. | wc -l | awk '{ print $1 }'`\"
-  gtfu = !sh -c \"echo GET THE FUCK UP\"
-  dm = !sh -c \"git diff|mate\"
   dc = diff --cached
-  dcm = !sh -c \"git diff --cached|mate\"
-  clear = !sh -c \"clear\"
-  happify = !sh -c \"ln -s ~/.git/hooks/post-commit .git/hooks\"
-  mute = !sh -c \"rm .git/hooks/post-commit 1&> /dev/null || true\"
-  proj = !sh -c \"proj\"
-  d = diff
-  nyan = !sh -c \"nyancat\"
   standup = log --since yesterday --oneline --author caius
-  rup = remote update --prune
   prup = !sh -c \"git pr && git rup\"
   rupr = !sh -c \"git prup\"
+  dm = !sh -c \"git diff | mate\"
+  dcm = !sh -c \"git diff --cached | mate\"
+  x = !sh -c \"gitx\"
+  clear = !sh -c \"clear\"
+  git = !sh -c \"git \\$0 \\$*\"
+  rebase-on-master = !sh -c \"git rebase -i HEAD~`git log --format=oneline master.. | wc -l | awk '{ print $1 }'`\"
+  merge-master = !sh -c \" git stash && git co master && git prup && git co - && git merge master && git stash pop\"
+  gtfu = !sh -c \"echo GET THE FUCK UP\"
+  proj = !sh -c \"proj\"
+  nyan = !sh -c \"nyancat 2> /dev/null || echo gem install nyancat\"
+  # purge-merged = !sh -c \"git b -d `git b --merged | awk \"/^ / { print $1 }\" | xargs` || echo 'No branches to delete'\"
   # From http://blog.apiaxle.com/post/handy-git-tips-to-stop-you-getting-fired/
   assume   = update-index --assume-unchanged
   unassume = update-index --no-assume-unchanged
   assumed  = "!git ls-files -v | grep ^h | cut -c 3-"
-  purge-merged = !sh -c \"git b -d `git b --merged | awk \"/^ / { print $1 }\" | xargs` || echo 'No branches to delete'\"
 [branch]
   autosetupmerge = true
 [merge]
