@@ -1,6 +1,13 @@
 # function savegif {
-  destination="$HOME/Google Drive/GifCentral/$2"
+  # If arg 2 is given, use that as filename
+  if [[ -n $2 ]]; then
+    destination="$2"
+  else
+    # Otherwise, use the gif's name from the URL
+    destination="$(basename "$1")"
+  fi
+  destination="$HOME/Google Drive/GifCentral/${destination}"
   # Append .gif if it doesn't have it
-  [[ "$destination" =~ "\.gif$" ]] || destination="$destination.gif"
+  [[ "$destination" =~ "\.gif$" ]] || destination="${destination}.gif"
   curl -o "$destination" "$1"
 # }
