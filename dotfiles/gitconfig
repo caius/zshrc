@@ -39,6 +39,7 @@
   pushy = push
   tpush = push
   psuh = push
+  pus = push
   pish = push
   satsh = stash
   mregetool = mergetool
