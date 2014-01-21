@@ -19,8 +19,8 @@ excludeInFolderSearch = "{$excludeInFolderSearch,$myExtraExcludes}"
 # Configure some binary paths
 TM_HG  = "/usr/local/bin/hg"
 TM_GIT = "/usr/local/bin/git"
-TM_RUBY = "/Users/caius/.rubies/ruby-1.9.3-p327-perf/bin/ruby"
-GEM_PATH = "/Users/caius/.gem/ruby/1.9.3:/Users/caius/.rubies/ruby-1.9.3-p327-perf/lib/ruby/gems/1.9.1"
+TM_RUBY = "/Users/caius/.rubies/ruby-2.0.0-p353/bin/ruby"
+GEM_PATH = "/Users/caius/.gem/ruby/2.0.0:/Users/caius/.rubies/ruby-2.0.0-p353/lib/ruby/gems/2.0.0"
 GOPATH = "/Users/caius/go"
 
 # Variables
