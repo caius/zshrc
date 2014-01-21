@@ -52,3 +52,10 @@ zle -N self-insert url-quote-magic
 
 ## jobs
 setopt long_list_jobs
+
+# Homebrew version of ZSH comes with helpfiles
+if [[ -d /usr/local/share/zsh ]]; then
+  unalias run-help
+  autoload run-help
+  HELPDIR=/usr/local/share/zsh/helpfiles
+fi
