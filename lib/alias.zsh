@@ -28,7 +28,6 @@ alias rt="rtest"
 alias bert="rtest" # bundle exec ruby -Itest, etc
 
 alias be="bundle exec"
-alias ber="nocorrect spring rake"
 
 alias rcap=$(whence -p cap)
 
