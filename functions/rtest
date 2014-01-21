@@ -4,5 +4,5 @@ SPRING="$(whence -p spring)"
 if [[ -n $SPRING && (-f "config/application.rb" || -f "config/spring.rb" ) ]]; then
   $SPRING test $*
 else
-  ruby -I'.:test' -e 'finish = (( e = ARGV.find {|e| e[/^-/] } )) && ARGV.index(e) || 0; requires = ARGV[0..finish - 1]; original_verbosity, $VERBOSE = $VERBOSE, nil; ARGV -= requires; $VERBOSE = original_verbosity; requires.each {|x| require x }' $*
+  ruby -I'.:test' -e 'finish = (( e = ARGV.find {|e| e[/^-/] } )) && ARGV.index(e) || 0; requires = ARGV[0..finish - 1]; original_verbosity, $VERBOSE = $VERBOSE, nil; ARGV -= requires; $VERBOSE = original_verbosity; $0 = "rtest #{requires.join(", ")} #{ARGV.join(" ")}"; requires.each {|x| require x }' $*
 fi
