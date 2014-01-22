@@ -1,4 +1,14 @@
 # function git_current_branch {
-  ref=$(git symbolic-ref HEAD 2> /dev/null) || (echo -n "no branch" && return)
-  echo ${ref#refs/heads/}
+  local gitdir
+  gitdir="$GIT_DIR"
+  if [[ -z "$gitdir" ]]; then
+    gitdir=".git"
+  fi
+
+  if grep -q "ref" "$gitdir/HEAD"; then
+    # OVER 9000
+    cut -d '/' -f 3-9001 "$gitdir/HEAD"
+  else
+    echo "no branch"
+  fi
 # }
