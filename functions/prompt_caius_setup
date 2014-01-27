@@ -15,11 +15,12 @@ function prompt_caius_battery {
   if [[ "$(pmset -g | awk '/Active Profiles/, /Currently in use/ { if (!/Active Profiles/ && !/Currently in use/) print }' | wc -l)" -eq 2 ]]; then
     pmset -g batt | tail -1 | awk '{
       # TODO: handle AC Power not charging;
-      if ($3 == "charging;") {
-        status="⚡️"
-      } else {
-        status="🔋"
-      }
+      # TODO: Find a fucking unicode char that does not fuck my terminal up
+      # if ($3 == "charging;") {
+      #   status=" ⚡︎ "
+      # } else {
+      #   status="🔋"
+      # }
       sub(";", "", $2)
       sub("%", "%%", $2)
       print $2 status " (" $4")"
