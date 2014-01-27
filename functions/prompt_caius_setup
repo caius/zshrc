@@ -13,7 +13,17 @@ function prompt_caius_battery {
   fi
 
   if [[ "$(pmset -g | awk '/Active Profiles/, /Currently in use/ { if (!/Active Profiles/ && !/Currently in use/) print }' | wc -l)" -eq 2 ]]; then
-    pmset -g batt | tail -1 | awk '{ sub(";", "", $2); sub("%", "%%", $2); print $2" ("$4")" }'
+    pmset -g batt | tail -1 | awk '{
+      # TODO: handle AC Power not charging;
+      if ($3 == "charging;") {
+        status="⚡️"
+      } else {
+        status="🔋"
+      }
+      sub(";", "", $2)
+      sub("%", "%%", $2)
+      print $2 status " (" $4")"
+    }'
   fi
 }
 
