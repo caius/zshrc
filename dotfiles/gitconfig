@@ -49,6 +49,7 @@
   ts = status -sb
   prr = pull --rebase
   prrr = pull --rebase
+  purr = pull --rebase
   pullr = pull --rebase
   tpr = pull --rebase
 
