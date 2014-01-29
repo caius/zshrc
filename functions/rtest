@@ -1,8 +1,18 @@
-SPRING="$(whence -p spring)"
+# function rtest() {
+  SPRING="$(whence -p spring)"
 
-# Only invoke spring if either config file exists *and* we have spring in the PATH
-if [[ -n $SPRING && (-f "config/application.rb" || -f "config/spring.rb" ) ]]; then
-  $SPRING test $*
-else
-  bundle exec ruby -I'.:test' -e 'finish = (( e = ARGV.find {|e| e[/^-/] } )) && ARGV.index(e) || 0; requires = ARGV[0..finish - 1]; original_verbosity, $VERBOSE = $VERBOSE, nil; ARGV -= requires; $VERBOSE = original_verbosity; $0 = "rtest #{requires.join(", ")} #{ARGV.join(" ")}"; requires.each {|x| require x }' $*
-fi
+  # Only invoke spring if either config file exists *and* we have spring in the PATH
+  if [[ -n $SPRING && (-f "config/application.rb" || -f "config/spring.rb" ) ]]; then
+    $SPRING test $*
+  else
+    bundle exec ruby -I'.:test' -e 'args = ARGV.dup
+  finish = (( e = args.find {|e| e[/^-/] } )) && args.index(e) || 0
+  requires = args[0..finish - 1]
+  args -= requires
+  $0 = "rtest #{requires.join(", ")} #{args.join(" ")}"
+  requires.map do |path|
+    path = File.expand_path(path)
+    File.directory?(path) ? Dir[File.join(path, "**/*_test.rb")].to_a : path
+  end.flatten.each {|file| require file }' $*
+  fi
+# }
