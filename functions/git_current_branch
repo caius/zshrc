@@ -5,7 +5,7 @@
     gitdir=".git"
   fi
 
-  if grep -q "ref" "$gitdir/HEAD"; then
+  if grep -q "ref" "$gitdir/HEAD" 2> /dev/null; then
     # OVER 9000
     cut -d '/' -f 3-9001 "$gitdir/HEAD"
   else
