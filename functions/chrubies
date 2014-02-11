@@ -1,0 +1,24 @@
+# function chrubies () {
+  local original_ruby="$(chruby | grep \* | awk '{ print $2 }')"
+
+  rubies=(${(ps:,:)${1}})
+
+  # Loop over each ruby given
+  for r in $rubies; do
+    # Try to change to it, or skip to the next one if we can't
+    # chruby will print an error if we can't switch
+    chruby $r || continue
+
+    # Output current ruby version first
+    echo -n ">> ${r} => "; ruby -v
+    # Run whatever we've been asked to!
+    echo ">> ${@[2,-1]}:"
+
+    ${@[2,-1]}
+
+    echo
+  done
+
+  # Change back to our original ruby
+  chruby $original_ruby
+# }
