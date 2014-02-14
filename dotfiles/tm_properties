@@ -39,3 +39,6 @@ fileType = "text.plain"
 
 [ "{Gemfile,Gemfile.lock,Capfile,Rakefile,.rvmrc,.bundle/config}"]
 fileType = "source.ruby"
+
+[ "{.gitconfig}"]
+fileType = "source.git-config"
