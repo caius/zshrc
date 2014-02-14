@@ -4,10 +4,10 @@ fontName = "LiberationMono"
 softWrap = true
 softTabs = true
 tabSize = 2
-showInvisibles = false
+showInvisibles = true
 
 # Extra files to include
-myExtraIncludes = ".tm_properties,.htaccess,.gitignore,.rvmrc,.rbenv-version"
+myExtraIncludes = ".tm_properties,.gitignore,.ruby-version,.env"
 fileBrowserGlob  = "{*,$myExtraIncludes}"
 include = "{$include,$myExtraIncludes}"
 
