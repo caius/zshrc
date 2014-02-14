@@ -100,6 +100,7 @@
   assumed  = "!git ls-files -v | grep ^h | cut -c 3-"
 [branch]
   autosetupmerge = true
+  autosetuprebase = always
 [merge]
   tool = opendiff
   stat = true
