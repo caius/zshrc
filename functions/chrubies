@@ -1,5 +1,5 @@
 # function chrubies () {
-  local original_ruby="$(chruby | grep \* | awk '{ print $2 }')"
+  original_ruby="$(chruby | grep \* | awk '{ print $2 }')"
 
   rubies=(${(ps:,:)${1}})
 
