@@ -1,135 +1,135 @@
 [user]
-  name = Caius Durling
-  email = dev@caius.name
+	name = Caius Durling
+	email = dev@caius.name
 [color]
-  branch = auto
-  diff = auto
-  status = auto
+	branch = auto
+	diff = auto
+	status = auto
 [color "branch"]
-  current = yellow reverse
-  local = yellow
-  remote = green
+	current = yellow reverse
+	local = yellow
+	remote = green
 [color "diff"]
-  meta = yellow bold
-  frag = magenta bold
-  old = red bold
-  new = green bold
+	meta = yellow bold
+	frag = magenta bold
+	old = red bold
+	new = green bold
 [color "status"]
-  added = yellow
-  changed = green
-  untracked = cyan
+	added = yellow
+	changed = green
+	untracked = cyan
 [color]
-  ui = true
+	ui = true
 [core]
-  whitespace = fix,-indent-with-non-tab,trailing-space,cr-at-eol
-  excludesfile = /Users/caius/.gitignore
-  # Deals with shitty projects having shitty line endings. Normally not needed.
-  # autocrlf = input
-  # safecrlf = true
+	whitespace = fix,-indent-with-non-tab,trailing-space,cr-at-eol
+	excludesfile = /Users/caius/.gitignore
+	# Deals with shitty projects having shitty line endings. Normally not needed.
+	# autocrlf = input
+	# safecrlf = true
 [alias]
-  ## Spellings
-  ass = add
-  doff = diff
-  dff = diff
-  idff = diff
-  pl = pull
-  tpull = pull
-  oull = pull
-  ps = push
-  pushy = push
-  tpush = push
-  psuh = push
-  pus = push
-  pish = push
-  satsh = stash
-  mregetool = mergetool
-  sst = status -sb
-  tst = status -sb
-  t = status -sb
-  ts = status -sb
-  prr = pull --rebase
-  prrr = pull --rebase
-  purr = pull --rebase
-  pullr = pull --rebase
-  tpr = pull --rebase
+	## Spellings
+	ass = add
+	doff = diff
+	dff = diff
+	idff = diff
+	pl = pull
+	tpull = pull
+	oull = pull
+	ps = push
+	pushy = push
+	tpush = push
+	psuh = push
+	pus = push
+	pish = push
+	satsh = stash
+	mregetool = mergetool
+	sst = status -sb
+	tst = status -sb
+	t = status -sb
+	ts = status -sb
+	prr = pull --rebase
+	prrr = pull --rebase
+	purr = pull --rebase
+	pullr = pull --rebase
+	tpr = pull --rebase
 
-  ## Shortcuts
-  st = status -sb
-  s = status -sb
-  b = branch
-  ci = commit
-  co = checkout
-  cob = checkout -b
-  cp = cherry-pick
-  l = log
-  a = add
-  d = diff
-  aa = add --all
-  aap = add --all -p
-  au = add -u
-  aua = add -u .
-  ap = add -p
-  pr = pull --rebase
-  rup = remote update --prune
-  tome = pull
-  toyou = push
-  cl = clone
-  vi = commit -v
-  via = commit -va
-  viaa = commit -va --amend
-  sui = submodule update --init
-  cot = checkout -t
-  dc = diff --cached
-  standup = log --since yesterday --oneline --author caius
-  prup = !sh -c \"git pr && git rup\"
-  rupr = !sh -c \"git prup\"
-  dm = !sh -c \"git diff | mate\"
-  dcm = !sh -c \"git diff --cached | mate\"
-  x = !sh -c \"gitx\"
-  clear = !sh -c \"clear\"
-  git = !sh -c \"git \\$0 \\$*\"
-  rebase-on-master = !sh -c \"git rebase -i HEAD~`git log --format=oneline master.. | wc -l | awk '{ print $1 }'`\"
-  merge-master = !sh -c \" git stash && git co master && git prup && git co - && git merge master && git stash pop\"
-  gtfu = !sh -c \"echo GET THE FUCK UP\"
-  proj = !sh -c \"proj\"
-  nyan = !sh -c \"nyancat 2> /dev/null || echo gem install nyancat\"
-  # purge-merged = !sh -c \"git b -d `git b --merged | awk \"/^ / { print $1 }\" | xargs` || echo 'No branches to delete'\"
-  # From http://blog.apiaxle.com/post/handy-git-tips-to-stop-you-getting-fired/
-  assume   = update-index --assume-unchanged
-  unassume = update-index --no-assume-unchanged
-  assumed  = "!git ls-files -v | grep ^h | cut -c 3-"
+	## Shortcuts
+	st = status -sb
+	s = status -sb
+	b = branch
+	ci = commit
+	co = checkout
+	cob = checkout -b
+	cp = cherry-pick
+	l = log
+	a = add
+	d = diff
+	aa = add --all
+	aap = add --all -p
+	au = add -u
+	aua = add -u .
+	ap = add -p
+	pr = pull --rebase
+	rup = remote update --prune
+	tome = pull
+	toyou = push
+	cl = clone
+	vi = commit -v
+	via = commit -va
+	viaa = commit -va --amend
+	sui = submodule update --init
+	cot = checkout -t
+	dc = diff --cached
+	standup = log --since yesterday --oneline --author caius
+	prup = !sh -c \"git pr && git rup\"
+	rupr = !sh -c \"git prup\"
+	dm = !sh -c \"git diff | mate\"
+	dcm = !sh -c \"git diff --cached | mate\"
+	x = !sh -c \"gitx\"
+	clear = !sh -c \"clear\"
+	git = !sh -c \"git \\$0 \\$*\"
+	rebase-on-master = !sh -c \"git rebase -i HEAD~`git log --format=oneline master.. | wc -l | awk '{ print $1 }'`\"
+	merge-master = !sh -c \" git stash && git co master && git prup && git co - && git merge master && git stash pop\"
+	gtfu = !sh -c \"echo GET THE FUCK UP\"
+	proj = !sh -c \"proj\"
+	nyan = !sh -c \"nyancat 2> /dev/null || echo gem install nyancat\"
+	# purge-merged = !sh -c \"git b -d `git b --merged | awk \"/^ / { print $1 }\" | xargs` || echo 'No branches to delete'\"
+	# From http://blog.apiaxle.com/post/handy-git-tips-to-stop-you-getting-fired/
+	assume	 = update-index --assume-unchanged
+	unassume = update-index --no-assume-unchanged
+	assumed	 = "!git ls-files -v | grep ^h | cut -c 3-"
 [branch]
-  autosetupmerge = true
-  autosetuprebase = always
+	autosetupmerge = true
+	autosetuprebase = always
 [merge]
-  tool = opendiff
-  stat = true
+	tool = opendiff
+	stat = true
 	ff = false
 [help]
-  autocorrect = 0
+	autocorrect = 0
 [diff "exif"]
-  textconv = exiftool
+	textconv = exiftool
 [diff "doc"]
-  textconv = strings
+	textconv = strings
 [diff]
-  renamelimit = 0
-  mnemonicprefix = true
-  renames = copies
+	renamelimit = 0
+	mnemonicprefix = true
+	renames = copies
 	algorithm = patience
 [mergetool]
-  keepBackup = false
+	keepBackup = false
 [status]
-  showUntrackedFiles = all
+	showUntrackedFiles = all
 [push]
-  default = current
+	default = current
 [rerere]
-  enabled = true
+	enabled = true
 [advice]
-  statusHints = true
-  pushNonFastForward = false
+	statusHints = true
+	pushNonFastForward = false
 [merge "railsschema"]
-  name = newer Rails schema version
-  driver = ruby -e '\n\
+	name = newer Rails schema version
+	driver = ruby -e '\n\
 "                system %(git), %(merge-file), %(--marker-size=%L), %(%A), %(%O), %(%B)"\n\
 "                b = File.read(%(%A))"\n\
 "                b.sub!(/^<+ .*\\nActiveRecord::Schema\\.define.:version => (\\d+). do\\n=+\\nActiveRecord::Schema\\.define.:version => (\\d+). do\\n>+ .*/) do"\n\
@@ -138,18 +138,18 @@
 "                File.open(%(%A), %(w)) {|f| f.write(b)}"\n\
 "                exit 1 if b.include?(%(<)*%L)'"
 [url "git@github.com:"]
-  insteadOf = gh:
-  pushInsteadOf = github:
-  pushInsteadOf = git://github.com/
+	insteadOf = gh:
+	pushInsteadOf = github:
+	pushInsteadOf = git://github.com/
 [url "git://github.com/"]
-  insteadOf = github:
+	insteadOf = github:
 [url "git@gist.github.com:"]
-  insteadOf = gst:
-  pushInsteadOf = gist:
-  pushInsteadOf = git://gist.github.com/
+	insteadOf = gst:
+	pushInsteadOf = gist:
+	pushInsteadOf = git://gist.github.com/
 [url "git://gist.github.com/"]
-  insteadOf = gist:
+	insteadOf = gist:
 [credential]
-  helper = osxkeychain
+	helper = osxkeychain
 [hub]
 	protocol = https
