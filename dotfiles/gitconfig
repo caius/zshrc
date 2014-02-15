@@ -104,7 +104,6 @@
 [merge]
 	tool = opendiff
 	stat = true
-	ff = false
 [help]
 	autocorrect = 0
 [diff "exif"]
