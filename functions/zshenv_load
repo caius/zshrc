@@ -1,0 +1,32 @@
+# Looks for .zshenv files in $PWD and loads keyvalue
+# pairs into the environment from said file.
+#
+# Intended to be called from chpwd() - tracks last
+# zshenv file ($OLD_ENVFILE) and unsets values from
+# there
+#
+# function caius_load_environment() {
+  export ENVFILE="$PWD/.zshenv"
+
+  # If there is a previous envfile, and the file exists
+  # NB: remove before add so we don't clobber new values
+  # for same key names.
+  if [[ -n "$OLD_ENVFILE" && -f "$OLD_ENVFILE" ]]; then
+    # Unset all the tokens in $OLD_ENVFILE
+    while read i; do
+      i=${i%%#*} # Strip all comments
+      i=${i%%=*} # Grab the variable name alone
+      [[ -n "$i" ]] && unset $i
+    done < "$OLD_ENVFILE"
+  fi
+
+  # Now setup from the new file
+  if [[ -n "$ENVFILE" && -f "$ENVFILE" ]]; then
+    while read i; do
+      i=${i%%#*} # Strip all comments
+      [[ -n "$i" ]] && export $i
+    done < "$ENVFILE"
+  fi
+
+  export OLD_ENVFILE="$ENVFILE"
+# }

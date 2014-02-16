@@ -58,3 +58,12 @@ if [[ -d /usr/local/share/zsh ]]; then
   autoload run-help
   HELPDIR=/usr/local/share/zsh/helpfiles
 fi
+
+# When changing PWD, load any new zshenv's and
+# unload any previous ones
+function chpwd() {
+  zshenv_load
+}
+
+# Initial load in case of ~/.zshenv
+zshenv_load
