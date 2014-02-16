@@ -1,6 +1,9 @@
 # Make sure we’re using the latest Homebrew
 update
 
+# And have upgraded packages [optional]
+# upgrade
+
 # Useful baseline of packages
 install apple-gcc42
 install autoconf
@@ -70,7 +73,41 @@ tap phinze/cask
 install brew-cask
 
 # Install some apps
-install google-chrome
+cask install betterzipql
+cask install bonjour-browser
+cask install charles
+cask install coconutbattery
+cask install delivery-status
+cask install dropbox
+cask install evernote
+cask install f-lux
+cask install firefox
+cask install gfxcardstatus
+cask install gitx
+cask install google-chrome
+cask install httpscoop
+cask install launchbar
+cask install limechat
+cask install mplayerx
+cask install picturelife
+cask install qlcolorcode
+cask install qlmarkdown
+cask install qlprettypatch
+cask install qlstephen
+cask install quicklook-csv
+cask install quicklook-json
+cask install scriptql
+cask install skype
+cask install spotify
+cask install suspicious-package
+cask install textmate2
+cask install textwrangler
+cask install the-unarchiver
+cask install vagrant
+cask install virtualbox
+cask install viscosity
+cask install webp-quicklook
+
 
 # Remove outdated versions from the cellar
 cleanup
