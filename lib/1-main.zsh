@@ -8,15 +8,12 @@ autoload -U url-quote-magic
 autoload add-zsh-hook
 autoload zmv
 
-# Setup my prompt
-setopt prompt_subst
-prompt caius
-
 # Options
 setopt auto_cd
 setopt multios
 setopt cdablevarS
 setopt BRACE_CCL # echo {a-c} # => [a,b,c]
+setopt long_list_jobs # tweak jobs
 
 # Completion
 setopt noautomenu
@@ -50,8 +47,9 @@ setopt pushd_ignore_dups
 ## smart urls
 zle -N self-insert url-quote-magic
 
-## jobs
-setopt long_list_jobs
+# Setup my prompt
+setopt prompt_subst
+prompt caius
 
 # Homebrew version of ZSH comes with helpfiles
 if [[ -d /usr/local/share/zsh ]]; then
