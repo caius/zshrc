@@ -1,0 +1,76 @@
+# Make sure we’re using the latest Homebrew
+update
+
+# Useful baseline of packages
+install apple-gcc42
+install autoconf
+install automake
+install curl-ca-bundle
+install libffi
+install libyaml
+install openssl
+install qt
+install readline
+
+# All the other "standard" packages
+install ag
+install aget
+install chruby
+install class-dump
+install coreutils
+install dnstop
+install dos2unix
+install exiftool
+install ffmpeg
+install flvstreamer
+install freeimage
+install freetype
+install gist
+install git
+install git-extras
+install gnu-sed
+install gnu-time
+install gnupg
+install gnutls
+install gpgme
+install graphviz
+install htop-osx
+install hub
+install imagemagick
+install ioping
+install jq
+install lynx
+install md5sha1sum
+install mplayer
+install mtr
+install netcat
+install ngrep
+install phantomjs
+install pkg-config
+install proctools
+install psgrep
+install pwgen
+install python --with-brewed-openssl
+install python3 --with-brewed-openssl
+install redis
+install rrdtool
+install rtmpdump
+install ruby-install
+install sqlite
+install tree
+install unrar
+install watch
+install wdiff
+install wget
+install wkhtmltopdf
+install youtube-dl
+
+# Brew cask!
+tap phinze/cask
+install brew-cask
+
+# Install some apps
+install google-chrome
+
+# Remove outdated versions from the cellar
+cleanup

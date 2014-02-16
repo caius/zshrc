@@ -3,7 +3,7 @@
 # Moves existing files aside if they don't match, to ~/.*.EPOCH-old
 
 ZSH_ROOT="$HOME/.zsh"
-NO_DOT=()
+NO_DOT=(Brewfile)
 
 echo "Installing dotfiles from $ZSH_ROOT/dotfiles to $HOME"
 
