@@ -5,6 +5,7 @@ export ARCHFLAGS="-arch x86_64"
 PATH="$HOME/bin" # Home folder overrides everything
 PATH="$PATH:$HOME/.cabal/bin" # Haskell binfiles
 PATH="$PATH:/usr/local/bin:/usr/local/sbin" # Homebrew
+PATH="$PATH:$HOME/pebble-dev/PebbleSDK-2.0.0/bin" # Pebble developer
 PATH="$PATH:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin" # Normal $PATH bit
 export PATH
 
