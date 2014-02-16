@@ -1,13 +1,20 @@
 #!/usr/bin/env zsh
-# Symlinks ~/.zsh/dotfiles/* to ~/.*
+# Symlinks ~/.zsh/dotfiles/* to ~/.* (or ~/* - see $NO_DOT)
 # Moves existing files aside if they don't match, to ~/.*.EPOCH-old
 
 ZSH_ROOT="$HOME/.zsh"
+NO_DOT=()
 
 echo "Installing dotfiles from $ZSH_ROOT/dotfiles to $HOME"
 
 for FROM in $ZSH_ROOT/dotfiles/*; do
-  NAME=".$(basename $FROM)"
+  NAME="$(basename $FROM)"
+
+  # Dot the file unless it's blacklisted
+  if [[ ! -n ${(M)NO_DOT:#${NAME}} ]]; then
+    NAME=".${NAME}"
+  fi
+
   TO="$HOME/$NAME"
   # echo "TO: $TO"
   # echo "FROM: $FROM"
