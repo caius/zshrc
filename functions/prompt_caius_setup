@@ -24,7 +24,10 @@ function prompt_caius_battery {
       }
       sub(";", "", $2)
       sub("%", "%%", $2)
-      print $2 icon " (" $4")"
+      print $2 icon " "
+      if ($4 != "0:00") {
+        print "(" $4")"
+      }
     }'
   fi
 }
@@ -34,7 +37,7 @@ function prompt_caius_datetime {
 }
 
 function prompt_caius_ruby {
-	type chruby > /dev/null && (chruby | awk '/\*/ { print $2 }')
+	type chruby > /dev/null && (chruby | awk '/\*/ { sub("ruby-", "", $2); print $2 }')
 }
 
 function prompt_caius_setup {
