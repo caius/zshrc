@@ -27,10 +27,11 @@ export LC_CTYPE=en_US.UTF-8
 export LANG=en_GB.UTF-8
 
 # Editors
-export SVN_EDITOR="mate -wl1"
-export HGEDITOR="mate -wl1"
-export GIT_EDITOR="mate -wl1"
-export EDITOR='mate'
+e="mate -wl1"
+export SVN_EDITOR="$e"
+export HGEDITOR="$e"
+export GIT_EDITOR="$e"
+export EDITOR="$e"
 
 # Fuck you make
 if [[ "FreeBSD" == $(uname) ]]; then
