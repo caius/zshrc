@@ -19,7 +19,7 @@ install readline
 install ag
 install aget
 install chruby
-install class-dump
+#install class-dump # Requires Xcode, not just cli tools
 install coreutils
 install dnstop
 install dos2unix
@@ -36,7 +36,7 @@ install gnu-time
 install gnupg
 install gnutls
 install gpgme
-install graphviz
+#install graphviz # Requires Xcode, not just cli tools
 install htop-osx
 install hub
 install imagemagick
