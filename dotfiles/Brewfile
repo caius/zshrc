@@ -96,7 +96,6 @@ cask install scriptql
 cask install skype
 cask install spotify
 cask install suspicious-package
-cask install textmate2
 cask install textwrangler
 cask install the-unarchiver
 cask install vagrant
