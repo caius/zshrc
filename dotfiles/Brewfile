@@ -56,7 +56,6 @@ install pwgen
 install python --with-brewed-openssl
 install python3 --with-brewed-openssl
 install redis
-install rrdtool
 install rtmpdump
 install ruby-install
 install sqlite
