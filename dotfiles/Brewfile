@@ -19,7 +19,6 @@ install readline
 install ag
 install aget
 install chruby
-#install class-dump # Requires Xcode, not just cli tools
 install coreutils
 install dnstop
 install dos2unix
@@ -36,7 +35,6 @@ install gnu-time
 install gnupg
 install gnutls
 install gpgme
-#install graphviz # Requires Xcode, not just cli tools
 install htop-osx
 install hub
 install imagemagick
@@ -76,7 +74,6 @@ cask install betterzipql
 cask install bonjour-browser
 cask install charles
 cask install coconutbattery
-cask install delivery-status
 cask install dropbox
 cask install evernote
 cask install f-lux
