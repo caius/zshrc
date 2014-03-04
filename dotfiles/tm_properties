@@ -19,9 +19,24 @@ excludeInFolderSearch = "{$excludeInFolderSearch,$myExtraExcludes}"
 # Configure some binary paths
 TM_HG  = "/usr/local/bin/hg"
 TM_GIT = "/usr/local/bin/git"
-TM_RUBY = "/Users/caius/.rubies/ruby-2.0.0-p353/bin/ruby"
-GEM_PATH = "/Users/caius/.gem/ruby/2.0.0:/Users/caius/.rubies/ruby-2.0.0-p353/lib/ruby/gems/2.0.0"
 GOPATH = "/Users/caius/go"
+
+TM_RUBY = "/Users/caius/.rubies/ruby-2.1.1/bin/ruby"
+RUBY_ROOT="/Users/caius/.rubies/ruby-2.1.1"
+RUBY_ENGINE="ruby"
+RUBY_VERSION="2.1.1"
+GEM_ROOT="/Users/caius/.rubies/ruby-2.1.1/lib/ruby/gems/2.1.0"
+GEM_HOME="/Users/caius/.gem/ruby/2.1.1"
+GEM_PATH="/Users/caius/.gem/ruby/2.1.1:/Users/caius/.rubies/ruby-2.1.1/lib/ruby/gems/2.1.0"
+RUBY_HEAP_SLOTS_INCREMENT=1000000
+RUBY_HEAP_SLOTS_GROWTH_FACTOR=1
+RUBY_GC_MALLOC_LIMIT=1000000000
+RUBY_HEAP_FREE_MIN=500000
+RUBY_GC_HEAP_INIT_SLOTS=1000000
+RUBY_GC_HEAP_FREE_SLOTS=200000
+RUBY_HEAP_MIN_SLOTS=1000000
+RUBY_FREE_MIN=200000
+RUBYOPT=
 
 # Variables
 TM_ORGANIZATION_NAME = ""
