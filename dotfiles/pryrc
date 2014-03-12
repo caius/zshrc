@@ -11,3 +11,12 @@ Pry.config.prompt = [
   proc { |obj, nest_level, _| "#{RUBY_VERSION} (#{obj}):#{nest_level} > " },
   proc { |obj, nest_level, _| "#{RUBY_VERSION} (#{obj}):#{nest_level} * " }
 ]
+
+def mate(*args)
+  if Array === args.first && args.first.size == 2 && String === args.first.first && Integer === args.first.last
+    file, line = args.first
+    system "mate", file, "-l", line.to_s
+  else
+    puts "Whoops, mate() can't handle #{args.inspect} yet!"
+  end
+end
