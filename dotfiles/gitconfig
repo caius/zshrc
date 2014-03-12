@@ -98,6 +98,7 @@
 	assume	 = update-index --assume-unchanged
 	unassume = update-index --no-assume-unchanged
 	assumed	 = "!git ls-files -v | grep ^h | cut -c 3-"
+	up = "!git remote update -p; git merge --ff-only @{u}"
 [branch]
 	autosetupmerge = true
 	autosetuprebase = always
