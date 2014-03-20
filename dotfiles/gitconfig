@@ -70,7 +70,6 @@
 	aua = add -u .
 	ap = add -p
 	pr = pull --rebase
-	rup = remote update --prune
 	tome = pull
 	toyou = push
 	cl = clone
@@ -81,15 +80,11 @@
 	cot = checkout -t
 	dc = diff --cached
 	standup = log --since yesterday --oneline --author caius
-	prup = "!git pr && git rup"
-	rupr = "!git prup"
 	dm = "!git diff | mate"
 	dcm = "!git diff --cached | mate"
 	x = "!gitx"
 	clear = "!clear"
 	git = "!git \\$0 \\$*"
-	rebase-on-master = "!git rebase -i HEAD~`git log --format=oneline master.. | wc -l | awk '{ print $1 }'`"
-	merge-master = "!git stash && git co master && git prup && git co - && git merge master && git stash pop"
 	gtfu = "!echo GET THE FUCK UP"
 	proj = "!proj"
 	nyan = "!nyancat 2> /dev/null || echo gem install nyancat"
