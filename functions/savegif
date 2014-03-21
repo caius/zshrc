@@ -6,8 +6,5 @@
     # Otherwise, use the gif's name from the URL
     destination="$(basename "$1")"
   fi
-  destination="$HOME/GoogleDrive/GifCentral/${destination}"
-  # Append .gif if it doesn't have it
-  [[ "$destination" =~ "\.gif$" ]] || destination="${destination}.gif"
-  curl -o "$destination" "$1"
+  curl -o "$HOME/GoogleDrive/GifCentral/${destination/.gif/}.gif" "$1"
 # }
