@@ -1,14 +1,10 @@
 # Runs `git push` before `cap deploy`
 # Otherwise just passes through to `cap`
 # function cap {
-  CAP=$(whence -p cap)
-  if [[ "$1" == "deploy" || "$2" == "deploy" || "$3" == "deploy" || "$1" == "deploy:migrations" || "$2" == "deploy:migrations" ]]; then
-    git push || return 1
-  fi
-  # Handle those projects without a Gemfile
+  # Run with Gemfile
   if [[ -f "Gemfile" ]]; then
     bundle exec cap $*
   else
-    $CAP $*
+    command cap $*
   fi
 # }

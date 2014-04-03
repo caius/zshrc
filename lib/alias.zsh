@@ -29,8 +29,6 @@ alias bert="rtest" # bundle exec ruby -Itest, etc
 
 alias be="bundle exec"
 
-alias rcap=$(whence -p cap)
-
 alias gvg='grep -v grep'
 
 alias rc='mate ~/.zsh'
