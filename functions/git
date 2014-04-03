@@ -2,7 +2,6 @@
 # Adds various checks to `git` as detailed below:
 #  * Changes `git rebase .` into `git rebase origin/$current_branch`
 # function git {
-  GIT=$(whence -p git)
   CONTINUE=true
 
   # git rebase
@@ -13,7 +12,7 @@
       CONTINUE=false
 
       # Run our actual git rebase
-      $GIT rebase origin/$(git_current_branch)
+      command git rebase origin/$(git_current_branch)
     fi
   fi
 
@@ -21,6 +20,6 @@
   # The default is to run the command so this
   # fires unless a check has disabled it.
   if [[ $CONTINUE == true ]]; then
-    $GIT $*
+    command git $*
   fi
 # }

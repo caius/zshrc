@@ -1,9 +1,7 @@
 # function rtest() {
-  SPRING="$(whence -p spring)"
-
   # Only invoke spring if either config file exists *and* we have spring in the PATH
-  if [[ -n $SPRING && (-f "config/application.rb" || -f "config/spring.rb" ) ]]; then
-    $SPRING test $*
+  if [[ -n "$(whence -p spring)" && (-f "config/application.rb" || -f "config/spring.rb" ) ]]; then
+    command spring test $*
   else
     bundle exec ruby -I'.:test' -e 'args = ARGV.dup
   finish = (( e = args.find {|e| e[/^-/] } )) && args.index(e) || 0

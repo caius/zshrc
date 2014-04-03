@@ -20,7 +20,6 @@
   if [[ -e "script/server" ]]; then
     bundle exec script/server $SERVER_ARGS
   else
-    SPRING="$(whence -p spring)"
-    $SPRING rails server $SERVER_ARGS
+    command spring rails server $SERVER_ARGS
   fi
 # }
