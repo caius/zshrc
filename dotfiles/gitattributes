@@ -1,3 +1,12 @@
+*.rb diff=ruby
+*.html diff=html
+*.htm diff=html
+*.java diff=java
+*.cpp diff=cpp
+*.php diff=php
+*.python diff=python
+*.m diff=objc
+*.c diff=cpp
 *.png diff=exif
 *.doc diff=doc
 db/schema.rb merge=railsschema
