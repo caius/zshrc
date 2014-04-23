@@ -106,6 +106,13 @@ cask install vagrant
 cask install viscosity
 cask install webp-quicklook
 
+# Install some fonts
+tap caskroom/fonts
+cask install font-inconsolata
+cask install font-liberation-sans
+cask install font-open-sans
+cask install font-source-code-pro
+cask install font-source-sans-pro
 
 # Remove outdated versions from the cellar
 cleanup
