@@ -1,3 +1,6 @@
+# Output timing info for slow commands
+export REPORTTIME=5
+
 # If we're 64bit, let everything know!
 [[ "x86_64" == "$(uname -m)" ]] && export ARCHFLAGS="-arch x86_64 ${ARCHFLAGS}"
 
@@ -15,7 +18,7 @@ MANPATH="$MANPATH:/usr/share/man:/usr/local/share/man" # The usual
 export MANPATH
 
 ## pager
-export PAGER=less
+export PAGER=less READNULLCMD=less
 
 # Make ls and grep coloured
 export CLICOLOR=true
