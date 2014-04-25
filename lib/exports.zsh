@@ -1,5 +1,5 @@
-# We are 64bit!
-export ARCHFLAGS="-arch x86_64"
+# If we're 64bit, let everything know!
+[[ "x86_64" == "$(uname -m)" ]] && export ARCHFLAGS="-arch x86_64 ${ARCHFLAGS}"
 
 # make sure Homebrew s/bin comes first
 PATH="$HOME/bin" # Home folder overrides everything
@@ -23,25 +23,22 @@ export GREP_OPTIONS='--color=auto' GREP_COLOR='1;32'
 export LSCOLORS="Gxfxcxdxbxegedabagacad"
 
 # Textmate required
-export LC_CTYPE=en_US.UTF-8
-export LANG=en_GB.UTF-8
+export LC_CTYPE=en_US.UTF-8 LANG=en_GB.UTF-8
 
 # Editors
-e="mate -wl1"
-export SVN_EDITOR="$e"
-export HGEDITOR="$e"
-export GIT_EDITOR="$e"
-export EDITOR="$e"
+export EDITOR="mate -wl1"
+export SVN_EDITOR="$EDITOR" HGEDITOR="$EDITOR" GIT_EDITOR="$EDITOR"
 
 # Fuck you make
-if [[ "FreeBSD" == $(uname) ]]; then
-  export MAKEFLAGS="-j$(sysctl hw.ncpu | awk '{ print $2 }')"
+if [[ "FreeBSD" == "$(uname)" ]]; then
+  MAKEFLAGS="-j$(sysctl hw.ncpu | awk '{ print $2 }')"
 else
-  export MAKEFLAGS="-j$(sysctl machdep.cpu.thread_count | awk '{ print $2 }')"
+  MAKEFLAGS="-j$(sysctl machdep.cpu.thread_count | awk '{ print $2 }')"
 fi
+export MAKEFLAGS
 
 # Coz I wanna be different, yeah?
 export SUDO_PROMPT="Sudo Password: "
 
 # If we have homebrew's curl-ca-bundle installed, use it
-[[ -d /usr/local/opt/curl-ca-bundle ]] && export SSL_CERT_FILE=/usr/local/opt/curl-ca-bundle/share/ca-bundle.crt
+[[ -d /usr/local/opt/curl-ca-bundle ]] && export SSL_CERT_FILE="/usr/local/opt/curl-ca-bundle/share/ca-bundle.crt"
