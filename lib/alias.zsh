@@ -27,6 +27,9 @@ alias eprod="eproduction"
 alias rt="rtest"
 alias bert="rtest" # bundle exec ruby -Itest, etc
 
+# Pry > IRB
+alias irb="pry"
+
 alias be="bundle exec"
 
 alias gvg='grep -v grep'

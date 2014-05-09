@@ -1,7 +1,0 @@
-# Use Pry everywhere except rbx
-unless (ENV["RUBY_VERSION"] || ENV["RBENV_VERSION"])["rbx"]
-  require "rubygems"
-  require 'pry'
-  Pry.start
-  exit
-end
