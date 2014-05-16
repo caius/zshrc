@@ -21,13 +21,13 @@ TM_HG  = "/usr/local/bin/hg"
 TM_GIT = "/usr/local/bin/git"
 GOPATH = "/Users/caius/go"
 
-TM_RUBY = "/Users/caius/.rubies/ruby-2.1.1/bin/ruby"
-RUBY_ROOT="/Users/caius/.rubies/ruby-2.1.1"
+TM_RUBY = "/Users/caius/.rubies/ruby-2.1.2/bin/ruby"
+RUBY_ROOT="/Users/caius/.rubies/ruby-2.1.2"
 RUBY_ENGINE="ruby"
-RUBY_VERSION="2.1.1"
-GEM_ROOT="/Users/caius/.rubies/ruby-2.1.1/lib/ruby/gems/2.1.0"
-GEM_HOME="/Users/caius/.gem/ruby/2.1.1"
-GEM_PATH="/Users/caius/.gem/ruby/2.1.1:/Users/caius/.rubies/ruby-2.1.1/lib/ruby/gems/2.1.0"
+RUBY_VERSION="2.1.2"
+GEM_ROOT="/Users/caius/.rubies/ruby-2.1.2/lib/ruby/gems/2.1.0"
+GEM_HOME="/Users/caius/.gem/ruby/2.1.2"
+GEM_PATH="/Users/caius/.gem/ruby/2.1.2:/Users/caius/.rubies/ruby-2.1.2/lib/ruby/gems/2.1.0"
 RUBYOPT=
 
 # Variables
