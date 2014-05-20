@@ -13,7 +13,8 @@ PATH="$PATH:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin" # Normal $PATH bit
 export PATH
 
 # And the same for the manpath
-MANPATH="/usr/local/share/man" # Homebrew
+MANPATH="$HOME/man"
+MANPATH="$MANPATH:/usr/local/share/man" # Homebrew
 MANPATH="$MANPATH:/usr/share/man:/usr/local/share/man" # The usual
 export MANPATH
 
