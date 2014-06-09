@@ -7,7 +7,6 @@ upgrade
 # Useful baseline of packages
 install autoconf
 install automake
-install curl-ca-bundle
 install libffi
 install libyaml
 install openssl
