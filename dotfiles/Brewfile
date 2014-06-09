@@ -5,7 +5,6 @@ update
 upgrade
 
 # Useful baseline of packages
-install apple-gcc42
 install autoconf
 install automake
 install curl-ca-bundle
@@ -63,6 +62,10 @@ install wdiff
 install wget
 install wkhtmltopdf
 install youtube-dl
+
+# Things not in main repo
+tap homebrew/dupes
+install apple-gcc42
 
 # Percona server install
 tap homebrew/versions
