@@ -1,15 +1,15 @@
 setopt correct_all
 
+alias aping='nocorrect aping'
+alias brew='nocorrect brew'
+alias gist='nocorrect gist'
+alias git="nocorrect git"
+alias heroku='nocorrect heroku'
 alias man='nocorrect man'
+alias mkdir='nocorrect mkdir'
 alias mv='nocorrect mv'
 alias mysql='nocorrect mysql'
-alias mkdir='nocorrect mkdir'
-alias gist='nocorrect gist'
-alias heroku='nocorrect heroku'
-alias git="nocorrect git"
-alias aping='nocorrect aping'
 alias port='nocorrect port'
-alias brew='nocorrect brew'
-alias scp="nocorrect scp"
 alias rspec="nocorrect rspec"
+alias scp="nocorrect scp"
 alias spec="nocorrect spec"
