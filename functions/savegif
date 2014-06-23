@@ -6,5 +6,11 @@
     # Otherwise, use the gif's name from the URL
     destination="$(basename "$1")"
   fi
-  curl -o "$HOME/GoogleDrive/GifCentral/${destination/.gif/}.gif" "$1"
+  giffile="$HOME/GoogleDrive/GifCentral/${destination/.gif/}.gif"
+  if [[ -f "$giffile" ]]; then
+    echo "ERR: ${destination} already exists in GifCentral" > /dev/stderr
+    return 1
+  else
+    curl -o "$giffile" "$1" && echo "LOG: Saved ${destination} successfully"
+  fi
 # }
