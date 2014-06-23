@@ -116,6 +116,7 @@ alias gtst='git st'
 alias gme='gem'
 alias rkae='rake'
 alias bundel="bundle"
+alias vybdke="bundle"
 
 alias js="/System/Library/Frameworks/JavaScriptCore.framework/Versions/Current/Resources/jsc"
 
