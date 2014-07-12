@@ -71,7 +71,7 @@ tap homebrew/versions
 install percona-server55
 
 # Brew cask!
-tap phinze/cask
+tap caskroom/cask
 install brew-cask
 
 # Install some apps
