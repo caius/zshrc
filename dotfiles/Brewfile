@@ -18,6 +18,7 @@ install ag
 install aget
 install chruby
 install coreutils
+install dnsmasq
 install dnstop
 install dos2unix
 install exiftool
