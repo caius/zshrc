@@ -5,8 +5,6 @@ update
 upgrade
 
 # Useful baseline of packages
-install autoconf
-install automake
 install libffi
 install libyaml
 install openssl
@@ -60,8 +58,9 @@ install unrar
 install watch
 install wdiff
 install wget
-install wkhtmltopdf
 install youtube-dl
+
+install wkhtmltopdf
 
 # Things not in main repo
 tap homebrew/dupes
@@ -75,23 +74,8 @@ install percona-server55
 tap caskroom/cask
 install brew-cask
 
-# Install some apps
+# Install some quick look plugins
 cask install betterzipql
-cask install bonjour-browser
-cask install charles
-cask install coconutbattery
-cask install dropbox
-cask install evernote
-cask install f-lux
-cask install firefox
-cask install gfxcardstatus
-cask install gitx
-cask install google-chrome
-cask install httpscoop
-cask install launchbar
-cask install limechat
-cask install mplayerx
-cask install picturelife
 cask install qlcolorcode
 cask install qlmarkdown
 cask install qlprettypatch
@@ -99,6 +83,21 @@ cask install qlstephen
 cask install quicklook-csv
 cask install quicklook-json
 cask install scriptql
+cask install webp-quicklook
+
+# Install some other apps
+cask install bonjour-browser
+cask install charles
+cask install coconutbattery
+cask install dropbox
+cask install evernote
+cask install f-lux
+cask install gfxcardstatus
+cask install httpscoop
+cask install launchbar
+cask install limechat
+cask install mplayerx
+cask install picturelife
 cask install skype
 cask install spotify
 cask install suspicious-package
@@ -107,7 +106,6 @@ cask install the-unarchiver
 cask install virtualbox
 cask install vagrant
 cask install viscosity
-cask install webp-quicklook
 
 # Install some fonts
 tap caskroom/fonts
