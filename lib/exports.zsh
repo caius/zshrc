@@ -23,7 +23,7 @@ export PAGER=less READNULLCMD=less
 
 # Make ls and grep coloured
 export CLICOLOR=true
-export GREP_OPTIONS='--color=auto' GREP_COLOR='1;32'
+export GREP_OPTIONS='--color=auto -E' GREP_COLOR='1;32'
 export LSCOLORS="Gxfxcxdxbxegedabagacad"
 
 # Textmate required
