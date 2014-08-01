@@ -113,6 +113,8 @@ alias gitgit="git"
 alias gitst='git st'
 alias gtst='git st'
 
+alias gitpush="git push"
+
 alias gme='gem'
 alias rkae='rake'
 alias bundel="bundle"
