@@ -41,6 +41,7 @@
 	psuh = push
 	pus = push
 	pish = push
+	puosh = push
 	satsh = stash
 	emrge = merge
 	mregetool = mergetool
