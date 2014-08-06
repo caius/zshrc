@@ -86,7 +86,7 @@
 	dcm = "!git diff --cached | mate"
 	x = "!gitx"
 	clear = "!clear"
-	git = "!git \\$0 \\$*"
+	git = "!git $*"
 	gtfu = "!echo GET THE FUCK UP"
 	proj = "!proj"
 	nyan = "!nyancat 2> /dev/null || echo gem install nyancat"
