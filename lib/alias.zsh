@@ -1,3 +1,5 @@
+alias §="nocorrect"
+
 alias ehco="echo"
 alias ea-ssh="ssh"
 
@@ -109,6 +111,8 @@ alias gits='git'
 alias guit="git"
 alias ig="git"
 alias gitgit="git"
+alias gity="git"
+alias gtis="git"
 
 alias gitst='git st'
 alias gtst='git st'
