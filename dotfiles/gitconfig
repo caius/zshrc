@@ -23,6 +23,7 @@
 [core]
 	whitespace = fix,-indent-with-non-tab,trailing-space,cr-at-eol
 	excludesfile = /Users/caius/.gitignore
+	preloadindex = true
 	# Deals with shitty projects having shitty line endings. Normally not needed.
 	# autocrlf = input
 	# safecrlf = true
@@ -158,3 +159,6 @@
 [grep]
 	extendRegexp = true
 	lineNumber = true
+[filter "media"]
+	clean = git-media-clean %f
+	smudge = git-media-smudge %f
