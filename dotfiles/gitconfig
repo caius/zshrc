@@ -102,6 +102,7 @@
 	# TODO: extract into separate tool / take argument for branch to diff against?
 	show-missing-newlines-in-branch = "!git diff master | awk '/\\+\\+\\+/ { gsub(/w\\//, \"\", $2); last_filename = $2 }; /No newline at end of file/ { print last_filename }'"
 	fix-missing-newlines-in-branch = "!for file in $(git show-missing-newlines-in-branch); do echo >> $file; done"
+	sha = rev-parse HEAD
 [branch]
 	autosetupmerge = true
 	autosetuprebase = always
