@@ -2,7 +2,7 @@ if [[ -f /usr/local/opt/chruby/share/chruby/chruby.sh ]]; then
 
   # Load up chruby
   source /usr/local/opt/chruby/share/chruby/chruby.sh
-
-  chruby 2.1.3
+  # Auto change rubies
+  source /usr/local/opt/chruby/share/chruby/auto.sh
 
 fi
