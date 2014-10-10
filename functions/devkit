@@ -1,0 +1,11 @@
+# function devkit() {
+  # Check if there's a binary we can call instead, ala `git-*`
+  # `devkit george help` => `devkit-george help`
+  possible_binary="$0-$1"
+
+  if which "$possible_binary" &> /dev/null; then
+    $possible_binary ${@[2,-1]}
+  else
+    command devkit $*
+  fi
+# }
