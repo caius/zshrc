@@ -27,7 +27,7 @@ unsetopt flowcontrol
 if [[ -d /usr/local/share/zsh ]]; then
   autoload -U run-help
   HELPDIR=/usr/local/share/zsh/helpfiles
-fi    
+fi
 
 WORDCHARS=''
 
