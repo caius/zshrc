@@ -144,30 +144,8 @@ alias csshx="csshX"
 alias pretty_json="python -m json.tool"
 alias pretty_xml="xmllint --format -"
 
-# brightbox-cli alias'
-alias bb-accounts="brightbox-accounts"
-alias bb-firewall-policies="brightbox-firewall-policies"
-alias bb-fwp="brightbox-firewall-policies"
-alias bb-images="brightbox-images"
-alias bb-imgs="brightbox-images"
-alias bb-types="brightbox-types"
-alias bb-cloudips="brightbox-cloudips"
-alias bb-cips="brightbox-cloudips"
-alias bb-firewall-rules="brightbox-firewall-rules"
-alias bb-fwr="brightbox-firewall-rules"
-alias bb-lbs="brightbox-lbs"
-alias bb-users="brightbox-users"
-alias bb-config="brightbox-config"
-alias bb-groups="brightbox-groups"
-alias bb-grps="brightbox-groups"
-alias bb-servers="brightbox-servers"
-alias bb-zones="brightbox-zones"
-
 # Habit
 alias rvm="rbenv"
-
-# Reload my shell!
-alias reload="exec zsh -l"
 
 # ag is faster than ack
 alias ack="ag"
