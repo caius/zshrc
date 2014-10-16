@@ -34,13 +34,8 @@ export EDITOR="mate -wl1"
 export SVN_EDITOR="$EDITOR" HGEDITOR="$EDITOR" GIT_EDITOR="$EDITOR"
 
 # Fuck you make
-if [[ "FreeBSD" == "$(uname)" ]]; then
-  cpus="$(sysctl hw.ncpu | awk '{ print $2 }')"
-else
-  cpus="$(sysctl machdep.cpu.thread_count | awk '{ print $2 }')"
-fi
-export MAKEFLAGS="-j${cpus}"
-export BUNDLER_JOBS="${cpus}"
+cpus="$(sysctl -n machdep.cpu.thread_count)"
+export MAKEFLAGS="-j${cpus}" BUNDLER_JOBS="${cpus}"
 
 # Coz I wanna be different, yeah?
 export SUDO_PROMPT="Sudo Password: "
