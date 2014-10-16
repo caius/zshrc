@@ -4,18 +4,22 @@ export REPORTTIME=5
 # If we're 64bit, let everything know!
 [[ "x86_64" == "$(uname -m)" ]] && export ARCHFLAGS="-arch x86_64 ${ARCHFLAGS}"
 
-# make sure Homebrew s/bin comes first
-PATH="$HOME/bin" # Home folder overrides everything
-PATH="$PATH:$HOME/.cabal/bin" # Haskell binfiles
-PATH="$PATH:/usr/local/bin:/usr/local/sbin" # Homebrew
-PATH="$PATH:$HOME/pebble-dev/PebbleSDK-2.0.0/bin" # Pebble developer
-PATH="$PATH:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin" # Normal $PATH bit
-export PATH
+# Futz with my $PATH
+# Lower case variable is an array of directories, booya
+path=(
+  $HOME/bin
+  $HOME/.cabal/bin
+  /usr/local/bin /usr/local/sbin # Homebrew
+  $path # Default $PATH
+)
 
-# And the same for the manpath
-MANPATH="$HOME/man"
-MANPATH="$MANPATH:/usr/local/share/man" # Homebrew
-MANPATH="$MANPATH:/usr/share/man:/usr/local/share/man" # The usual
+# And the same for the $MANPATH
+manpath=(
+  $HOME/man
+  /usr/local/share/man # Homebrew
+  $(cat /etc/manpaths) # Default manpaths - not loaded by default
+)
+# ZSH doesn't do this automatically, it does fill from $manpath though
 export MANPATH
 
 ## pager
