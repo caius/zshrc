@@ -36,7 +36,6 @@ packages=(
   gnupg
   gnutls
   gpgme
-  "graphviz --with-app --with-bindings --universal"
   htop-osx
   hub
   imagemagick
@@ -48,13 +47,12 @@ packages=(
   mtr
   netcat
   ngrep
-  phantomjs
   pkg-config
   proctools
   psgrep
-  pwgen
   "python --with-brewed-openssl"
   "python3 --with-brewed-openssl"
+  pwgen
   qt
   redis
   rtmpdump
@@ -65,7 +63,6 @@ packages=(
   watch
   wdiff
   wget
-  wkhtmltopdf
   youtube-dl
 
   # homebrew/dupes
