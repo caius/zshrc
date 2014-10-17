@@ -41,6 +41,9 @@ packages=(
   imagemagick
   ioping
   jq
+  libiconv
+  libxml2
+  libxslt
   lynx
   md5sha1sum
   mplayer
