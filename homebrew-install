@@ -8,12 +8,15 @@ taps=(
 )
 
 packages=(
-  # Useful baseline of packages
-  libffi
-  libyaml
+  # Needed to use ruby-install
   openssl
-  qt
   readline
+  libyaml
+  gdbm
+  libffi
+  automake
+  autoconf
+
   # All the other "standard" packages
   ag
   chruby
@@ -52,6 +55,7 @@ packages=(
   pwgen
   "python --with-brewed-openssl"
   "python3 --with-brewed-openssl"
+  qt
   redis
   rtmpdump
   ruby-install
