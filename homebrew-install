@@ -1,0 +1,155 @@
+#!/usr/bin/env zsh
+
+taps=(
+  homebrew/dupes
+  homebrew/versions
+  caskroom/cask
+  caskroom/fonts
+)
+
+packages=(
+  # Useful baseline of packages
+  libffi
+  libyaml
+  openssl
+  qt
+  readline
+  # All the other "standard" packages
+  ag
+  chruby
+  coreutils
+  dnsmasq
+  dnstop
+  dos2unix
+  exiftool
+  ffmpeg
+  freeimage
+  freetype
+  gist
+  "git --with-pcre --with-brewed-curl --with-blk-sha1 --with-gettext --with-brewed-openssl --with-persistent-https"
+  git-extras
+  gnu-sed
+  gnu-time
+  gnupg
+  gnutls
+  gpgme
+  "graphviz --with-app --with-bindings --universal"
+  htop-osx
+  hub
+  imagemagick
+  ioping
+  jq
+  lynx
+  md5sha1sum
+  mplayer
+  mtr
+  netcat
+  ngrep
+  phantomjs
+  pkg-config
+  proctools
+  psgrep
+  pwgen
+  "python --with-brewed-openssl"
+  "python3 --with-brewed-openssl"
+  redis
+  rtmpdump
+  ruby-install
+  sqlite
+  tree
+  unrar
+  watch
+  wdiff
+  wget
+  wkhtmltopdf
+  youtube-dl
+
+  # homebrew/dupes
+  apple-gcc42
+
+  # homebrew/versions
+  percona-server55
+
+  # caskroom/cask
+  brew-cask
+)
+
+cask_packages=(
+  # Quick look plugins
+  betterzipql
+  qlcolorcode
+  qlmarkdown
+  qlprettypatch
+  qlstephen
+  quicklook-csv
+  quicklook-json
+  scriptql
+  suspicious-package
+  webp-quicklook
+
+  # Other apps
+  bonjour-browser
+  charles
+  coconutbattery
+  dropbox
+  evernote
+  flux
+  gfxcardstatus
+  httpscoop
+  launchbar
+  limechat
+  mplayerx
+  picturelife
+  skype
+  spotify
+  textwrangler
+  the-unarchiver
+  vagrant
+  virtualbox
+  viscosity
+
+  # caskroom/fonts
+  font-inconsolata
+  font-liberation-sans
+  font-open-sans
+  font-source-code-pro
+  font-source-sans-pro
+)
+
+function log() {
+  echo $* > /dev/stderr
+}
+
+#########################################################################
+
+log "brew update"
+brew update
+
+log "brew upgrade"
+brew upgrade
+
+log "Tapping.."
+for name in $taps
+do
+  log "brew tap ${name}"
+  brew tap $name
+done
+
+log "Installing"
+for name_and_args in $packages
+do
+  log "brew install ${=name_and_args}"
+  brew install "${=name_and_args}"
+done
+
+for name_and_args in $cask_packages
+do
+  log "brew cask install ${=name_and_args}"
+  brew cask install "${=name_and_args}"
+done
+
+log "brew cleanup"
+brew cleanup
+
+log "brew linkapps"
+brew linkapps
