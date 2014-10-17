@@ -1,3 +1,7 @@
-export GOPATH=$HOME/gocode
-export GOROOT=$HOME/go
-export PATH="$GOROOT/bin:$GOPATH/bin:$PATH"
+export GOPATH=$HOME/go
+
+if [[ -f /usr/local/bin/brew ]]; then
+  export PATH="$(brew --prefix go)/libexec/bin:$PATH"
+fi
+
+export PATH="$GOPATH/bin:$PATH"
