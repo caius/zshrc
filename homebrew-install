@@ -1,5 +1,7 @@
 #!/usr/bin/env zsh
 
+set -e
+
 taps=(
   homebrew/dupes
   homebrew/versions
