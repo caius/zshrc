@@ -26,6 +26,7 @@ packages=(
   dnsmasq
   dnstop
   dos2unix
+  elasticsearch
   exiftool
   ffmpeg
   freeimage
@@ -59,10 +60,12 @@ packages=(
   "python3 --with-brewed-openssl"
   pwgen
   qt
+  rabbitmq
   redis
   rtmpdump
   ruby-install
   sqlite
+  tomcat
   tree
   unrar
   watch
