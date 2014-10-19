@@ -49,6 +49,7 @@ packages=(
   libxslt
   lynx
   md5sha1sum
+  memcached
   mplayer
   mtr
   netcat
