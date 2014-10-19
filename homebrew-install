@@ -52,7 +52,7 @@ packages=(
   mplayer
   mtr
   netcat
-  ngrep
+#  ngrep
   pkg-config
   proctools
   psgrep
