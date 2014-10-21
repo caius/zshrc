@@ -2,9 +2,13 @@
   # Check if there's a binary we can call instead, ala `git-*`
   # `devkit george help` => `devkit-george help`
   possible_binary="$0-$1"
+  possible_go_binary="$0-$1.go"
+  remaining_args="${@[2,-1]}"
 
   if which "$possible_binary" &> /dev/null; then
-    $possible_binary ${@[2,-1]}
+    $possible_binary $remaining_args
+  elif which "$possible_go_binary" &> /dev/null; then
+    $possible_go_binary $remaining_args
   else
     command devkit $*
   fi
