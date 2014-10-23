@@ -45,6 +45,7 @@ packages=(
   ioping
   jq
   libiconv
+  libusb
   libxml2
   libxslt
   lynx
