@@ -1,0 +1,19 @@
+# function orphaned_gem_installs() {
+  set -e
+
+  X_RUBIES_LOCATION="$HOME/.rubies"
+  X_GEM_LOCATION="$HOME/.gem/ruby"
+
+  set -A rubies $(ls "$X_RUBIES_LOCATION" | egrep ^ruby- | cut -d- -f2)
+  set -A gems $(ls "$X_GEM_LOCATION/")
+
+  set -A to_remove ${gems:|rubies}
+
+  delete_cmd="rm -rf "
+  for version in $to_remove
+  do
+    delete_cmd+="$X_GEM_LOCATION/$version "
+  done
+  echo "To remove orphaned gem installs run:" > /dev/stderr
+  echo $delete_cmd
+# }
