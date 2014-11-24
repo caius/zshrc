@@ -9,7 +9,7 @@ export REPORTTIME=5
 path=(
   $HOME/bin
   $HOME/.cabal/bin
-  /usr/local/bin /usr/local/sbin # Homebrew
+  /usr/local/sbin # Homebrew - /usr/local/bin in $path already
   $path # Default $PATH
 )
 
