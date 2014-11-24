@@ -7,6 +7,7 @@ taps=(
   homebrew/versions
   caskroom/cask
   caskroom/fonts
+  dinkypumpkin/get_iplayer
 )
 
 packages=(
@@ -125,6 +126,9 @@ cask_packages=(
   font-open-sans
   font-source-code-pro
   font-source-sans-pro
+
+  # get_iplayer
+  brew install get_iplayer --with-deps
 )
 
 function log() {
