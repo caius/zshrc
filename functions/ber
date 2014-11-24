@@ -1,8 +1,8 @@
 # function ber() {
   # Only invoke spring if either config file exists *and* we have spring in the PATH
-  if [[ -n "$(whence -p spring)" && (-f "config/application.rb" || -f "config/spring.rb" ) ]]; then
-    command spring rake $*
-  else
+  # if [[ -n "$(whence -p spring)" && (-f "config/application.rb" || -f "config/spring.rb" ) ]]; then
+    # command spring rake $*
+  # else
     bundle exec rake $*
-  fi
+  # fi
 # }
