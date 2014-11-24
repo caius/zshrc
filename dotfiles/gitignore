@@ -12,3 +12,4 @@ tmtags
 /.bundle/config
 /.rbx/
 /.listen_test
+.vagrant
