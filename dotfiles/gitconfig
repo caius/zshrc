@@ -154,6 +154,10 @@
 	pushInsteadOf = git://gist.github.com/
 [url "git://gist.github.com/"]
 	insteadOf = gist:
+[url "git@bitbucket.org:"]
+	insteadOf = bb:
+	pushInsteadOf = bitbucket:
+	pushInsteadOf = git://bitbucket.org/
 [credential]
 	helper = osxkeychain
 [hub]
