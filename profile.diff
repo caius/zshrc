@@ -1,0 +1,28 @@
+diff --git i/dotfiles/zshrc w/dotfiles/zshrc
+index a64c20f..92c9838 100644
+--- i/dotfiles/zshrc
++++ w/dotfiles/zshrc
+@@ -1,6 +1,14 @@
+ # Caius' ZSH config
+ # Initialize the environment
+ 
++## PROFILE ##
++# From https://kev.inburke.com/kevin/profiling-zsh-startup-time/
++# http://zsh.sourceforge.net/Doc/Release/Prompt-Expansion.html
++PS4=$'%D{%M%S%.} %N:%i> '
++exec 3>&2 2> $HOME/tmp/startlog.$$
++setopt xtrace prompt_subst
++## ELIFORP ##
++
+ ZSH_ROOT="$HOME/.zsh"
+ 
+ # Use the force to load my functions
+@@ -10,3 +18,8 @@ autoload $^fpath/*(N:t)
+ 
+ # Load all the ZSH config files
+ for config_file ($ZSH_ROOT/lib/*.zsh) source $config_file
++
++## PROFILE ##
++unsetopt xtrace
++exec 2>&3 3>&-
++## ELIFORP ##
