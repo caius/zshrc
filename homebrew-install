@@ -110,6 +110,7 @@ cask_packages=(
   httpscoop
   launchbar
   limechat
+  menumeters
   mplayerx
   picturelife
   skype
