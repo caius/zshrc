@@ -1,0 +1,3 @@
+# function mou {
+  open -a Mou $*
+# }
