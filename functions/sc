@@ -6,10 +6,10 @@
   if [[ -e "script/console" ]]; then
     script/console $*
   else
-    if [[ "$(whence -p spring)" == ""  ]]; then
+    # if [[ "$(whence -p spring)" == ""  ]]; then
       rails console $*
-    else
-      command spring rails console $*
-    fi
+    # else
+      # command spring rails console $*
+    # fi
   fi
 # }
