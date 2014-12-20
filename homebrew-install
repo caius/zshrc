@@ -89,6 +89,8 @@ packages=(
 cask_packages=(
   # Quick look plugins
   betterzipql
+  cert-quicklook
+  epubquicklook
   qlcolorcode
   qlmarkdown
   qlprettypatch
@@ -97,24 +99,28 @@ cask_packages=(
   quicklook-json
   scriptql
   suspicious-package
-  webp-quicklook
+  webpquicklook
 
   # Other apps
   bonjour-browser
   charles
+  chicken
   coconutbattery
   dropbox
   evernote
   flux
+  firefox
   gfxcardstatus
+  gitx
   httpscoop
   launchbar
   limechat
   menumeters
+  mou
   mplayerx
-  picturelife
   skype
   spotify
+  steam
   textwrangler
   the-unarchiver
   vagrant
