@@ -94,9 +94,9 @@
 	nyan = "!nyancat 2> /dev/null || echo gem install nyancat"
 	# purge-merged = "git b -d `git b --merged | awk \"/^ / { print $1 }\" | xargs` || echo 'No branches to delete'\"
 	# From http://blog.apiaxle.com/post/handy-git-tips-to-stop-you-getting-fired/
-	assume	 = update-index --assume-unchanged
+	assume = update-index --assume-unchanged
 	unassume = update-index --no-assume-unchanged
-	assumed	 = "!git ls-files -v | grep ^h | cut -c 3-"
+	assumed = "!git ls-files -v | grep ^h | cut -c 3-"
 	g = grep --break --heading --line-number
 	pu = !git up
 	# TODO: extract into separate tool / take argument for branch to diff against?
@@ -104,6 +104,8 @@
 	fix-missing-newlines-in-branch = "!for file in $(git show-missing-newlines-in-branch); do echo >> $file; done"
 	sha = rev-parse HEAD
 	reabse = rebase
+	ad = add
+	praise = blame
 [branch]
 	autosetupmerge = true
 	autosetuprebase = always
