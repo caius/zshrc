@@ -7,7 +7,7 @@
     script/console $*
   else
     # if [[ "$(whence -p spring)" == ""  ]]; then
-      rails console $*
+      bundle exec rails console $*
     # else
       # command spring rails console $*
     # fi
