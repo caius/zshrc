@@ -5,6 +5,7 @@
 	branch = auto
 	diff = auto
 	status = auto
+	ui = true
 [color "branch"]
 	current = yellow reverse
 	local = yellow
@@ -18,8 +19,6 @@
 	added = yellow
 	changed = green
 	untracked = cyan
-[color]
-	ui = true
 [core]
 	whitespace = fix,-indent-with-non-tab,trailing-space,cr-at-eol
 	excludesfile = /Users/caius/.gitignore
