@@ -52,6 +52,7 @@ packages=(
   lynx
   md5sha1sum
   memcached
+  moreutils
   mplayer
   mtr
   netcat
