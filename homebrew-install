@@ -39,6 +39,7 @@ packages=(
   gnu-time
   gnupg
   gnutls
+  go --with-cc-common
   gpgme
   htop-osx
   hub
