@@ -1,5 +1,5 @@
-# TM FTW
-Pry.config.editor = "mate -wl1"
+# TextMate FTW.
+Pry.config.editor = -> (file, line) { "mate -w -l#{line} #{file.inspect}"}
 
 # My pry is polite
 Pry.config.hooks.add_hook :after_session, :say_bye do
