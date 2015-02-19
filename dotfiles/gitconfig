@@ -29,32 +29,34 @@
 	# safecrlf = true
 [alias]
 	## Spellings
+	ad = add
 	ass = add
-	doff = diff
 	dff = diff
-	idff = diff
-	pl = pull
-	tpull = pull
-	oull = pull
-	ps = push
-	pushy = push
-	tpush = push
-	psuh = push
-	pus = push
-	pish = push
-	puosh = push
-	satsh = stash
+	doff = diff
 	emrge = merge
+	idff = diff
+	mergfe = merge
 	mregetool = mergetool
+	oull = pull
+	pish = push
+	pl = pull
+	ps = push
+	psuh = push
+	pu = !git up
+	puhs = push
+	puosh = push
+	pus = push
+	pushy = push
+	reabse = rebase
+	satsh = stash
 	sst = status -sb
-	tst = status -sb
 	t = status -sb
+	tint = init
+	tpull = pull
+	tpush = push
 	ts = status -sb
-	prr = pull --rebase
-	prrr = pull --rebase
-	purr = pull --rebase
-	pullr = pull --rebase
-	tpr = pull --rebase
+	tst = status -sb
+	tup = up
 
 	## Shortcuts
 	st = status -sb
@@ -97,13 +99,11 @@
 	unassume = update-index --no-assume-unchanged
 	assumed = "!git ls-files -v | grep ^h | cut -c 3-"
 	g = grep --break --heading --line-number
-	pu = !git up
 	# TODO: extract into separate tool / take argument for branch to diff against?
 	show-missing-newlines-in-branch = "!git diff master | awk '/\\+\\+\\+/ { gsub(/w\\//, \"\", $2); last_filename = $2 }; /No newline at end of file/ { print last_filename }'"
 	fix-missing-newlines-in-branch = "!for file in $(git show-missing-newlines-in-branch); do echo >> $file; done"
 	sha = rev-parse HEAD
-	reabse = rebase
-	ad = add
+	u = up
 	praise = blame
 [branch]
 	autosetupmerge = true
