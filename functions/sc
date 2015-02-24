@@ -1,15 +1,19 @@
 # script/console shortcut
 #
-# Works with rails 1.x, 2.x and rails 3.x, with and without spring
+# Works with rails 1.x through 4.x, with and without spring in the latter case
 #
 # function sc () {
-  if [[ -e "script/console" ]]; then
+  if [[ -e "script/console" ]]
+  then
+    # 1.x, 2.x
     script/console $*
   else
-    # if [[ "$(whence -p spring)" == ""  ]]; then
+    # 3.x, 4.x
+    if springing
+    then
       bundle exec rails console $*
-    # else
-      # command spring rails console $*
-    # fi
+    else
+      bundle exec spring rails console $*
+    fi
   fi
 # }

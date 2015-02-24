@@ -1,0 +1,21 @@
+# function springing() {
+  # Return 0 for true (success) and 1 for false (failure). Yay shells.
+  ALLOWED=0
+  DISALLOWED=1
+
+  # FIXME: figure out why this is fucked
+  return $DISALLOWED
+
+
+  # We want:
+  #   * NOSPRING undefined
+  #   * `spring` to be in $PATH
+  #   * spring config file to be available from pwd
+  #
+  if [[ -n "$(whence -p spring)" && (-f "config/application.rb" || -f "config/spring.rb" ) && -z $NOSPRING ]]
+  then
+    return $ALLOWED
+  fi
+
+  return $DISALLOWED
+# }
