@@ -1,0 +1,10 @@
+require "pathname"
+
+# Play a rimshot when cap deploy finishes
+task :rimshot do
+  if (mp3 = Pathname.new("~/.zsh/share/rimshot.mp3").expand_path).exist?
+    exec("afplay", mp3.to_s) if fork.nil?
+  end
+end
+
+after "deploy:restart", :rimshot
