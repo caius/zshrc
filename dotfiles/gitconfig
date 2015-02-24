@@ -122,10 +122,12 @@
 	mnemonicprefix = true
 	renames = copies
 	algorithm = patience
+	submodule = log
 [mergetool]
 	keepBackup = false
 [status]
 	showUntrackedFiles = all
+	submoduleSummary = true
 [push]
 	default = current
 [rerere]
