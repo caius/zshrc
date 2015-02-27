@@ -1,5 +1,5 @@
 # Open manpages in TextMate
 # Runs the command in a subshell so we don't change $PWD
 # function mman () {
-  $(cd $HOME && "$HOME/Library/Application Support/TextMate/Managed/Bundles/Man Pages.tmbundle/Support/mman" $*)
+  $(cd $HOME && TM_MATE=$(whence -p mate) "$HOME/Library/Application Support/TextMate/Managed/Bundles/Man Pages.tmbundle/Support/mman" $*)
 # }
