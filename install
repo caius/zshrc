@@ -7,6 +7,22 @@ NO_DOT=(Brewfile)
 
 echo "Installing dotfiles from $ZSH_ROOT/dotfiles to $HOME"
 
+echo -n ".bundle/config"
+if [[ ! -f "$HOME/.bundle/config" ]]; then
+  echo -n " ..installing link"
+  mkdir -p "$HOME/.bundle"
+  ln -s "$ZSH_ROOT/dotfiles/.bundle/config" "$HOME/.bundle/config"
+fi
+echo " ..done!"
+
+# for DIR in $(find $ZSH_ROOT/dotfiles/ -type d -depth 1); do
+#   DEST="$HOME/$(basename $DIR)"
+#   if [[ ! -d $DEST ]]; then
+#     echo "Creating $DEST"
+#     mkdir -p $DEST
+#   fi
+# done
+
 for FROM in $ZSH_ROOT/dotfiles/*; do
   NAME="$(basename $FROM)"
 

@@ -1,0 +1,3 @@
+---
+BUNDLE_BUILD__NOKOGIRI: "--with-iconv-dir=$(brew --prefix libiconv)"
+BUNDLE_JOBS: '7'
