@@ -1,2 +1,2 @@
 ---
-gem: --no-rdoc --no-user-install --env-shebang
+gem: --no-rdoc --no-ri --no-user-install --env-shebang
