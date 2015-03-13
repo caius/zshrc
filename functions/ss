@@ -20,6 +20,11 @@
   if [[ -e "script/server" ]]; then
     bundle exec script/server $SERVER_ARGS
   else
-    command spring rails server $SERVER_ARGS
+    if springing
+    then
+      command spring rails server $SERVER_ARGS
+    else
+      command rails server $SERVER_ARGS
+    fi
   fi
 # }
