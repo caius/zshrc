@@ -11,9 +11,9 @@
     # 3.x, 4.x
     if springing
     then
-      bundle exec rails console $*
-    else
       bundle exec spring rails console $*
+    else
+      bundle exec rails console $*
     fi
   fi
 # }
