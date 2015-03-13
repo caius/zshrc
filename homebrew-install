@@ -89,6 +89,8 @@ packages=(
 )
 
 cask_packages=(
+  java
+
   # Quick look plugins
   betterzipql
   cert-quicklook
