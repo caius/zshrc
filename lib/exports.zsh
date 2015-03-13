@@ -44,3 +44,6 @@ export MAKEFLAGS="-j${parallel_cpus}" BUNDLER_JOBS="${parallel_cpus}" WORKER_COU
 
 # Coz I wanna be different, yeah?
 export SUDO_PROMPT="Sudo Password: "
+
+# Strictness of the HTML pleases
+export STRICT_HTML=true
