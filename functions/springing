@@ -12,10 +12,10 @@
   #   * `spring` to be in $PATH
   #   * spring config file to be available from pwd
   #
-  if [[ -n "$(whence -p spring)" && (-f "config/application.rb" || -f "config/spring.rb" ) && -z $NOSPRING ]]
-  then
-    return $ALLOWED
-  fi
-
-  return $DISALLOWED
+  # if [[ -n "$(whence -p spring)" && (-f "config/application.rb" || -f "config/spring.rb" ) && -z $NOSPRING ]]
+  # then
+  #   return $ALLOWED
+  # fi
+  #
+  # return $DISALLOWED
 # }
