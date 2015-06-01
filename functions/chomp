@@ -1,0 +1,3 @@
+# function chomp() {
+  ruby -pe '$_.strip!'
+# }
