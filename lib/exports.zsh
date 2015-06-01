@@ -18,6 +18,7 @@ manpath=(
   $HOME/man
   /usr/local/share/man # Homebrew
   /opt/X11/share/man
+  $manpath # Other setup files
   $(/bin/cat /etc/manpaths) # Default manpaths - not loaded by default
 )
 # ZSH doesn't do this automatically, it does fill from $manpath though
