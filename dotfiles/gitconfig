@@ -161,6 +161,8 @@
 	insteadOf = bb:
 	pushInsteadOf = bitbucket:
 	pushInsteadOf = git://bitbucket.org/
+[url "git@gitlab.com:"]
+	insteadOf = gl:
 [credential]
 	helper = osxkeychain
 [hub]
