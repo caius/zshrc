@@ -1,3 +1,4 @@
 # function mou {
-  open -a Mou $*
+  [[ -f $1 ]] || touch $1
+  open -a Mou $1
 # }
