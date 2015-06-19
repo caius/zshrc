@@ -12,23 +12,29 @@ fileBrowserGlob  = "{*,$myExtraIncludes}"
 include = "{$include,$myExtraIncludes}"
 
 # Hide log and vendor directories from search popups.
-myExtraExcludes = "log,vendor"
+myExtraExcludes = "log,vendor,_build,deps"
 excludeInFileChooser  = "{$excludeInFileChooser,$myExtraExcludes}"
 excludeInFolderSearch = "{$excludeInFolderSearch,$myExtraExcludes}"
 
-# Configure some binary paths
-TM_HG  = "/usr/local/bin/hg"
-TM_GIT = "/usr/local/bin/git"
-TM_GO = "/Users/caius/go/bin/go"
-GOPATH = "/Users/caius/go"
+# LaTeX tools
+PATH = "$PATH:/usr/texbin"
+# Homebrew tools
+PATH = "$PATH:/usr/local/bin"
 
+GOPATH = "/Users/caius/go"
+GOROOT = "/usr/local/opt/go/libexec"
+
+# Configure some binary paths
+TM_DOT = "/usr/local/bin/dot"
+TM_GIT = "/usr/local/bin/git"
+TM_GO = "$GOROOT/bin/go"
+TM_HG  = "/usr/local/bin/hg"
 TM_PYTHON = "/usr/local/bin/python"
 TM_RUBY = "/Users/caius/bin/tm_chruby"
 
 # Variables
 TM_FULLNAME = "Caius Durling"
-TM_ORGANIZATION_NAME = ""
-TM_DOT = "/usr/local/bin/dot"
+TM_ORGANIZATION_NAME = "SwedishCampground"
 
 # Specific file overrides
 [ .git/COMMIT_EDITMSG ]
