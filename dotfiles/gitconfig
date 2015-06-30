@@ -105,6 +105,7 @@
 	sha = rev-parse HEAD
 	u = up
 	praise = blame
+	stup = up
 [branch]
 	autosetupmerge = true
 	autosetuprebase = always
