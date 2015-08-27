@@ -41,7 +41,7 @@ export SVN_EDITOR="$EDITOR" HGEDITOR="$EDITOR" GIT_EDITOR="$EDITOR"
 
 # Fuck you make, et al. Leave some CPU for the rest of us.
 parallel_cpus=$(( $(/usr/sbin/sysctl -n machdep.cpu.thread_count) - 1 ))
-export MAKEFLAGS="-j${parallel_cpus}" BUNDLER_JOBS="${parallel_cpus}" WORKER_COUNT="${parallel_cpus}"
+export MAKEFLAGS="-j${parallel_cpus}" BUNDLER_JOBS="${parallel_cpus}" PARALLEL_TEST_PROCESSORS="${parallel_cpus}"
 
 # Coz I wanna be different, yeah?
 export SUDO_PROMPT="Sudo Password: "
