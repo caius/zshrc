@@ -6,10 +6,14 @@ export REPORTTIME=5
 
 # Futz with my $PATH
 # Lower case variable is an array of directories, booya
+
+# Bring in the default PATH from /etc/paths /etc/paths.d
+eval `/usr/libexec/path_helper -s`
+
 path=(
   $HOME/bin
   $HOME/.cabal/bin
-  /usr/local/sbin # Homebrew - /usr/local/bin in $path already
+  /usr/local/sbin # Homebrew
   $path # Default $PATH
 )
 

@@ -23,12 +23,6 @@ setopt always_to_end
 
 unsetopt flowcontrol
 
-# Online help for brewed zsh
-if [[ -d /usr/local/share/zsh ]]; then
-  autoload -U run-help
-  HELPDIR=/usr/local/share/zsh/helpfiles
-fi
-
 WORDCHARS=''
 
 zmodload -i zsh/complist
