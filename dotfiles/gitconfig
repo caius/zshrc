@@ -42,7 +42,7 @@
 	pl = pull
 	ps = push
 	psuh = push
-	pu = !git up
+	pu = up
 	puhs = push
 	puosh = push
 	pus = push
