@@ -1,9 +1,26 @@
 # function fa() {
-  if [[ -z $1 ]]; then
-    # No arguments, behave like an alias
-    ff
-  else
-    # Pass shit upstream to devkit
-    nocorrect devkit $*
-  fi
+  FA_SRC="$HOME/freeagent/src"
+
+  case "$1" in
+
+  "clone")
+      # Clone a fac/ GH repo to FA_SRC
+      if [[ ! -z $2 ]]; then
+        git clone gh:fac/$2 $FA_SRC/$2
+      else
+        echo "USAGE: $(basename $0) clone <repo>"
+        echo "Clones gh:fac/<repo> into $FA_SRC/<repo>"
+        return 1
+      fi
+    ;;
+
+  "")
+      # Behave like an alias and go to FA_SRC
+      cd $FA_SRC
+    ;;
+  *)
+      # Invoke the power of devkit
+      nocorrect devkit $*
+    ;;
+  esac
 # }
