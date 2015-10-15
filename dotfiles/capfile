@@ -13,7 +13,7 @@ task :schedule_rimshot do
   $rimshot = true
 end
 
-if Capistrano::VERSION[0].to_i >= 3
+if defined?(Capistrano::VERSION)
   task :deploy => :schedule_rimshot
   namespace :deploy do
     task :restart => :schedule_rimshot
