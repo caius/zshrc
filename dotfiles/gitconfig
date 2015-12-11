@@ -80,6 +80,7 @@
 	u = up
 	praise = blame
 	stup = up
+	stas = stash
 [branch]
 	autosetupmerge = true
 	autosetuprebase = always
