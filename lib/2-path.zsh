@@ -8,6 +8,7 @@ path=(
   $HOME/bin
   $HOME/.cabal/bin
   /usr/local/sbin # Homebrew
+  /Library/TeX/texbin # mactex
   $path # Default $PATH
 )
 
