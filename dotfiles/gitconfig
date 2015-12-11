@@ -133,7 +133,7 @@
 [hub]
 	protocol = https
 [merge]
-	tool = opendiff
+	tool = mergemate
 	stat = true
 [merge "railsschema"]
 	name = newer Rails schema version
@@ -147,6 +147,9 @@
 		exit 1 if b.include?(%(<)*%L)'"
 [mergetool]
 	keepBackup = false
+[mergetool "mergemate"]
+	cmd = mate -wl1 \"$MERGED\"
+	trustExitCode = false
 [push]
 	default = current
 [rerere]
