@@ -1,6 +1,16 @@
 # Caius' ZSH config
 # Initialize the environment
 
+## PROFILE ##
+PROFILE_STARTUP=false
+if [[ "$PROFILE_STARTUP" == true ]]; then
+    # http://zsh.sourceforge.net/Doc/Release/Prompt-Expansion.html
+    PS4=$'%D{%M%S%.} %N:%i> '
+    exec 3>&2 2> $HOME/tmp/startlog.$$
+    setopt xtrace prompt_subst
+fi
+## ELIFORP ##
+
 ZSH_ROOT="$HOME/.zsh"
 
 # Use the force to load my functions
@@ -10,3 +20,10 @@ autoload $^fpath/*(N:t)
 
 # Load all the ZSH config files
 for config_file ($ZSH_ROOT/lib/*.zsh) source $config_file
+
+## PROFILE ##
+if [[ "$PROFILE_STARTUP" == true ]]; then
+    unsetopt xtrace
+    exec 2>&3 3>&-
+fi
+## ELIFORP ##
