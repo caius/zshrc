@@ -180,3 +180,9 @@
 [user]
 	name = Caius Durling
 	email = dev@caius.name
+[transfer]
+  fsckObjects = true
+[fetch]
+  fsckObjects = true
+[receive]
+  fsckObjects = true
