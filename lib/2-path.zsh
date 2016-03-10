@@ -16,6 +16,7 @@ path=(
 manpath=(
   $HOME/man
   /usr/local/share/man # Homebrew
+  /usr/local/opt/erlang/lib/erlang/man # erlang
   /opt/X11/share/man
   $manpath # Other setup files
   $(/bin/cat /etc/manpaths) # Default manpaths - not loaded by default
