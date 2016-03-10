@@ -35,7 +35,7 @@
 	## Shortcuts
 	st = status -sb
 	s = status -sb
-	b = branch
+	b = branch -v
 	ci = commit
 	co = checkout
 	cob = checkout -b
