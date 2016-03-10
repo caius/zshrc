@@ -2,6 +2,7 @@ setopt correct_all
 
 alias aping='nocorrect aping'
 alias brew='nocorrect brew'
+alias cucumber="nocorrect bundle exec cucumber"
 alias gist='nocorrect gist'
 alias git="nocorrect git"
 alias heroku='nocorrect heroku'
