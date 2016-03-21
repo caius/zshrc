@@ -81,6 +81,8 @@
 	praise = blame
 	stup = up
 	stas = stash
+	uip = up
+	iup = up
 [branch]
 	autosetupmerge = true
 	autosetuprebase = always
