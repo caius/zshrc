@@ -137,6 +137,7 @@
 [merge]
 	tool = mergemate
 	stat = true
+	ff = false
 [merge "railsschema"]
 	name = newer Rails schema version
 	driver = "ruby -e '\n\
