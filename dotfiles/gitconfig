@@ -183,6 +183,7 @@
 [user]
 	name = Caius Durling
 	email = dev@caius.name
+	useconfigonly = true
 [transfer]
   fsckObjects = true
 [fetch]
