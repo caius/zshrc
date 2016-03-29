@@ -190,3 +190,5 @@
   fsckObjects = true
 [receive]
   fsckObjects = true
+[http]
+	sslverify = true
