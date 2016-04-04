@@ -8,9 +8,9 @@ This is [Caius][]' ZSH configs for his shell. It has an `install` script to syml
 
 Should be simply:
 
-	$ cd ~
-	$ git clone git://github.com/caius/zshrc.git .zsh
-	$ ./.zsh/install
+    $ cd ~
+    $ git clone git://github.com/caius/zshrc.git .zsh
+    $ ./.zsh/install
 
 ## Screenshot
 
