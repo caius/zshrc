@@ -5,6 +5,7 @@ softWrap = true
 softTabs = true
 tabSize = 2
 showInvisibles = true
+saveOnBlur = true
 
 # Extra files to include
 myExtraIncludes = ".tm_properties,.gitignore,.ruby-version,.env"
