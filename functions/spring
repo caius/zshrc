@@ -1,0 +1,8 @@
+# Make sure to call spring through bundler if Gemfile exists
+# function spring {
+  if [[ -f "Gemfile" ]]; then
+    bundle exec spring $*
+  else
+    command spring $*
+  fi
+# }
