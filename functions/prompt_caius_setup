@@ -1,10 +1,10 @@
 function prompt_caius_precmd {
-	local exitstatus=$?
-	setopt localoptions noxtrace noksharrays
-	psvar=(SIG)
-	[[ $exitstatus -gt 128 ]] && psvar[1]=SIG$signals[$exitstatus-127]
-	[[ $psvar[1] = SIG ]] && psvar[1]=$exitstatus
-	jobs % >/dev/null 2>&1 && psvar[2]=
+  local exitstatus=$?
+  setopt localoptions noxtrace noksharrays
+  psvar=(SIG)
+  [[ $exitstatus -gt 128 ]] && psvar[1]=SIG$signals[$exitstatus-127]
+  [[ $psvar[1] = SIG ]] && psvar[1]=$exitstatus
+  jobs % >/dev/null 2>&1 && psvar[2]=
 }
 
 function prompt_caius_battery {
@@ -36,7 +36,7 @@ function prompt_caius_datetime {
 }
 
 function prompt_caius_ruby {
-	type chruby > /dev/null && (chruby | awk '/\*/ { sub("ruby-", "", $2); print $2 }')
+  type chruby > /dev/null && (chruby | awk '/\*/ { sub("ruby-", "", $2); print $2 }')
 }
 
 function prompt_caius_setup {
