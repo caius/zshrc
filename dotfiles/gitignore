@@ -6,3 +6,7 @@
 /.bundle/config
 /.listen_test
 /config/deploy.local.rb
+/deploy/environment/caius.rb
+/.rubocop.yml
+/.overcommit.yml
+/.byebug_history
