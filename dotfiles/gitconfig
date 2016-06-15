@@ -120,6 +120,7 @@
 	renames = copies
 	algorithm = patience
 	submodule = log
+	compactionHeuristic = true
 [diff "doc"]
 	textconv = strings
 [diff "exif"]
@@ -192,3 +193,5 @@
   fsckObjects = true
 [http]
 	sslverify = true
+[submodule]
+	fetchJobs = 4
