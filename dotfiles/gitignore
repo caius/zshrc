@@ -10,3 +10,4 @@
 /.rubocop.yml
 /.overcommit.yml
 /.byebug_history
+/tmp
