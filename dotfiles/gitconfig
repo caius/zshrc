@@ -83,6 +83,7 @@
 	stas = stash
 	uip = up
 	iup = up
+	tpull-request = pull-request
 [branch]
 	autosetupmerge = true
 	autosetuprebase = always
