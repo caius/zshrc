@@ -187,12 +187,17 @@
 	name = Caius Durling
 	email = dev@caius.name
 	useconfigonly = true
-[transfer]
-  fsckObjects = true
-[fetch]
-  fsckObjects = true
-[receive]
-  fsckObjects = true
+# [transfer]
+#   fsckObjects = true
+#   zeroPaddedFilemode = ignore
+# [fetch]
+#   fsckObjects = true
+#   zeroPaddedFilemode = ignore
+# [receive]
+#   fsckObjects = true
+#   zeroPaddedFilemode = ignore
+[fsck]
+	zeroPaddedFilemode = ignore
 [http]
 	sslverify = true
 [submodule]
