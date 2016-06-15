@@ -28,3 +28,5 @@ export SUDO_PROMPT="Sudo Password: "
 
 # Strictness of the HTML pleases
 export STRICT_HTML=true
+
+export BUILDZONE_ENDPOINT=http://10.8.100.238
