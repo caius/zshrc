@@ -6,6 +6,7 @@ eval `/usr/libexec/path_helper -s`
 
 path=(
   $HOME/bin
+  $HOME/.cargo/bin # rustup
   $HOME/.cabal/bin
   /usr/local/sbin # Homebrew
   /Library/TeX/texbin # mactex
