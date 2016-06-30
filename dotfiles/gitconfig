@@ -202,3 +202,5 @@
 	sslverify = true
 [submodule]
 	fetchJobs = 4
+[commit]
+	verbose = true
