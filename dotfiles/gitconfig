@@ -106,6 +106,8 @@
 	added = yellow
 	changed = green
 	untracked = cyan
+[commit]
+	verbose = true
 [core]
 	whitespace = fix,-indent-with-non-tab,trailing-space,cr-at-eol
 	excludesfile = /Users/caius/.gitignore
@@ -127,14 +129,21 @@
 	textconv = strings
 [diff "exif"]
 	textconv = exiftool
+# [fetch]
+#   fsckObjects = true
+#   zeroPaddedFilemode = ignore
 [filter "media"]
 	clean = git-media-clean %f
 	smudge = git-media-smudge %f
+[fsck]
+	zeroPaddedFilemode = ignore
 [grep]
 	extendRegexp = true
 	lineNumber = true
 [help]
 	autocorrect = 0
+[http]
+	sslverify = true
 [hub]
 	protocol = https
 [merge]
@@ -158,11 +167,19 @@
 	trustExitCode = false
 [push]
 	default = current
+# [receive]
+#   fsckObjects = true
+#   zeroPaddedFilemode = ignore
 [rerere]
 	enabled = true
 [status]
 	showUntrackedFiles = all
 	submoduleSummary = true
+[submodule]
+	fetchJobs = 4
+# [transfer]
+#   fsckObjects = true
+#   zeroPaddedFilemode = ignore
 [url "git://gist.github.com/"]
 	insteadOf = gist:
 [url "git://github.com/"]
@@ -187,20 +204,3 @@
 	name = Caius Durling
 	email = dev@caius.name
 	useconfigonly = true
-# [transfer]
-#   fsckObjects = true
-#   zeroPaddedFilemode = ignore
-# [fetch]
-#   fsckObjects = true
-#   zeroPaddedFilemode = ignore
-# [receive]
-#   fsckObjects = true
-#   zeroPaddedFilemode = ignore
-[fsck]
-	zeroPaddedFilemode = ignore
-[http]
-	sslverify = true
-[submodule]
-	fetchJobs = 4
-[commit]
-	verbose = true
