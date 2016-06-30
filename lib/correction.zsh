@@ -14,3 +14,4 @@ alias port='nocorrect port'
 alias rspec="nocorrect bundle exec rspec"
 alias scp="nocorrect scp"
 alias spec="nocorrect spec"
+alias cargo="nocorrect cargo"
