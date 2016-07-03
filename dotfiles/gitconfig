@@ -48,7 +48,7 @@
 	au = add -u
 	aua = add -u .
 	ap = add -p
-	pr = pull --rebase
+	pr = pull-request
 	tome = pull
 	toyou = push
 	cl = clone
