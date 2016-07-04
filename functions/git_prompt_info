@@ -1,4 +1,4 @@
 # function git_prompt_info {
   ref=$(git rev-parse --is-inside-work-tree 2> /dev/null) || return
-  echo "%{$reset_color%}%{$fg[red]%}($(git_current_branch)$(git_dirty))%{$reset_color%}%{$fg[yellow]%}$(git_stash_count)"
+  echo "%{$reset_color%}%{$fg[red]%}($(git current-branch)$(git_dirty))%{$reset_color%}%{$fg[yellow]%}$(git_stash_count)"
 # }
