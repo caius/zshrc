@@ -85,6 +85,7 @@
 	iup = up
 	tpull-request = pull-request
 	recent = for-each-ref --sort=committerdate refs/heads/ --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(color:red)%(objectname:short)%(color:reset) - %(contents:subject) - %(authorname) (%(color:green)%(committerdate:relative)%(color:reset))'
+	tpr = !git pr
 [branch]
 	autosetupmerge = true
 	autosetuprebase = always
