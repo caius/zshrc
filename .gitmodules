@@ -1,0 +1,3 @@
+[submodule "vendor/Binfiles"]
+	path = vendor/Binfiles
+	url = gh:caius/Binfiles
