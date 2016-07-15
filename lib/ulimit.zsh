@@ -10,3 +10,6 @@ if [[ "$(uname)" == "Darwin" ]]; then
   # Thanks OS X
   ulimit -n 32768
 fi
+
+# No core, no more
+ulimit -c 0
