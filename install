@@ -2,8 +2,12 @@
 # Symlinks ~/.zsh/dotfiles/* to ~/.* (or ~/* - see $NO_DOT)
 # Moves existing files aside if they don't match, to ~/.*.EPOCH-old
 
+set -e
+
 ZSH_ROOT="$HOME/.zsh"
 NO_DOT=(Brewfile)
+
+git submodule update --init
 
 echo "Installing dotfiles from $ZSH_ROOT/dotfiles to $HOME"
 
