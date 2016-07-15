@@ -1,3 +1,6 @@
 [submodule "vendor/Binfiles"]
 	path = vendor/Binfiles
 	url = gh:caius/Binfiles
+[submodule "vendor/zsh-syntax-highlighting"]
+	path = vendor/zsh-syntax-highlighting
+	url = gh:zsh-users/zsh-syntax-highlighting
