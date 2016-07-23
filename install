@@ -61,4 +61,8 @@ for FROM in $ZSH_ROOT/dotfiles/*; do
 
 done
 
+echo "Installing binfiles to ~/bin"
+
+(cd vendor/Binfiles && rake)
+
 echo "All installed!"
