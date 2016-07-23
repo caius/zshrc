@@ -1,9 +1,9 @@
 [submodule "vendor/Binfiles"]
 	path = vendor/Binfiles
-	url = gh:caius/Binfiles
+	url = git://github.com/caius/Binfiles
 [submodule "vendor/zsh-syntax-highlighting"]
 	path = vendor/zsh-syntax-highlighting
-	url = gh:zsh-users/zsh-syntax-highlighting
+	url = git://github.com/zsh-users/zsh-syntax-highlighting
 [submodule "vendor/zsh-history-substring-search"]
 	path = vendor/zsh-history-substring-search
-	url = gh:zsh-users/zsh-history-substring-search
+	url = git://github.com/zsh-users/zsh-history-substring-search
