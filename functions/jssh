@@ -1,0 +1,8 @@
+# function jssh() {
+  if [[ -z $1 || -z $2 ]]; then
+    echo "USAGE: jssh JUMPHOST [OPTIONS] HOST"
+    exit 1
+  fi
+
+  ssh -o ProxyCommand="ssh -W %h:%p $1" ${*:2}
+# }
