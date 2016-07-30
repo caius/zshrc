@@ -1,3 +1,6 @@
 ---
 BUNDLE_JOBS: '7'
 BUNDLE_CONSOLE: pry
+BUNDLE_GEM__TEST: rspec
+BUNDLE_GEM__MIT: 'true'
+BUNDLE_GEM__COC: 'true'
