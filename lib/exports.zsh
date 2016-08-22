@@ -29,3 +29,5 @@ export SUDO_PROMPT="Sudo Password: "
 # Strictness of the HTML pleases
 export STRICT_HTML=true
 
+# GPG refuses to be invoked by git without this
+export GPG_TTY=$(tty)
