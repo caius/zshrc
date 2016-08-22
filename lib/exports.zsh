@@ -29,4 +29,3 @@ export SUDO_PROMPT="Sudo Password: "
 # Strictness of the HTML pleases
 export STRICT_HTML=true
 
-export BUILDZONE_ENDPOINT=http://buildzone.eng.fre.ag
