@@ -12,23 +12,21 @@ function prompt_caius_battery {
     return ""
   fi
 
-  if [[ "$(pmset -g | awk '/Active Profiles/, /Currently in use/ { if (!/Active Profiles/ && !/Currently in use/) print }' | wc -l)" -eq 2 ]]; then
-    pmset -g batt | tail -1 | awk '{
-      # TODO: handle AC Power not charging;
-      if ($3 == "charging;") {
-        icon="%1{⚡️%}"
-      } else if ($3 == "charged;") {
-        icon="🌟"
-      } else {
-        icon="🔋"
-      }
-      sub(";", "", $2)
-      sub("%", "%%", $2)
-      output = sprintf("%s %s ", $2, icon)
-      if ($4 != "0:00") { output = sprintf("%s (%s)", output, $4) }
-      print output
-    }'
-  fi
+  pmset -g batt | tail -1 | awk '{
+    # TODO: handle AC Power not charging;
+    if ($4 == "charging;") {
+      icon="%1{⚡️%}"
+    } else if ($4 == "charged;") {
+      icon="🌟"
+    } else {
+      icon="🔋"
+    }
+    sub(";", "", $3)
+    sub("%", "%%", $3)
+    output = sprintf("%s %s ", $3, icon)
+    if ($5 != "0:00") { output = sprintf("%s (%s)", output, $5) }
+    print output
+  }'
 }
 
 function prompt_caius_datetime {
