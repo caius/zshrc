@@ -31,6 +31,7 @@
 	ts = status -sb
 	tst = status -sb
 	tup = up
+  fu = push --force-with-lease -u
 
 	## Shortcuts
 	st = status -sb
@@ -86,6 +87,7 @@
 	tpull-request = pull-request
 	recent = for-each-ref --sort=committerdate refs/heads/ --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(color:red)%(objectname:short)%(color:reset) - %(contents:subject) - %(authorname) (%(color:green)%(committerdate:relative)%(color:reset))'
 	tpr = !git pr
+	it = !git init && git commit -m \"root\" --allow-empty
 [branch]
 	autosetupmerge = true
 	autosetuprebase = always
