@@ -20,7 +20,7 @@
     ;;
   *)
       # Invoke the power of devkit
-      nocorrect devkit $*
+      nocorrect chruby-exec $(< ~/.ruby-version) -- devkit $*
     ;;
   esac
 # }
