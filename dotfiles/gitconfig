@@ -88,6 +88,7 @@
 	recent = for-each-ref --sort=committerdate refs/heads/ --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(color:red)%(objectname:short)%(color:reset) - %(contents:subject) - %(authorname) (%(color:green)%(committerdate:relative)%(color:reset))'
 	tpr = !git pr
 	it = !git init && git commit -m \"root\" --allow-empty
+	pre = pr
 [branch]
 	autosetupmerge = true
 	autosetuprebase = always
