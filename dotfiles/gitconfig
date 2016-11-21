@@ -89,6 +89,7 @@
 	tpr = !git pr
 	it = !git init && git commit -m \"root\" --allow-empty
 	pre = pr
+	upsh = push
 [branch]
 	autosetupmerge = true
 	autosetuprebase = always
