@@ -13,4 +13,4 @@ else
 fi
 
 echo "Booting static server on ${host}:${port}"
-exec python -c 'import BaseHTTPServer as bhs, SimpleHTTPServer as shs; bhs.HTTPServer(("'$host'", '$port'), shs.SimpleHTTPRequestHandler).serve_forever()'
+python -c 'import BaseHTTPServer as bhs, SimpleHTTPServer as shs; bhs.HTTPServer(("'$host'", '$port'), shs.SimpleHTTPRequestHandler).serve_forever()'
