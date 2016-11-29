@@ -12,4 +12,5 @@ else
   port="$2"
 fi
 
-python -c 'import BaseHTTPServer as bhs, SimpleHTTPServer as shs; bhs.HTTPServer(("'$host'", '$port'), shs.SimpleHTTPRequestHandler).serve_forever()'
+echo "Booting static server on ${host}:${port}"
+exec python -c 'import BaseHTTPServer as bhs, SimpleHTTPServer as shs; bhs.HTTPServer(("'$host'", '$port'), shs.SimpleHTTPRequestHandler).serve_forever()'
