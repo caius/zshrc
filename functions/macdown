@@ -1,0 +1,4 @@
+# function macdown {
+  [[ -f $1 ]] || touch $1
+  open -a MacDown $1
+# }
