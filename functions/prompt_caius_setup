@@ -37,14 +37,19 @@ function prompt_caius_ruby {
   type chruby > /dev/null && (chruby | awk '/\*/ { sub("ruby-", "", $2); print $2 }')
 }
 
+function prompt_caius_append_triton {
+  [[ -z $TRITON_PROFILE ]] || echo -n " | $TRITON_PROFILE"
+}
+
 function prompt_caius_setup {
 #  PS1='[%(2L.%L/.)'$ZSH_VERSION']%(?..%B{%v}%b)%n%(2v.%B@%b.@)%m:%B%~%b%(!.#.>) '
   [[ ! -z "$SSH_CONNECTION" ]] && sshflag="☎︎ "
-  PS1='$sshflag%{$fg_bold[green]%}%m:%{$fg_bold[blue]%}%1~$(git_prompt_info) %{$reset_color%}%n%(!.#.$) '
+
+  PS1="➡️  %{\$fg_bold[green]%}%m%{\$reset_color%} | %{\$fg_bold[blue]%}%1~%{$reset_color%} | \$(git_prompt_info) | \$(prompt_caius_datetime) | \$(prompt_caius_battery) | \$(prompt_caius_ruby)\$(prompt_caius_append_triton)${prompt_newline}\$sshflag↳ %n%(!.#.$) "
   PS2='%(4_:... :)%3_> '
 
-  [[ "Darwin" == $(uname) ]] && RPROMPT="\$(prompt_caius_ruby) | \$(prompt_caius_battery) | \$(prompt_caius_datetime)"
-  [[ -z $RPROMPT ]] && RPROMPT="\$(prompt_caius_datetime)"
+  # [[ "Darwin" == $(uname) ]] && RPROMPT="\$(prompt_caius_prepend_triton)\$(prompt_caius_ruby) | \$(prompt_caius_battery) | \$(prompt_caius_datetime)"
+  # [[ -z $RPROMPT ]] && RPROMPT="\$(prompt_caius_datetime)"
 
   prompt_opts=( cr subst percent )
 
