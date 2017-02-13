@@ -12,7 +12,7 @@
       CONTINUE=false
 
       # Run our actual git rebase
-      command git rebase origin/$(git_current_branch)
+      command git rebase origin/$(git current-branch)
     fi
   fi
 
