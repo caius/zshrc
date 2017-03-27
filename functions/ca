@@ -1,0 +1,11 @@
+# function ca {
+  for dir in {"$HOME/Projects/mine","$HOME/Projects"}
+  do
+    if [[ -d "${dir}" ]]; then
+      cd "${dir}"
+      return 0
+    fi
+  done
+
+  echo "Uh-oh, didn't find a project folder. Not moving." > /dev/stderr
+# }
