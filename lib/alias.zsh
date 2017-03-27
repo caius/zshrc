@@ -1,5 +1,3 @@
-alias §="nocorrect"
-
 alias ehco="echo"
 alias ea-ssh="ssh"
 
@@ -101,7 +99,6 @@ alias gt='git'
 alias gi='git'
 alias it='git'
 alias g='git'
-alias t='git'
 alias ggit='git'
 alias giit='git'
 alias fit='git'
@@ -157,5 +154,9 @@ alias ack="ag"
 
 # Fuck yes, I am this lazy
 alias v="vagrant"
+alias t="triton"
 
 alias mcli="/usr/local/m-cli/m"
+
+## Global alias'
+alias -g §='$(fzf)'
