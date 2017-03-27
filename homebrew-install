@@ -32,6 +32,7 @@ packages=(
   ffmpeg
   freeimage
   freetype
+  fzf
   gist
   "git --with-pcre --with-brewed-curl --with-blk-sha1 --with-gettext --with-brewed-openssl --with-persistent-https"
   git-extras
