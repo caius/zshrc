@@ -103,7 +103,6 @@ alias ggit='git'
 alias giit='git'
 alias fit='git'
 alias igt='git'
-alias ti='git'
 alias tit='git'
 alias gits='git'
 alias guit="git"
