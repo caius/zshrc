@@ -1,5 +1,5 @@
 # Default Settings
-fontSize = 14
+fontSize = 12
 fontName = "LiberationMono"
 softWrap = true
 softTabs = true
