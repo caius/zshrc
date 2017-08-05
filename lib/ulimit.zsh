@@ -6,6 +6,10 @@ if [[ "$(uname)" == "Darwin" ]]; then
   #   kern.maxfiles=262144
   #   kern.maxfilesperproc=32768
   #
+  # And then either reboot or run
+  #
+  #   cat /etc/sysctl.conf | grep -v '#' | xargs -L1 sudo sysctl
+  #
 
   # Thanks OS X
   ulimit -n 32768
