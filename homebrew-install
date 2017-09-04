@@ -8,6 +8,7 @@ taps=(
   caskroom/cask
   caskroom/fonts
   dinkypumpkin/get_iplayer
+  soveran/tools
 )
 
 packages=(
@@ -87,6 +88,8 @@ packages=(
 
   # caskroom/cask
   brew-cask
+
+  soveran/tools/chen
 )
 
 cask_packages=(
