@@ -1,5 +1,5 @@
 # Default Settings
-fontSize = 12
+fontSize = 14
 fontName = "LiberationMono"
 softWrap = true
 softTabs = true
@@ -13,7 +13,7 @@ fileBrowserGlob  = "{*,$myExtraIncludes}"
 include = "{$include,$myExtraIncludes}"
 
 # Hide log and vendor directories from search popups.
-myExtraExcludes = "log,_build,deps,tmp/cache,target"
+myExtraExcludes = "log,_build,deps,tmp/cache,target,env"
 excludeInFileChooser  = "{$excludeInFileChooser,$myExtraExcludes}"
 excludeInFolderSearch = "{$excludeInFolderSearch,$myExtraExcludes}"
 
