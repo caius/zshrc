@@ -63,7 +63,6 @@
 	dm = "!git diff | mate"
 	dcm = "!git diff --cached | mate"
 	x = "!gitx"
-	clear = "!clear"
 	git = "!exec git"
 	gtfu = "!echo GET THE FUCK UP"
 	proj = "!proj"
