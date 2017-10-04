@@ -31,7 +31,7 @@
 	ts = status -sb
 	tst = status -sb
 	tup = up
-  fu = push --force-with-lease -u
+	fu = push --force-with-lease -u
 
 	## Shortcuts
 	st = status -sb
