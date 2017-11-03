@@ -1,6 +1,4 @@
 # function fa() {
-  FA_SRC="$HOME/freeagent/src"
-
   case "$1" in
 
   "clone")
