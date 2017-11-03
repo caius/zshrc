@@ -24,3 +24,6 @@ manpath=(
 )
 # ZSH doesn't do this automatically, it does fill from $manpath though
 export MANPATH
+
+
+set -U fish_user_paths $HOME/bin $HOME/.cargo/bin $HOME/.cabal/bin /usr/local/sbin /Library/TeX/texbin
