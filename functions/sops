@@ -1,0 +1,3 @@
+# function sops {
+  cd "${FA_SRC}/ops-sops"
+# }
