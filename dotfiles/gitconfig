@@ -90,6 +90,7 @@
 	it = !git init && git commit -m "First!!!111oneone" --allow-empty
 	pre = pr
 	upsh = push
+  vin = commit -v -n
 [branch]
 	autosetupmerge = true
 	autosetuprebase = always
