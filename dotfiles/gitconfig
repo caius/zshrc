@@ -91,6 +91,7 @@
 	pre = pr
 	upsh = push
   vin = commit -v -n
+	poush = push
 [branch]
 	autosetupmerge = true
 	autosetuprebase = always
