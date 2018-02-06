@@ -92,6 +92,7 @@
 	upsh = push
   vin = commit -v -n
 	poush = push
+	add-p = add -p
 [branch]
 	autosetupmerge = true
 	autosetuprebase = always
