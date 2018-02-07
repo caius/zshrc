@@ -1,8 +1,13 @@
 # Runs `git push` before `cap deploy`
 # Otherwise just passes through to `cap`
 # function cap {
-  # Run with Gemfile
-  if [[ -f "Gemfile" ]]; then
+  # Run capistrano in the correct way for the current folder
+  # Use bundler with custom gemfile if it's named gems.deploy.rb
+  # Otherwise use bundler with Gemfile if it exists
+  # Otherwise just invoke the command directly
+  if [[ -f "gems.deploy.rb" ]]; then
+    BUNDLE_GEMFILE=gems.deploy.rb bundle exec cap $*
+  elif [[ -f "Gemfile" ]]; then
     bundle exec cap $*
   else
     command cap $*
