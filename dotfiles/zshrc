@@ -1,15 +1,8 @@
 # Caius' ZSH config
 # Initialize the environment
 
-## PROFILE ##
-PROFILE_STARTUP=false
-if [[ "$PROFILE_STARTUP" == true ]]; then
-    # http://zsh.sourceforge.net/Doc/Release/Prompt-Expansion.html
-    PS4=$'%D{%M%S%.} %N:%i> '
-    exec 3>&2 2> $HOME/tmp/startlog.$$
-    setopt xtrace prompt_subst
-fi
-## ELIFORP ##
+# Profile with something like $(PROFILE_STARTUP=true /usr/bin/time zsh -i -c exit;)
+[[ "$PROFILE_STARTUP" == true ]] && zmodload zsh/zprof
 
 ZSH_ROOT="$HOME/.zsh"
 
@@ -19,11 +12,8 @@ fpath=($ZSH_ROOT/functions $fpath)
 autoload $^fpath/*(N:t)
 
 # Load all the ZSH config files
-for config_file ($ZSH_ROOT/lib/*.zsh) source $config_file
+for config_file ($ZSH_ROOT/lib/*.zsh); do
+  source $config_file
+done
 
-## PROFILE ##
-if [[ "$PROFILE_STARTUP" == true ]]; then
-    unsetopt xtrace
-    exec 2>&3 3>&-
-fi
-## ELIFORP ##
+[[ "$PROFILE_STARTUP" == true ]] && zprof
