@@ -1,4 +1,1 @@
-zfile="$(brew --prefix z)/etc/profile.d/z.sh"
-if [[ -e "$zfile" ]]; then
-  . "$zfile"
-fi
+source "$ZSH_ROOT/vendor/z/z.sh"

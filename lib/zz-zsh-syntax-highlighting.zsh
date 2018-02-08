@@ -1,4 +1,1 @@
-syntax="$(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
-if [[ -e "$syntax" ]]; then
-  source "$syntax"
-fi
+source "$ZSH_ROOT/vendor/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
