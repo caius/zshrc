@@ -7,3 +7,6 @@
 [submodule "vendor/zsh-history-substring-search"]
 	path = vendor/zsh-history-substring-search
 	url = git://github.com/zsh-users/zsh-history-substring-search
+[submodule "vendor/z"]
+	path = vendor/z
+	url = git://github.com/rupa/z
