@@ -130,6 +130,8 @@ alias js="/System/Library/Frameworks/JavaScriptCore.framework/Versions/Current/R
 alias sqlite='sqlite3'
 alias crontab="EDITOR=nano crontab"
 
+alias chrome="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome"
+
 # Override ZSH's built ins
 alias time="$(whence -p time)"
 
