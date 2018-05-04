@@ -1,4 +1,14 @@
+# Edit files in MacDown.app
+#
+# Without any arguments, it opens MacDown.app
+# Given an argument, it opens that file in MacDown for editing. New files
+# will be created automagically.
+#
 # function macdown {
-  [[ -f $1 ]] || touch $1
-  open -a MacDown $1
+  if [[ -z $1 ]]; then
+    open -a MacDown
+  else
+    [[ -f $1 ]] || touch $1
+    open -a MacDown $1
+  fi
 # }
