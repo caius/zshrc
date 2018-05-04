@@ -156,6 +156,7 @@ alias ack="ag"
 # Fuck yes, I am this lazy
 alias v="vagrant"
 alias t="triton"
+alias tf="terraform"
 alias md="macdown"
 
 alias mcli="/usr/local/m-cli/m"
