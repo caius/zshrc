@@ -1,0 +1,6 @@
+# Search gopass password manager
+# Credit to @cornet
+# gp() {
+  pass=$(gopass ls -f | fzf +m) && \
+    gopass -c "$pass"
+# }
