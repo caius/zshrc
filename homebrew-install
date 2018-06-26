@@ -72,6 +72,8 @@ packages=(
   rtmpdump
   ruby-install
   sqlite
+  tmux
+  tmux-cssh
   tomcat
   tree
   unrar

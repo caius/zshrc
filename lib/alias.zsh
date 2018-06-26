@@ -141,7 +141,7 @@ alias javascript="jsc"
 # From http://www.leancrew.com/all-this/2013/02/getting-rid-of-open-with-duplicates/
 alias fixopenwith='/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -kill -r -domain local -domain system -domain user'
 
-alias csshx="csshX"
+alias csshx="tmux-cssh"
 
 # Prettify JSON/XML
 alias pretty_json="python -m json.tool"
