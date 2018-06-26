@@ -1,0 +1,19 @@
+# function 1p {
+
+  if [[ -z ${ONE_PASSWORD_ACCOUNT} ]]; then
+    echo "Error: you need to define your 1password account in ONE_PASSWORD_ACCOUNT first"
+    return 1
+  fi
+
+  SESSION_VARIABLE="OP_SESSION_${ONE_PASSWORD_ACCOUNT}"
+  if [[ -z ${(P)SESSION_VARIABLE} ]]; then
+    eval "$(op signin ${ONE_PASSWORD_ACCOUNT})"
+  fi
+
+  if [[ -z ${(P)SESSION_VARIABLE} ]]; then
+    echo "Error: signing in failed. Make sure \$(op signin ${ONE_PASSWORD_ACCOUNT}) succeeds."
+    return 1
+  fi
+
+  op $*
+# }
