@@ -161,5 +161,7 @@ alias md="macdown"
 
 alias mcli="/usr/local/m-cli/m"
 
+alias dossh='doctl compute ssh --ssh-user caius'
+
 ## Global alias'
 alias -g §='$(fzf)'
