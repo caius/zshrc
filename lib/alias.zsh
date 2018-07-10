@@ -162,6 +162,7 @@ alias md="macdown"
 alias mcli="/usr/local/m-cli/m"
 
 alias dossh='doctl compute ssh --ssh-user caius'
+alias tmux-cssh='command tmux-cssh -ns'
 
 ## Global alias'
 alias -g §='$(fzf)'
