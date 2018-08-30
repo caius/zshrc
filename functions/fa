@@ -1,24 +1,3 @@
 # function fa() {
-  case "$1" in
-
-  "clone")
-      # Clone a fac/ GH repo to FA_SRC
-      if [[ ! -z $2 ]]; then
-        git clone gh:fac/$2 $FA_SRC/$2
-      else
-        echo "USAGE: $(basename $0) clone <repo>"
-        echo "Clones gh:fac/<repo> into $FA_SRC/<repo>"
-        return 1
-      fi
-    ;;
-
-  "")
-      # Behave like an alias and go to FA_SRC
-      cd $FA_SRC
-    ;;
-  *)
-      # Invoke the power of devkit
-      nocorrect chruby-exec $(< ~/.ruby-version) -- devkit $*
-    ;;
-  esac
+  echo ":'("
 # }
