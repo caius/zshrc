@@ -39,6 +39,7 @@
 	b = branch -v
 	ci = commit
 	co = checkout
+  ch = change-branch
 	cob = checkout -b
 	cp = cherry-pick
 	l = log
@@ -93,6 +94,8 @@
   vin = commit -v -n
 	poush = push
 	add-p = add -p
+  # Pinched from https://github.com/speric/dotfiles/blob/master/gitconfig
+	short-recent = "for-each-ref --count=25 --sort=-committerdate refs/heads/ --format='%(refname:short)'"
 [branch]
 	autosetupmerge = true
 	autosetuprebase = always
