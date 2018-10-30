@@ -1,0 +1,9 @@
+# function rails() {
+  # Save us having to wait 1+ seconds if we run without an argument
+  if [[ -z $1 ]]; then
+    echo "Error: run with a subcommand, idiot"
+    exit 1
+  else
+    command rails $@
+  fi
+# }
