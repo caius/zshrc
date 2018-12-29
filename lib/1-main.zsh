@@ -13,7 +13,6 @@ setopt auto_cd
 setopt multios
 setopt cdablevarS
 setopt BRACE_CCL # echo {a-c} # => [a,b,c]
-setopt re_match_pcre # PCRE regexp
 setopt long_list_jobs # tweak jobs
 
 # Completion
