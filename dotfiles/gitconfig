@@ -204,3 +204,10 @@
 	name = Caius Durling
 	email = dev@caius.name
 	useconfigonly = true
+[filter "lfs"]
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+[protocol]
+	version = 2
