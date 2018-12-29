@@ -121,13 +121,10 @@
 	verbose = true
 	template = /Users/caius/.zsh/share/git/commit.txt
 [core]
-	whitespace = fix,-indent-with-non-tab,trailing-space,cr-at-eol
+	whitespace = fix,-indent-with-non-tab,trailing-space
 	excludesfile = /Users/caius/.gitignore
 	preloadindex = true
 	attributesfile = /Users/caius/.gitattributes
-	# Deals with shitty projects having shitty line endings. Normally not needed.
-	# autocrlf = input
-	# safecrlf = true
 [credential]
 	helper = osxkeychain
 [diff]
@@ -141,9 +138,6 @@
 	textconv = strings
 [diff "exif"]
 	textconv = exiftool
-# [fetch]
-#   fsckObjects = true
-#   zeroPaddedFilemode = ignore
 [filter "media"]
 	clean = git-media-clean %f
 	smudge = git-media-smudge %f
@@ -179,9 +173,6 @@
 	trustExitCode = false
 [push]
 	default = current
-# [receive]
-#   fsckObjects = true
-#   zeroPaddedFilemode = ignore
 [rerere]
 	enabled = true
 [status]
@@ -189,9 +180,6 @@
 	submoduleSummary = true
 [submodule]
 	fetchJobs = 4
-# [transfer]
-#   fsckObjects = true
-#   zeroPaddedFilemode = ignore
 [url "git://gist.github.com/"]
 	insteadOf = gist:
 [url "git://github.com/"]
