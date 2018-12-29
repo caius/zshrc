@@ -16,3 +16,7 @@ if [[ -e /usr/local/opt/mariadb@10.2/bin ]]
 then
   path=($path /usr/local/opt/mariadb@10.2/bin)
 fi
+
+if [[ -e /usr/local/opt/esp-idf ]]; then
+  export IDF_PATH=/usr/local/opt/esp-idf
+fi
