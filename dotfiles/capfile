@@ -4,6 +4,7 @@ $rimshot = false
 
 # Play a rimshot when cap deploy finishes
 def rimshot
+  return if ENV["MUTE_CAP"]
   return unless (mp3 = Pathname.new("~/.zsh/share/rimshot.mp3").expand_path).exist?
   exec("afplay", mp3.to_s) if fork.nil?
 end
