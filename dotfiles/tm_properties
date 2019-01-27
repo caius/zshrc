@@ -13,7 +13,7 @@ fileBrowserGlob  = "{*,$myExtraIncludes}"
 include = "{$include,$myExtraIncludes}"
 
 # Hide log and vendor directories from search popups.
-myExtraExcludes = "log,_build,deps,tmp/cache,target,env,node_modules,tmp/capybara"
+myExtraExcludes = "log,_build,deps,tmp/cache,target,env,node_modules,tmp/capybara,coverage"
 excludeInFileChooser  = "{$excludeInFileChooser,$myExtraExcludes}"
 excludeInFolderSearch = "{$excludeInFolderSearch,$myExtraExcludes}"
 
