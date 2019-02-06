@@ -96,6 +96,7 @@
 	add-p = add -p
   # Pinched from https://github.com/speric/dotfiles/blob/master/gitconfig
 	short-recent = "for-each-ref --count=25 --sort=-committerdate refs/heads/ --format='%(refname:short)'"
+	stt = status -sb
 [branch]
 	autosetupmerge = true
 	autosetuprebase = always
