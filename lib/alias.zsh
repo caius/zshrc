@@ -109,6 +109,7 @@ alias gity="git"
 alias gtis="git"
 alias gitr="git"
 alias gigit="git"
+alias gitt="git"
 
 alias gitb='git b'
 alias gitst='git st'
