@@ -97,6 +97,7 @@
   # Pinched from https://github.com/speric/dotfiles/blob/master/gitconfig
 	short-recent = "for-each-ref --count=25 --sort=-committerdate refs/heads/ --format='%(refname:short)'"
 	stt = status -sb
+	cleanup-branches = "!git branch --merged | awk '$1 !~ /(master|production|\\*)/ { print $1 }' | xargs git branch -d"
 [branch]
 	autosetupmerge = true
 	autosetuprebase = always
