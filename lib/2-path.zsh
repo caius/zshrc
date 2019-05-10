@@ -10,6 +10,8 @@ path=(
   $HOME/.cargo/bin # rustup
   $HOME/.cabal/bin
   /usr/local/sbin # Homebrew
+  /opt/local/bin # macports
+  /opt/local/sbin # macports
   /Library/TeX/texbin # mactex
   $path # Default $PATH
 )
@@ -18,6 +20,7 @@ path=(
 manpath=(
   $HOME/man
   /usr/local/share/man # Homebrew
+  /opt/local/man # macports
   /usr/local/opt/erlang/lib/erlang/man # erlang
   /opt/X11/share/man
   $manpath # Other setup files
