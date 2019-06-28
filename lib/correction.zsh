@@ -10,7 +10,6 @@ alias man='nocorrect man'
 alias mkdir='nocorrect mkdir'
 alias mv='nocorrect mv'
 alias mysql='nocorrect mysql'
-alias port='nocorrect port'
 alias rspec="nocorrect bundle exec rspec"
 alias scp="nocorrect scp"
 alias spec="nocorrect spec"
