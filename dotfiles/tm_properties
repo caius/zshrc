@@ -8,7 +8,7 @@ showInvisibles = true
 saveOnBlur = true
 
 # Extra files to include
-myExtraIncludes = ".tm_properties,.gitignore,.ruby-version,.env,.github"
+myExtraIncludes = ".tm_properties,.gitignore,.ruby-version,.env,.github,.circleci"
 fileBrowserGlob  = "{*,$myExtraIncludes}"
 include = "{$include,$myExtraIncludes}"
 
