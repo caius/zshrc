@@ -1,2 +1,5 @@
-erlang 21.2.6
 elixir 1.8.1-otp-21
+erlang 21.2.6
+golang 1.12.6
+nodejs 12.5.0
+terraform 0.12.3
