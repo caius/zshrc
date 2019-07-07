@@ -5,7 +5,6 @@
 set -e
 
 ZSH_ROOT="$HOME/.zsh"
-NO_DOT=(Brewfile)
 
 git submodule update --init
 
@@ -28,12 +27,7 @@ echo " ..done!"
 # done
 
 for FROM in $ZSH_ROOT/dotfiles/*; do
-  NAME="$(basename $FROM)"
-
-  # Dot the file unless it's blacklisted
-  if [[ ! -n ${(M)NO_DOT:#${NAME}} ]]; then
-    NAME=".${NAME}"
-  fi
+  NAME=".$(basename $FROM)"
 
   TO="$HOME/$NAME"
   # echo "TO: $TO"
@@ -64,5 +58,7 @@ done
 echo "Installing binfiles to ~/bin"
 
 (cd vendor/Binfiles && rake)
+
+(brew bundle)
 
 echo "All installed!"
