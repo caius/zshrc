@@ -56,7 +56,6 @@ brew "mosquitto"
 
 # cask
 cask "java" unless system("/usr/libexec/java_home --failfast")
-cask "bonjour-browser"
 cask "charles"
 cask "coconutbattery"
 cask "firefox"
