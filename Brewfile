@@ -62,7 +62,7 @@ cask "firefox"
 cask "launchbar"
 cask "macdown"
 cask "the-unarchiver"
-cask "virtualbox" unless `system_profiler -detailLevel basic -json SPSoftwareDataType`["macOS 10.15"]
+cask "virtualbox" unless MacOS.cat == :catalina
 
 # fonts
 cask "font-liberation-sans"
