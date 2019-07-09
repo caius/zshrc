@@ -1,4 +1,4 @@
 # Let pip do it's thing without being in a virtual env
-# function syspip(){
+# function syspip3(){
   PIP_REQUIRE_VIRTUALENV="" pip3 "$@"
 # }
