@@ -1,7 +1,7 @@
 cask_args appdir: "#{ENV["HOME"]}/Applications"
 
 tap "homebrew/cask"
-tap "caskroom/fonts"
+tap "homebrew/cask-fonts"
 tap "soveran/tools"
 tap "nektos/tap"
 
