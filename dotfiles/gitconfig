@@ -99,7 +99,7 @@
 	stt = status -sb
 	cleanup-branches = "!git branch --merged | awk '$1 !~ /(master|production|\\*)/ { print $1 }' | xargs git branch -d"
 	base-branch = "!git rev-parse --symbolic-full-name refs/remotes/origin/HEAD | awk -F/ '{ print $4 }'"
-	cobase = "!git checkout $(git base-branch)"
+	home = "!git checkout $(git base-branch)"
 [branch]
 	autosetupmerge = true
 	autosetuprebase = always
