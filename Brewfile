@@ -1,4 +1,4 @@
-cask_args appdir: "#{ENV["HOME"]}/Applications"
+cask_args appdir: "/Applications"
 
 tap "homebrew/cask"
 tap "homebrew/cask-fonts"
