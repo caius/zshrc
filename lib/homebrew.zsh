@@ -9,9 +9,6 @@ export HOMEBREW_NO_AUTO_UPDATE=1
 # Don't follow insecure redirects
 export HOMEBREW_NO_INSECURE_REDIRECT=1
 
-# Make sure casks have SHAs for downloaded packages when installing
-export HOMEBREW_CASK_OPTS=--require-sha
-
 if [[ -e /usr/local/opt/mariadb@10.2/bin ]]
 then
   path=($path /usr/local/opt/mariadb@10.2/bin)
