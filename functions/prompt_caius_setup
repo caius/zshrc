@@ -5,6 +5,16 @@ function prompt_caius_precmd {
   [[ $exitstatus -gt 128 ]] && psvar[1]=SIG$signals[$exitstatus-127]
   [[ $psvar[1] = SIG ]] && psvar[1]=$exitstatus
   jobs % >/dev/null 2>&1 && psvar[2]=
+  prompt_caius_path_in_title
+}
+
+function prompt_caius_preexec {
+  prompt_caius_path_in_title
+}
+
+# Puts the current working directory in terminal title
+function prompt_caius_path_in_title {
+  print -Pn "\e]2; %~/ \a"
 }
 
 function prompt_caius_battery {
@@ -37,15 +47,11 @@ function prompt_caius_ruby {
   type chruby > /dev/null && (chruby | awk '/\*/ { sub("ruby-", "", $2); print $2 }')
 }
 
-function prompt_caius_append_triton {
-  [[ -z $TRITON_PROFILE ]] || echo -n " | $TRITON_PROFILE"
-}
-
 function prompt_caius_setup {
 #  PS1='[%(2L.%L/.)'$ZSH_VERSION']%(?..%B{%v}%b)%n%(2v.%B@%b.@)%m:%B%~%b%(!.#.>) '
   [[ ! -z "$SSH_CONNECTION" ]] && sshflag="☎︎ "
 
-  PS1="➡️  %{\$fg_bold[green]%}%m%{\$reset_color%} | %{\$fg_bold[blue]%}%1~%{$reset_color%} | \$(git_prompt_info) | \$(prompt_caius_datetime) | \$(prompt_caius_battery) | \$(prompt_caius_ruby)\$(prompt_caius_append_triton)${prompt_newline}\$sshflag↳ %n%(!.#.$) "
+  PS1="➡️  %{\$fg_bold[green]%}%m%{\$reset_color%} | %{\$fg_bold[blue]%}%1~%{$reset_color%} | \$(git_prompt_info) | \$(prompt_caius_datetime) | \$(prompt_caius_battery) | \$(prompt_caius_ruby)${prompt_newline}\$sshflag↳ %n%(!.#.$) "
   PS2='%(4_:... :)%3_> '
 
   # [[ "Darwin" == $(uname) ]] && RPROMPT="\$(prompt_caius_prepend_triton)\$(prompt_caius_ruby) | \$(prompt_caius_battery) | \$(prompt_caius_datetime)"
@@ -54,6 +60,7 @@ function prompt_caius_setup {
   prompt_opts=( cr subst percent )
 
   add-zsh-hook precmd prompt_caius_precmd
+  add-zsh-hook preexec prompt_caius_preexec
 }
 
 prompt_caius_setup "$@"
