@@ -17,8 +17,6 @@ myExtraExcludes = "log,_build,deps,tmp/cache,target,env,node_modules,tmp/capybar
 excludeInFileChooser  = "{$excludeInFileChooser,$myExtraExcludes}"
 excludeInFolderSearch = "{$excludeInFolderSearch,$myExtraExcludes}"
 
-# LaTeX tools
-PATH = "$PATH:/usr/texbin"
 # Homebrew tools
 PATH = "$PATH:/usr/local/bin"
 
@@ -38,7 +36,7 @@ TM_FULLNAME = "Caius Durling"
 TM_ORGANIZATION_NAME = "SwedishCampground"
 
 # Specific file overrides
-[ .git/COMMIT_EDITMSG ]
+[ ".git/COMMIT_EDITMSG" ]
 spellChecking = true
 
 [ *.{icns,ico,jpg,jpeg,m4v,nib,pdf,png,psd,pyc,rtf,tif,tiff,xib} ]
@@ -52,3 +50,7 @@ fileType = "source.ruby"
 
 [ "{.gitconfig}"]
 fileType = "source.git-config"
+
+[ "Makefile" ]
+tabSize = 4
+softTabs = false
