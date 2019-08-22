@@ -1,6 +1,6 @@
 # Default Settings
 fontSize = 14
-fontName = "LiberationMono"
+fontName = "Fira Code Retina"
 softWrap = true
 softTabs = true
 tabSize = 2
@@ -53,4 +53,7 @@ fileType = "source.git-config"
 
 [ "Makefile" ]
 tabSize = 4
+softTabs = false
+
+[ "*.go" ]
 softTabs = false

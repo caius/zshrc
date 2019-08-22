@@ -1,5 +1,3 @@
-cask_args appdir: "/Applications"
-
 tap "homebrew/cask"
 tap "homebrew/cask-fonts"
 tap "soveran/tools"
@@ -71,3 +69,4 @@ cask "virtualbox" unless MacOS.cat == :catalina
 
 # fonts
 cask "font-liberation-sans"
+cask "font-fira-code"
