@@ -18,6 +18,7 @@ export LC_CTYPE=en_US.UTF-8 LANG=en_GB.UTF-8
 # Editors
 export EDITOR="mate -wl1"
 export SVN_EDITOR="$EDITOR" HGEDITOR="$EDITOR" GIT_EDITOR="$EDITOR"
+export MARKDOWN_EDITOR="macdown"
 
 # Fuck you make, et al. Leave some CPU for the rest of us.
 parallel_cpus=$(( $(/usr/sbin/sysctl -n machdep.cpu.thread_count) - 1 ))
