@@ -37,7 +37,8 @@
 	st = status -sb
 	s = status -sb
 	b = branch -v
-	ci = commit
+	ci = commit --no-verbose
+	cia = commit --no-verbose --all
 	co = checkout
   ch = change-branch
 	cob = checkout -b
@@ -54,9 +55,10 @@
 	tome = pull
 	toyou = push
 	cl = clone
-	vi = commit -v
-	via = commit -va
-	viaa = commit -va --amend
+	vi = commit
+	via = commit --all
+	vin = commit --no-verify
+	viaa = commit --all --amend
 	sui = submodule update --init
 	cot = checkout -t
 	dc = diff --cached
@@ -91,7 +93,6 @@
 	it = !git init && git commit -m "First!!!111oneone" --allow-empty
 	pre = pr
 	upsh = push
-  vin = commit -v -n
 	poush = push
 	add-p = add -p
   # Pinched from https://github.com/speric/dotfiles/blob/master/gitconfig
