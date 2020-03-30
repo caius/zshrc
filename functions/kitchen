@@ -1,0 +1,7 @@
+# function kitchen() {
+  if [[ -f Gemfile ]]; then
+    bundle exec kitchen $*
+  else
+    command kitchen $*
+  fi
+# }
