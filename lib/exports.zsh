@@ -32,3 +32,6 @@ export STRICT_HTML=true
 
 # GPG refuses to be invoked by git without this
 export GPG_TTY=$(tty)
+
+# Fucking ruby 2.7
+export RUBYOPT="-W:no-deprecated -W:no-experimental"
