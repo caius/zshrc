@@ -1,0 +1,3 @@
+# function tmux-cssh() {
+  tmux-xpanes --ssh -ss $*
+# }
