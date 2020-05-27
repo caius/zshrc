@@ -1,7 +1,0 @@
-# See http://code.google.com/p/csshx/wiki/Manual for help
-
-# Default to the main screen
-screen = 1
-
-# Remap from ctl-a to ctl-z
-action_key = \032
