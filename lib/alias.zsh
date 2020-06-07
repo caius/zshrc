@@ -139,8 +139,6 @@ alias javascript="jsc"
 # From http://www.leancrew.com/all-this/2013/02/getting-rid-of-open-with-duplicates/
 alias fixopenwith='/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -kill -r -domain local -domain system -domain user'
 
-alias csshx="tmux-cssh"
-
 # Prettify JSON/XML
 alias pretty_json="python -m json.tool"
 alias pretty_xml="xmllint --format -"
@@ -160,7 +158,6 @@ alias md="macdown"
 alias mcli="/usr/local/m-cli/m"
 
 alias dossh='doctl compute ssh --ssh-user caius'
-alias tmux-cssh='command tmux-cssh -ns'
 
 ## Global alias'
 alias -g §='$(fzf)'
