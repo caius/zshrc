@@ -1,9 +1,0 @@
-elixir 1.8.1-otp-21
-erlang 21.2.6
-gohugo 0.55.6
-golang 1.12.6
-nodejs 8.11.1
-python 3.7.3 2.7.16
-ruby 2.6.3
-terraform 0.12.13
-yarn 1.17.2
