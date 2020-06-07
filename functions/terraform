@@ -1,0 +1,41 @@
+# Magical terraform override
+# function terraform() {
+
+  # Make `terraform cloud` a thing
+  if [[ $1 == "cloud" ]]; then
+    case $2 in
+    "open")
+
+      readonly tfstate_path=".terraform/terraform.tfstate"
+      if [[ ! -f $tfstate_path ]]; then
+        echo "ERROR: Terraform state not found at ${tfstate_path}"
+        return 2
+      fi
+
+      readonly backend_type="$(jq --join-output '.backend.type' ${tfstate_path})"
+      if [[ "remote" != $backend_type ]]; then
+        echo "ERROR: Terraform backend not of type remote. Found '${backend_type}'."
+        return 2
+      fi
+
+      backend_organization="$(jq --join-output '.backend.config.organization' ${tfstate_path})"
+      backend_workspace="$(jq --join-output '.backend.config.workspaces.name' ${tfstate_path})"
+      workspace_url="https://app.terraform.io/app/${backend_organization}/workspaces/${backend_workspace}"
+
+      echo "Opening ${workspace_url}"
+      open "${workspace_url}"
+
+      return 0
+      ;;
+    *)
+      echo "Unknown command for terraform-cloud ${2}"
+      echo "Available commands:"
+      echo "  terraform cloud open # opens terraform cloud for current project"
+      echo
+      return 1
+    esac
+  fi
+
+  # Otherwise fall back to normal command
+  command terraform $*
+# }
