@@ -39,3 +39,5 @@ Temporary Items
 /.byebug_history
 /tmp
 /.tm_properties
+
+.tool-versions
