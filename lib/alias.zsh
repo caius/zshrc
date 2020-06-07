@@ -151,13 +151,10 @@ alias ack="ag"
 
 # Fuck yes, I am this lazy
 alias v="vagrant"
-alias t="triton"
 alias tf="terraform"
 alias md="macdown"
 
-alias mcli="/usr/local/m-cli/m"
-
-alias dossh='doctl compute ssh --ssh-user caius'
+alias macos="$(brew --prefix m-cli)/bin/m"
 
 ## Global alias'
 alias -g §='$(fzf)'
