@@ -90,7 +90,7 @@
 	tpull-request = pull-request
 	recent = for-each-ref --sort=committerdate refs/heads/ --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(color:red)%(objectname:short)%(color:reset) - %(contents:subject) - %(authorname) (%(color:green)%(committerdate:relative)%(color:reset))'
 	tpr = !git pr
-	it = !git init && git commit -m "First!!!111oneone" --allow-empty
+	it = !git init && git commit -m "First!!!111oneone" --allow-empty && git branch -M main
 	pre = pr
 	upsh = push
 	poush = push
