@@ -41,3 +41,5 @@ Temporary Items
 /.tm_properties
 
 .tool-versions
+.env
+.ruby-version
