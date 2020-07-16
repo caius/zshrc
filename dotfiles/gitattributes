@@ -7,6 +7,8 @@
 *.python diff=python
 *.m diff=objc
 *.c diff=cpp
+*.jpg diff=exif
+*.tiff diff=exif
 *.png diff=exif
 *.doc diff=doc
 db/schema.rb merge=railsschema

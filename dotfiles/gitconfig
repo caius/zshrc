@@ -133,16 +133,14 @@
 [credential]
 	helper = osxkeychain
 [diff]
-	renamelimit = 0
-	mnemonicprefix = true
-	renames = copies
-	algorithm = patience
-	submodule = log
-	compactionHeuristic = true
+  renamelimit = 0
+  mnemonicprefix = true
+  renames = copies
+  algorithm = patience
+  submodule = log
+  compactionHeuristic = true
 [diff "doc"]
-	textconv = strings
-[diff "exif"]
-	textconv = exiftool
+  textconv = strings
 [filter "media"]
 	clean = git-media-clean %f
 	smudge = git-media-smudge %f
