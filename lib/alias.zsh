@@ -156,5 +156,7 @@ alias md="macdown"
 
 alias macos="$(brew --prefix m-cli)/bin/m"
 
+alias k="kitchen"
+
 ## Global alias'
 alias -g §='$(fzf)'
