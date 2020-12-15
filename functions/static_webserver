@@ -13,4 +13,4 @@ else
 fi
 
 echo "Booting static server on ${host}:${port}"
-python -c 'import BaseHTTPServer as bhs, SimpleHTTPServer as shs; bhs.HTTPServer(("'$host'", '$port'), shs.SimpleHTTPRequestHandler).serve_forever()'
+ruby -run -ehttpd . --bind-address "${host}" --port "${port}"
