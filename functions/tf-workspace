@@ -1,0 +1,15 @@
+# function tf-workspace() {
+  readonly statefile=".terraform/terraform.tfstate"
+  if [[ ! -f $statefile ]]; then
+    echo "Could not find terraform tfstate to inspect"
+    return
+  fi
+
+  readonly backend_type=$(jq -r '.backend.type' $statefile)
+  if [[ "$backend_type" != "remote" ]]; then
+    echo "Not a remote backend"
+    return
+  fi
+
+  open $(jq -r '.backend.config | "https://\(.hostname)/app/\(.organization)/workspaces/\(.workspaces.name)"' .terraform/terraform.tfstate)
+# }
