@@ -101,6 +101,8 @@
 	cleanup-branches = "!git branch-cleanup"
 	base-branch = "!git rev-parse --symbolic-full-name refs/remotes/origin/HEAD | awk -F/ '{ print $4 }'"
 	home = "!git checkout $(git base-branch)"
+	# https://carolynvanslyck.com/blog/2020/12/git-wip/
+	wip = for-each-ref --sort='authordate:iso8601' --format=' %(color:green)%(authordate:relative)%09%(color:white)%(refname:short)' refs/heads
 [branch]
 	autosetupmerge = true
 	autosetuprebase = always
