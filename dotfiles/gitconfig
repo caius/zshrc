@@ -98,7 +98,7 @@
   # Pinched from https://github.com/speric/dotfiles/blob/master/gitconfig
 	short-recent = "for-each-ref --count=25 --sort=-committerdate refs/heads/ --format='%(refname:short)'"
 	stt = status -sb
-	cleanup-branches = "!git branch --merged | awk '$1 !~ /(master|production|\\*)/ { print $1 }' | xargs git branch -d"
+	cleanup-branches = "!git branch-cleanup"
 	base-branch = "!git rev-parse --symbolic-full-name refs/remotes/origin/HEAD | awk -F/ '{ print $4 }'"
 	home = "!git checkout $(git base-branch)"
 [branch]
