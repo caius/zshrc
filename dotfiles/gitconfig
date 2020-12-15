@@ -222,3 +222,5 @@
 # This next lines include Netlify's Git Credential Helper configuration in your Git configuration.
 [include]
   path = /Users/caius/.netlify/helper/git-config
+[reset]
+	quiet = true
