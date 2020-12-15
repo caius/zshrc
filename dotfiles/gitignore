@@ -43,3 +43,7 @@ Temporary Items
 .tool-versions
 .env
 .ruby-version
+.secrets
+
+# emacs
+*~
