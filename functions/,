@@ -4,6 +4,17 @@
     , "$PWD"
   else
     # Pass shit upstream to mate - uses alias' of mate
-    mate $*
+    declare -a args
+
+    for i in "$@"
+    do
+      if [[ $i =~ ":" ]]; then
+        args=($args ${i/:*/} "-l" ${i/*:/})
+      else
+        args=($args ${i})
+      fi
+    done
+
+    mate "${args[@]}"
   fi
 # }
