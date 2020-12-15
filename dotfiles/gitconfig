@@ -143,6 +143,8 @@
   compactionHeuristic = true
 [diff "doc"]
   textconv = strings
+[diff "exif"]
+	textconv = exiftool
 [filter "media"]
 	clean = git-media-clean %f
 	smudge = git-media-smudge %f
