@@ -4,6 +4,6 @@
     echo "Error: run with a subcommand, idiot"
     exit 1
   else
-    command rails $@
+    command bin/rails $@
   fi
 # }
