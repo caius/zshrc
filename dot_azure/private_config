@@ -1,0 +1,10 @@
+[cloud]
+name = AzureCloud
+
+[core]
+collect_telemetry = yes
+first_run = yes
+
+[defaults]
+location = UK West
+
