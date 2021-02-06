@@ -1,0 +1,8 @@
+--database postgresql
+--skip-action-cable
+--skip-action-mailbox
+--skip-sprockets
+--skip-spring
+--skip-listen
+--skip-turbolinks
+--webpack=stimulus
