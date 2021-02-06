@@ -1,0 +1,10 @@
+---
+BUNDLE_JOBS: "7"
+BUNDLE_CONSOLE: "pry"
+BUNDLE_GEM__TEST: "rspec"
+BUNDLE_GEM__MIT: "true"
+BUNDLE_GEM__COC: "true"
+BUNDLE_BUILD__LIBXML2: "--with-xml2-config=/usr/local/opt/libxml2/bin/xml2-config"
+BUNDLE_RUBYGEMS__PKG__GITHUB__COM: "{{ (onepassword ".bundle/config rubygems.pkg.github.com").details.password }}"
+BUNDLE_ENTERPRISE__CONTRIBSYS__COM: "{{ (onepassword ".bundle/config enterprise.contribsys.com").details.password }}"
+BUNDLE_BUILD__PUMA: "--with-cflags=-Wno-error=implicit-function-declaration"
