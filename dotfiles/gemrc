@@ -1,7 +1,0 @@
----
-gem: --no-rdoc --no-ri --no-user-install --env-shebang
-:bulk_threshold: 1000
-:sources:
-- https://rubygems.org/
-:update_sources: true
-:verbose: true

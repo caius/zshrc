@@ -34,7 +34,7 @@ alias be="bundle exec"
 
 alias gvg='grep -v grep'
 
-alias rc='mate ~/.zsh'
+alias rc='mate $(chezmoi source-path)'
 alias so='source ~/.zshrc && echo "Sourced ~/.zshrc"'
 alias sshc='mate -w ~/.ssh/config'
 alias irbrc='mate -w ~/.irbrc'

@@ -1,3 +1,0 @@
-require 'autotest/fsevent'
-require 'autotest/bundler'
-require 'autotest/growl'

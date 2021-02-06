@@ -1,2 +1,3 @@
-[ "functions/**/*" ]
+# These are all zsh files
+[ "dot_zsh2/functions/*" ]
 fileType = "source.shell"
