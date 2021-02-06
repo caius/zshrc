@@ -1,0 +1,19 @@
+# Caius' ZSH config
+# Initialize the environment
+
+# Profile with something like $(PROFILE_STARTUP=true /usr/bin/time zsh -i -c exit;)
+[[ "$PROFILE_STARTUP" == true ]] && zmodload zsh/zprof
+
+ZSH_ROOT="$HOME/.zsh"
+
+# Use the force to load my functions
+fpath=($ZSH_ROOT/functions $fpath)
+# autoload custom functions
+autoload $^fpath/*(N:t)
+
+# Load all the ZSH config files
+for config_file ($ZSH_ROOT/lib/*.zsh); do
+  source $config_file
+done
+
+[[ "$PROFILE_STARTUP" == true ]] && zprof

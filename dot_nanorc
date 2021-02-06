@@ -1,0 +1,10 @@
+set autoindent
+set historylog
+set morespace
+set nowrap
+set quickblank
+set smooth
+set suspend
+set tabsize 2
+set tabstospaces
+set wordbounds

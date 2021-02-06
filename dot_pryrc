@@ -1,0 +1,13 @@
+# TextMate FTW.
+Pry.config.editor = -> (file, line) { "mate -w -l#{line} #{file.inspect}"}
+
+# My pry is polite
+Pry.config.hooks.add_hook :after_session, :say_bye do
+  puts "bye-bye"
+end
+
+# Prompt with ruby version
+Pry.config.prompt = [
+  proc { |obj, nest_level, _| "#{RUBY_VERSION} (#{obj}):#{nest_level} > " },
+  proc { |obj, nest_level, _| "#{RUBY_VERSION} (#{obj}):#{nest_level} * " }
+]
