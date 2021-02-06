@@ -1,0 +1,10 @@
+{
+    "config_version": 1,
+    "profiles": [
+        {
+            "email": "{{ (onepasswordDetailsFields ".sendcat").username.value }}",
+            "api_token": "{{ (onepasswordDetailsFields ".sendcat").password.value }}",
+            "default": true
+        }
+    ]
+}
