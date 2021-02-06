@@ -158,5 +158,7 @@ alias macos="$(brew --prefix m-cli)/bin/m"
 
 alias k="kitchen"
 
+alias cz="chezmoi"
+
 ## Global alias'
 alias -g §='$(fzf)'
