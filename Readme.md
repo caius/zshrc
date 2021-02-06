@@ -34,6 +34,12 @@ chezmoi diff
 chezmoi apply
 ```
 
+## Vendored dependencies
+
+`./run_once_zsh_plugins.sh` installs specific versions of ZSH plugins. Editing the file will cause it to be re-run on `chezmoi apply` again, updating the given plugin.
+
+(I spent far too much time fighting `git subtree` and `chezmoi` to make it work, but `chezmoi` kept flipping out at README.md being an unknown file type, even if I ignored it. Sometimes adding some bash is the simplest solution.)
+
 ## Licence
 
 Copyright (c) 2011 Caius Durling <dev@caius.name>
