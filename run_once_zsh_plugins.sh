@@ -7,7 +7,7 @@ set -o noclobber
 
 # increment to force apply: 2
 
-readonly ZSH_ROOT="${HOME}/.zsh2"
+readonly ZSH_ROOT="${HOME}/.zsh"
 
 mkdir -p "${ZSH_ROOT}/vendor"
 
