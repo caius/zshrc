@@ -1,0 +1,3 @@
+# function chruby-default() {
+  chruby $(< ~/.zsh2/dotfiles/ruby-version)
+# }
