@@ -4,7 +4,7 @@
 # Profile with something like $(PROFILE_STARTUP=true /usr/bin/time zsh -i -c exit;)
 [[ "$PROFILE_STARTUP" == true ]] && zmodload zsh/zprof
 
-ZSH_ROOT="$HOME/.zsh2"
+ZSH_ROOT="$HOME/.zsh"
 
 # Use the force to load my functions
 fpath=($ZSH_ROOT/functions $fpath)

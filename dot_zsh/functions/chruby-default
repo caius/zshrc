@@ -1,0 +1,3 @@
+# function chruby-default() {
+  chruby $(< ~/.ruby-version)
+# }
