@@ -35,14 +35,8 @@ alias be="bundle exec"
 alias gvg='grep -v grep'
 
 alias rc='mate $(chezmoi source-path)'
-alias so='source ~/.zshrc && echo "Sourced ~/.zshrc"'
-alias sshc='mate -w ~/.ssh/config'
-alias irbrc='mate -w ~/.irbrc'
-alias gitrc='mate -w ~/.gitconfig'
-
-alias nt="terminal_clone_tab"
-
-alias cur='clear && pwd && ls'
+alias sshc='mate ~/.ssh/config'
+alias gitrc='mate ~/.gitconfig'
 
 ## Top Stuff
 alias cpu='(which htop > /dev/null && htop --sort-key PERCENT_CPU) || top -o cpu'
