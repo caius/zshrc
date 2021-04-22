@@ -20,7 +20,7 @@ excludeInFolderSearch = "{$excludeInFolderSearch,$myExtraExcludes}"
 # Homebrew tools
 PATH = "$PATH:/opt/homebrew/bin:/usr/local/bin"
 
-GOPATH = "/Users/caius/go"
+GOPATH = "{{ .chezmoi.homeDir }}/go"
 GOROOT = "/opt/homebrew/opt/go/libexec"
 
 # Configure some binary paths
@@ -29,7 +29,7 @@ TM_GIT = "/opt/homebrew/bin/git"
 # TM_GO = "$GOROOT/bin/go"
 # TM_HG  = "/opt/homebrew/bin/hg"
 # TM_PYTHON = "/opt/homebrew/bin/python"
-TM_RUBY = "/Users/caius/bin/tm_chruby"
+TM_RUBY = "{{ .chezmoi.homeDir }}/bin/tm_chruby"
 
 # Variables
 TM_FULLNAME = "Caius Durling"
