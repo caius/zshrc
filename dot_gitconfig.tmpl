@@ -126,12 +126,12 @@
 	untracked = cyan
 [commit]
 	verbose = true
-	template = /Users/caius/.zsh/share/git/commit.txt
+	template = {{ .chezmoi.homeDir }}/.git_commit_template.txt
 [core]
 	whitespace = fix,-indent-with-non-tab,trailing-space
-	excludesfile = /Users/caius/.gitignore
+	excludesfile = {{ .chezmoi.homeDir }}/.gitignore
 	preloadindex = true
-	attributesfile = /Users/caius/.gitattributes
+	attributesfile = {{ .chezmoi.homeDir }}/.gitattributes
 [credential]
 	helper = osxkeychain
 [diff]
@@ -221,6 +221,6 @@
 
 # This next lines include Netlify's Git Credential Helper configuration in your Git configuration.
 [include]
-  path = /Users/caius/.netlify/helper/git-config
+  path = {{ .chezmoi.homeDir }}/.netlify/helper/git-config
 [reset]
 	quiet = true
