@@ -54,10 +54,10 @@ setopt prompt_subst
 prompt caius
 
 # Homebrew version of ZSH comes with helpfiles
-if [[ -d /usr/local/share/zsh ]]; then
+if [[ -d /opt/homebrew/share/zsh ]]; then
   unalias run-help
   autoload run-help
-  HELPDIR=/usr/local/share/zsh/helpfiles
+  HELPDIR=/opt/homebrew/share/zsh/helpfiles
 fi
 
 # When changing PWD, load any new zshenv's and

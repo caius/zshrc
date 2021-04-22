@@ -9,7 +9,10 @@ path=(
   $HOME/bin
   $HOME/.cargo/bin # rustup
   $HOME/.cabal/bin
-  /usr/local/sbin # Homebrew
+  /opt/homebrew/bin # ARM Homebrew
+  /opt/homebrew/sbin # ARM Homebrew
+  /usr/local/bin # Rosetta 2 Homebrew
+  /usr/local/sbin # Rosetta 2 Homebrew
   /Library/TeX/texbin # mactex
   $path # Default $PATH
 )
@@ -17,8 +20,9 @@ path=(
 # And the same for the $MANPATH
 manpath=(
   $HOME/man
-  /usr/local/share/man # Homebrew
-  /usr/local/opt/erlang/lib/erlang/man # erlang
+  /opt/homebrew/share/man # ARM Homebrew
+  /usr/local/share/man # Rosetta 2 Homebrew
+  /opt/homebrew/opt/erlang/lib/erlang/man # erlang
   /opt/X11/share/man
   $manpath # Other setup files
   $(/bin/cat /etc/manpaths) # Default manpaths - not loaded by default

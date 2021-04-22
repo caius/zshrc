@@ -1,4 +1,4 @@
-chruby_dir="/usr/local/opt/chruby/share/chruby"
+chruby_dir="/opt/homebrew/opt/chruby/share/chruby"
 if [[ -d $chruby_dir ]]; then
   # Load up chruby
   source $chruby_dir/chruby.sh
