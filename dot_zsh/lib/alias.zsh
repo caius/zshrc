@@ -154,5 +154,8 @@ alias k="kitchen"
 
 alias cz="chezmoi"
 
+alias rbrew="rosetta brew"
+
 ## Global alias'
 alias -g §='$(fzf)'
+alias -g rosetta="arch -x86_64"
