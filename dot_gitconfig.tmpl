@@ -145,6 +145,11 @@
   textconv = strings
 [diff "exif"]
 	textconv = exiftool
+[filter "lfs"]
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
 [filter "media"]
 	clean = git-media-clean %f
 	smudge = git-media-smudge %f
@@ -159,29 +164,25 @@
 	sslverify = true
 [hub]
 	protocol = https
+[include]
+	path = {{ .chezmoi.homeDir }}/.netlify/helper/git-config
 [merge]
 	tool = mergemate
 	stat = true
 	ff = false
-[merge "railsschema"]
-	name = newer Rails schema version
-	driver = "ruby -e '\n\
-		system %(git), %(merge-file), %(--marker-size=%L), %(%A), %(%O), %(%B)\n\
-		b = File.read(%(%A))\n\
-		b.sub!(/^<+ .*\\nActiveRecord::Schema\\.define.(:version =>|version:) (\\d+). do\\n=+\\nActiveRecord::Schema\\.define.(?::version =>|version:) (\\d+). do\\n>+ .*/) do\n\
-			%(ActiveRecord::Schema.define(#{$1} #{[$2, $3].max}) do)\n\
-		end\n\
-		File.open(%(%A), %(w)) {|f| f.write(b)}\n\
-		exit 1 if b.include?(%(<)*%L)'"
 [mergetool]
 	keepBackup = false
 [mergetool "mergemate"]
 	cmd = mate -wl1 \"$MERGED\"
 	trustExitCode = false
+[protocol]
+	version = 2
 [push]
 	default = current
 [rerere]
 	enabled = true
+[reset]
+	quiet = true
 [status]
 	showUntrackedFiles = all
 	submoduleSummary = true
@@ -211,16 +212,3 @@
 	name = Caius Durling
 	email = {{ .email }}
 	useconfigonly = true
-[filter "lfs"]
-	process = git-lfs filter-process
-	required = true
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
-[protocol]
-	version = 2
-
-# This next lines include Netlify's Git Credential Helper configuration in your Git configuration.
-[include]
-  path = {{ .chezmoi.homeDir }}/.netlify/helper/git-config
-[reset]
-	quiet = true
