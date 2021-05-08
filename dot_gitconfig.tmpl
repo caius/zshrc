@@ -90,7 +90,7 @@
 	tpull-request = pull-request
 	recent = for-each-ref --sort=committerdate refs/heads/ --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(color:red)%(objectname:short)%(color:reset) - %(contents:subject) - %(authorname) (%(color:green)%(committerdate:relative)%(color:reset))'
 	tpr = !git pr
-	it = !git init && git commit -m "First!!!111oneone" --allow-empty && git branch -M main
+	it = !git init && git commit -m "First!!!111oneone" --allow-empty
 	pre = pr
 	upsh = push
 	poush = push
@@ -166,6 +166,8 @@
 	protocol = https
 [include]
 	path = {{ .chezmoi.homeDir }}/.netlify/helper/git-config
+[init]
+	defaultBranch = main
 [merge]
 	tool = mergemate
 	stat = true
