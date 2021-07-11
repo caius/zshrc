@@ -9,9 +9,10 @@ export HOMEBREW_NO_AUTO_UPDATE=1
 # Don't follow insecure redirects
 export HOMEBREW_NO_INSECURE_REDIRECT=1
 
-if [[ -e /usr/local/opt/mariadb@10.2/bin ]]
+# Add mysql tools to the path
+if [[ -d /opt/homebrew/opt/mariadb@10.5/bin ]]
 then
-  path=($path /usr/local/opt/mariadb@10.2/bin)
+  path=($path /opt/homebrew/opt/mariadb@10.5/bin)
 fi
 
 if [[ -e /usr/local/opt/esp-idf ]]; then

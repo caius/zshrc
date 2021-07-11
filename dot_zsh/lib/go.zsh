@@ -1,3 +1,3 @@
 export GOPATH=$HOME/go
-export GOROOT=/usr/local/opt/go/libexec
+export GOROOT=/opt/homebrew/opt/go/libexec
 path=($GOPATH/bin $GOROOT/bin $path)

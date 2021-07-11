@@ -1,5 +1,5 @@
-if [[ -d /usr/local/CrossPack-AVR/bin ]]
+if [[ -d /opt/homebrew/CrossPack-AVR/bin ]]
 then
-  path=($path /usr/local/CrossPack-AVR/bin)
-  manpath=($manpath /usr/local/CrossPack-AVR/man)
+  path=($path /opt/homebrew/CrossPack-AVR/bin)
+  manpath=($manpath /opt/homebrew/CrossPack-AVR/man)
 fi
