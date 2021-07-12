@@ -154,7 +154,8 @@ alias k="kitchen"
 
 alias cz="chezmoi"
 
-alias rbrew="rosetta brew"
+# Have to explicitly use /usr/local brew path here
+alias rbrew="rosetta /usr/local/bin/brew"
 
 ## Global alias'
 alias -g §='$(fzf)'
