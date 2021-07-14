@@ -157,6 +157,8 @@ alias cz="chezmoi"
 # Have to explicitly use /usr/local brew path here
 alias rbrew="rosetta /usr/local/bin/brew"
 
+alias tailscale="/Applications/Tailscale.app/Contents/MacOS/Tailscale"
+
 ## Global alias'
 alias -g §='$(fzf)'
 alias -g rosetta="arch -x86_64"
