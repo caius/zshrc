@@ -81,7 +81,7 @@
 	fix-missing-newlines-in-branch = "!for file in $(git show-missing-newlines-in-branch); do echo >> $file; done"
 	sha = rev-parse HEAD
 	u = up
-	up = pull --rebase --autostash
+	up = pull
 	praise = blame
 	stup = up
 	stas = stash
@@ -179,8 +179,12 @@
 	trustExitCode = false
 [protocol]
 	version = 2
+[pull]
+	rebase = true
 [push]
 	default = current
+[rebase]
+	autoStash = true
 [rerere]
 	enabled = true
 [reset]
