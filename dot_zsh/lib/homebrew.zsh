@@ -18,3 +18,6 @@ fi
 if [[ -e /usr/local/opt/esp-idf ]]; then
   export IDF_PATH=/usr/local/opt/esp-idf
 fi
+
+# Setup dotnet so Visual Studio Code works
+export DOTNET_ROOT="/usr/local/opt/dotnet/libexec"
