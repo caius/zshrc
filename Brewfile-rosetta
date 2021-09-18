@@ -1,0 +1,7 @@
+tap "homebrew/bundle"
+tap "homebrew/core"
+tap "semaphoreci/tap"
+brew "crystal"
+brew "dotnet"
+brew "libgit2"
+brew "semaphoreci/tap/sem"
