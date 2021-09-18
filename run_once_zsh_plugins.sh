@@ -36,7 +36,8 @@ function handle_zsh_plugin() {
   fi
 }
 
-handle_zsh_plugin "z" "git@github.com:rupa/z" "9d5a3fe0407101e2443499e4b95bca33f7a9a9ca"
+# Cleanup old plugin install
+rm -rf "${ZSH_ROOT}/vendor/z"
 
 handle_zsh_plugin "zsh-autosuggestions" "git@github.com:zsh-users/zsh-autosuggestions" "v0.6.4"
 
