@@ -1,3 +1,3 @@
-# function sgm() {
-  cd $HOME/sm/src
+# function sm() {
+  echo ":'("
 # }
