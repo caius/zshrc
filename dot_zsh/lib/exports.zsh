@@ -35,3 +35,6 @@ export GPG_TTY=$(tty)
 
 # Fucking ruby 2.7
 export RUBYOPT="-W:no-deprecated -W:no-experimental"
+
+# Fucking spring
+export DISABLE_SPRING=true
