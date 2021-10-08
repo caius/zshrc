@@ -42,8 +42,10 @@ Temporary Items
 
 .tool-versions
 .env
+.envrc
 .ruby-version
 .secrets
+lefthook.yml
 
 # emacs
 *~
