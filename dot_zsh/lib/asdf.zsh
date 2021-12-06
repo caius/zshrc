@@ -1,5 +1,5 @@
-asdf_dir="/opt/homebrew/opt/asdf"
-if [[ -d $asdf_dir ]]; then
+homebrew_asdf_dir="/opt/homebrew/opt/asdf"
+if [[ -d $homebrew_asdf_dir ]]; then
   # Load up asdf
-  source $asdf_dir/asdf.sh
+  source $homebrew_asdf_dir/libexec/asdf.sh
 fi
